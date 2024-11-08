@@ -1,0 +1,23 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	href: string;
+}
+---
+<nav class="nav">
+<div class="container">
+	<img src="/assets/img/ghost.png" height="50" onclick="window.location.href = '/'" class='navimg'> 
+	<ul class="nav-links">
+		<li><a href="/ag/" id="school"><i class="fa-solid fa-gamepad active"></i> Games</a></li>
+		<span style="color:gray">|</span>
+		<li><a href="/a/" id="algebra"><i class="fas fa-shapes active"></i> Apps</a></li>
+		<span style="color:gray">|</span>
+	   <li><a href="/s/" id="sett"><i class="fa-solid fa-gear active"></i> Settings</a></li>
+	   <span style="color:gray">|</span>
+	   <li><a href="/b/" id="brows"><i class="fa-solid fa-search active"></i> Sea<x>rch</x></a></li>
+			   </ul>
+	</div>
+	</nav>
+	<script is:inline src="/js/astro.js?cosmos&stars=skib"></script>
+	

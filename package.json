@@ -1,0 +1,27 @@
+{
+  "name": "ghost-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "node run-server.js",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/node": "^8.3.4",
+    "@tomphttp/bare-server-node": "^2.0.3",
+    "astro": "^4.16.8",
+    "express": "^4.21.1",
+    "http": "^0.0.1-security",
+    "typescript": "^5.6.3"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": true
+  }
+}
