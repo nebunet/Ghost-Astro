@@ -119,7 +119,8 @@ res.json(sa)
 server.listen(PORT);
 
 server.on("listening", () => {
-  console.log("Ghost Is On http://localhost:" + PORT);
+  console.log("Thanks for using Ghost! The server is located on the link below! :3")
+  console.log("http://localhost:" + PORT);
 });
 
 // SIGMA SHUTDOWN

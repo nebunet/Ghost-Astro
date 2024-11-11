@@ -1,15 +1,18 @@
-import { c as createComponent, r as renderTemplate, d as renderComponent, m as maybeRenderHead } from '../chunks/astro/server_CzykWKfA.mjs';
+import { c as createComponent, r as renderTemplate, d as renderComponent, b as createAstro, m as maybeRenderHead } from '../chunks/astro/server_CzykWKfA.mjs';
 import 'kleur/colors';
-import { $ as $$Layout } from '../chunks/Layout_Cr_hehKx.mjs';
-import { $ as $$Nav } from '../chunks/nav_-chI5du2.mjs';
+import { $ as $$Layout } from '../chunks/Layout_BKQvBf0X.mjs';
+import { $ as $$Nav } from '../chunks/nav_BgULAXup.mjs';
 export { renderers } from '../renderers.mjs';
 
 var __freeze = Object.freeze;
 var __defProp = Object.defineProperty;
 var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(cooked.slice()) }));
 var _a;
+const $$Astro = createAstro();
 const $$Index = createComponent(async ($$result, $$props, $$slots) => {
-  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Ghost" }, { "default": ($$result2) => renderTemplate(_a || (_a = __template([" ", "<main> ", ` <center> <br> <br> <br> <br> <p class="ex2" style="animation: fadeIn 2s;">Ghost</p> <p> <span style="animation: owo .5s;">A</span> <span style="animation: owo 1s; animation-delay: .5s">Cool</span> <span style="animation: owo 1s; animation-delay: 1s; color: var(--Primary-Color);">Ga<x>me</x>s</span> <span style="animation: owo 1s; animation-delay: 1.5s; color: var(--Primary-Color);">Website</span> <span style="animation: owo 1s; animation-delay: 2s; color: var(--Primary-Color);">:D</span> </p> <button class="button2" onclick="blank();">Open in About:blank</button> <button class="button2" onclick="search()">Search Something!</button> <div class="trendingtop"> <center> <h1>Recommended Games</h1> </center> </div> <div class="trendingbottom" id="trendingg"></div> <div class="trendingtop"> <center> <h1>Recommended Apps</h1> </center> </div> <div class="trendingbottom" id="trendinga"></div> </center> </main> <script src="/u/b.js" defer><\/script> <script src="/u/c.js" defer><\/script> <script>
+  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
+  Astro2.self = $$Index;
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Ghost" }, { "default": ($$result2) => renderTemplate(_a || (_a = __template([" ", "<main> ", ` <center> <br> <br> <br> <br> <p class="ex2" style="animation: fadeIn 2s;">Ghost</p> <p> <span style="animation: owo .5s;">Now</span> <span style="animation: owo 1s; animation-delay: .5s">Remade</span> <span style="animation: owo 1s; animation-delay: 1s; color: #f84545;">In</span> <span style="animation: owo 1s; animation-delay: 1.5s; color: #f84545;">Astro!</span> <span style="animation: owo 1s; animation-delay: 2s; color: #f84545;">:D</span> </p> <button class="button2" onclick="blank();">Open in About:blank</button> <button class="button2" onclick="search()">Search Something!</button> <div class="trendingtop"> <center> <h1>Recommended Games</h1> </center> </div> <div class="trendingbottom" id="trendingg"></div> <div class="trendingtop"> <center> <h1>Recommended Apps</h1> </center> </div> <div class="trendingbottom" id="trendinga"></div> </center> </main> <script src="/u/b.js" defer><\/script> <script src="/u/c.js" defer><\/script> <script>
 		 let rgAPI = '/api/rg/v1/';
       //load g and a
       addEventListener("DOMContentLoaded", async (event) => {

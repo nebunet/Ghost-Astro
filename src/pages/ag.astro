@@ -27,7 +27,7 @@ import Nav from '../components/nav.astro';
             const gameicons = document.getElementById('gcontainer')
 
             const games = document.createElement('div')
-            games.classList.add('gicon')
+            games.classList.add('game-icon')
             games.setAttribute('onclick', "localStorage.setItem('url', '" + __uv$config.prefix + __uv$config.encodeUrl(game.href) + "'); window.location.href = '/q/'")
 
             const gameimg = document.createElement('button')

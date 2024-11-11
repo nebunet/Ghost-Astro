@@ -21,7 +21,7 @@ const $$Layout = createComponent(($$result, $$props, $$slots) => {
          gtag('js', new Date());
 
          gtag('config', 'G-WFWKKRRXLT');
-     <\/script><script src="/u/b.js" defer><\/script><script src="/u/c.js" defer><\/script><script src="/js/load.js"><\/script>`, "</head> <body> ", "  </body></html>"])), renderHead(), renderSlot($$result, $$slots["default"]));
+     <\/script><script src="/u/space.js" defer><\/script><script src="/u/liftoff.js" defer><\/script><script src="/js/galaxy.js?rocket=true"><\/script>`, "</head> <body> ", "  </body></html>"])), renderHead(), renderSlot($$result, $$slots["default"]));
 }, "/home/nobodycares/Downloads/ghost-astro/src/layouts/Layout.astro", void 0);
 
 export { $$Layout as $ };

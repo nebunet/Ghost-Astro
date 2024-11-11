@@ -10,7 +10,7 @@ const blanke = localStorage.getItem("abt");
 const themeload = localStorage.getItem('themeload')
 const swAllowedHostnames = ["localhost", "127.0.0.1"];
 const stockSW3 = "/u/sw.js";
-const SwRegistered = localStorage.getItem('SwRegistered')
+const SwRegistered = localStorage.getItem('ServiceWorkerRegistered')
 
 addEventListener("DOMContentLoaded", async (event) => {
   initTheme();
@@ -63,11 +63,11 @@ addEventListener("DOMContentLoaded", async (event) => {
   if(SwRegistered === null) {
     console.log('Registering SW')
     unregisterSW();
-    localStorage.setItem('SwRegistered', 'true');
+    localStorage.setItem('ServiceWorkerRegistered', 'true');
     location.reload();
   }if(SwRegistered === 'true') {
     registerSWv2();
-    localStorage.setItem('SwRegistered', 'true2');
+    localStorage.setItem('ServiceWorkerRegistered', 'true2');
 }
 else {
   };
@@ -227,3 +227,5 @@ document.addEventListener("DOMContentLoaded", () => {
       "4chan.org",
     ];
   });
+
+  registerSWv2();
