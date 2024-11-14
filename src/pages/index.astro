@@ -1,152 +1,169 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Nav from '../components/nav.astro';
+import Layout from '../layouts/Layout.astro'
+import Nav from '../components/nav.astro'
 ---
 
 <Layout title="Ghost">
-	<main>
-    
-    <Nav title="" body="" href=""/>
+    <main>
+        <Nav title="" body="" href="" />
 
-		<center>
-			<br />
-			<br />
-      <br />
-      <br />
-		<p class="ex2" style="animation: fadeIn 2s;">Ghost</p>
-		<p>
-			<span style="animation: owo .5s;">Now</span>
-			<span style="animation: owo 1s; animation-delay: .5s">Remade</span>
-			<span style="animation: owo 1s; animation-delay: 1s; color: #f84545;">In</span>
-			<span style="animation: owo 1s; animation-delay: 1.5s; color: #f84545;" >Astro!</span>
-			<span style="animation: owo 1s; animation-delay: 2s; color: #f84545;">:D</span>
-		</p>
-		<button class="button2" onclick="blank();">Open in About:blank</button>
-		<button class="button2" onclick="search()">Search Something!</button>
-		<div class="trendingtop">
-			<center>
-			<h1>Recommended Games</h1>
-		</center>
-		</div>
-		<div class="trendingbottom" id="trendingg">
+        <center>
+            <br />
+            <br />
+            <br />
+            <br />
+            <p class="ex2" style="animation: fadeIn 2s;">Ghost</p>
+            <p>
+                <span style="animation: owo .5s;">Now</span>
+                <span style="animation: owo 1s; animation-delay: .5s"
+                    >Remade</span
+                >
+                <span
+                    style="animation: owo 1s; animation-delay: 1s; color: #f84545;"
+                    >In</span
+                >
+                <span
+                    style="animation: owo 1s; animation-delay: 1.5s; color: #f84545;"
+                    >Astro!</span
+                >
+                <span
+                    style="animation: owo 1s; animation-delay: 2s; color: #f84545;"
+                    >:D</span
+                >
+            </p>
+            <button class="button2" onclick="blank();"
+                >Open in About:blank</button
+            >
+            <button class="button2" onclick="search()">Search Something!</button
+            >
+            <div class="trendingtop">
+                <center>
+                    <h1>Recommended Games</h1>
+                </center>
+            </div>
+            <div class="trendingbottom" id="trendingg"></div>
+            <div class="trendingtop">
+                <center>
+                    <h1>Recommended Apps</h1>
+                </center>
+            </div>
+            <div class="trendingbottom" id="trendinga"></div>
+        </center>
+    </main>
+    <script is:inline src="/u/b.js" defer></script>
+    <script is:inline src="/u/c.js" defer></script>
+    <script is:inline>
+        let rgAPI = '/api/rg/v1/'
+        //load g and a i think )
+        addEventListener('DOMContentLoaded', async (event) => {
+            const gData = await fetch(rgAPI)
+                .then((response) => response.text())
+                .then((text) => {
+                    return JSON.parse(text)
+                })
+            gData.forEach((game) => {
+                const i = document.getElementById('trendingg')
+                const g = document.createElement('div')
+                g.classList.add('game-icon')
+                g.setAttribute(
+                    'onclick',
+                    "localStorage.setItem('url', '" +
+                        '/u/query/' +
+                        __uv$config.encodeUrl(game.href) +
+                        "'); window.location.href = '/q/'"
+                )
 
-		</div>
-		<div class="trendingtop">
-			<center>
-			<h1>Recommended Apps</h1>
-		</center>
-		</div>
-		<div class="trendingbottom" id="trendinga">
+                const img = document.createElement('button')
+                const image = document.createElement('img')
+                image.src = game.img
 
-		</div>
-</center>
-	</main>
-	<script is:inline src="/u/b.js" defer></script>
-	<script is:inline src="/u/c.js" defer></script>
-	<script is:inline>
-		 let rgAPI = '/api/rg/v1/';
-      //load g and a
-      addEventListener("DOMContentLoaded", async (event) => {
-        const gData = await fetch(rgAPI).then((response) => response.text()).then((text) => {return JSON.parse(text)});
-        gData.forEach((game) => {
-          const i = document.getElementById("trendingg");
-          const g = document.createElement("div");
-          g.classList.add("game-icon");
-          g.setAttribute(
-            "onclick",
-            "localStorage.setItem('url', '" +
-              '/u/query/' + __uv$config.encodeUrl(game.href) +
-              "'); window.location.href = '/q/'",
-          );
-          
+                const gname = document.createElement('p')
+                gname.innerText = game.name
 
-          const img = document.createElement("button");
-          const image = document.createElement("img");
-          image.src = game.img;
+                img.appendChild(image)
+                g.appendChild(img)
+                g.appendChild(gname)
+                i.appendChild(g)
+            })
+        })
+        //load g and a
+        let raAPI = '/api/ra/v1/'
+        addEventListener('DOMContentLoaded', async (event) => {
+            const gData = await fetch(raAPI)
+                .then((response) => response.text())
+                .then((text) => {
+                    return JSON.parse(text)
+                })
+            gData.forEach((game) => {
+                const i = document.getElementById('trendinga')
 
-          const gname = document.createElement("p");
-          gname.innerText = game.name;
+                const g = document.createElement('div')
+                g.classList.add('game-icon')
+                g.setAttribute(
+                    'onclick',
+                    "localStorage.setItem('url', '" +
+                        '/u/query/' +
+                        __uv$config.encodeUrl(game.href) +
+                        "'); window.location.href = '/q/'"
+                )
 
-          img.appendChild(image);
-          g.appendChild(img);
-          g.appendChild(gname);
-          i.appendChild(g);
-        });
-      });
-      //load g and a
-      let raAPI = '/api/ra/v1/';
-      addEventListener("DOMContentLoaded", async (event) => {
-        const gData = await fetch(raAPI).then((response) => response.text()).then((text) => {return JSON.parse(text)});
-        gData.forEach((game) => {
-          const i = document.getElementById("trendinga");
+                const img = document.createElement('button')
+                const image = document.createElement('img')
+                image.src = game.img
 
-          const g = document.createElement("div");
-          g.classList.add("game-icon");
-          g.setAttribute(
-            "onclick",
-            "localStorage.setItem('url', '" +
-              '/u/query/' + __uv$config.encodeUrl(game.href) +
-              "'); window.location.href = '/q/'",
-          );
-          
+                const gname = document.createElement('p')
+                gname.innerText = game.name
 
-          const img = document.createElement("button");
-          const image = document.createElement("img");
-          image.src = game.img;
-
-          const gname = document.createElement("p");
-          gname.innerText = game.name;
-
-          img.appendChild(image);
-          g.appendChild(img);
-          g.appendChild(gname);
-          i.appendChild(g);
-        });
-      });
-      function getRandomInt(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-      }
-
-      function getRandomLink() {
-        let csites = [
-          "https://google.com",
-          "https://classroom.google.com",
-          "https://docs.google.com",
-          "https://nasa.gov",
-          "https://desmos.com",
-          "https://clever.com",
-          "https://ixl.com",
-        ] 
-        return csites[getRandomInt(0, csites.length-1)]
-      }
-      function blank() {
-        var currentUrl = top.location.href;
-        if (currentUrl === "about:blank") {
-          console.log(currentUrl);
-        } else {
-          var win = window.open();
-          var url = "/";
-          var iframe = win.document.createElement("iframe");
-          top.location.replace(getRandomLink());
-          iframe.style.position = "fixed";
-          iframe.style.top = 0;
-          iframe.style.bottom = 0;
-          iframe.style.left = 0;
-          iframe.style.right = 0;
-          iframe.style.border = "none";
-          iframe.style.outline = "none";
-          iframe.style.width = "100%";
-          iframe.style.height = "100%";
-          iframe.src = url;
-
-          win.document.body.appendChild(iframe);
+                img.appendChild(image)
+                g.appendChild(img)
+                g.appendChild(gname)
+                i.appendChild(g)
+            })
+        })
+        function getRandomInt(min, max) {
+            min = Math.ceil(min)
+            max = Math.floor(max)
+            return Math.floor(Math.random() * (max - min + 1)) + min
         }
-      }
 
-     function search() {
-    window.location.href = '/b/'       
-    }
-	</script>
+        function getRandomLink() {
+            let csites = [
+                'https://google.com',
+                'https://classroom.google.com',
+                'https://docs.google.com',
+                'https://nasa.gov',
+                'https://desmos.com',
+                'https://clever.com',
+                'https://ixl.com',
+            ]
+            return csites[getRandomInt(0, csites.length - 1)]
+        }
+        function blank() {
+            var currentUrl = top.location.href
+            if (currentUrl === 'about:blank') {
+                console.log(currentUrl)
+            } else {
+                var win = window.open()
+                var url = '/'
+                var iframe = win.document.createElement('iframe')
+                top.location.replace(getRandomLink())
+                iframe.style.position = 'fixed'
+                iframe.style.top = 0
+                iframe.style.bottom = 0
+                iframe.style.left = 0
+                iframe.style.right = 0
+                iframe.style.border = 'none'
+                iframe.style.outline = 'none'
+                iframe.style.width = '100%'
+                iframe.style.height = '100%'
+                iframe.src = url
+
+                win.document.body.appendChild(iframe)
+            }
+        }
+
+        function search() {
+            window.location.href = '/b/'
+        }
+    </script>
 </Layout>

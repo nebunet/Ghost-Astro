@@ -1,76 +1,82 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Nav from '../components/nav.astro';
+import Layout from '../layouts/Layout.astro'
+import Nav from '../components/nav.astro'
 ---
 
 <Layout title="Ghost">
-<Nav body="" href="" title=""/>
-<center>
-    <br />
-    <br />
-    <br />
-<p class="ex2"><img id="logo2" src="/assets/img/ghost.png" height="200"></p>
-            <p class="ex3">Ghost Sea<span>rch</span></p>
-            <h2><span id="subtitle">loading...</span></h2>
-            <input type="text" id="input" class="input" placeholder="Search or enter a URL..">
-        </center>
+    <Nav body="" href="" title="" />
+    <center>
+        <br />
+        <br />
+        <br />
+        <p class="ex2">
+            <img id="logo2" src="/assets/img/ghost.png" height="200" />
+        </p>
+        <p class="ex3">Ghost Sea<span>rch</span></p>
+        <h2><span id="subtitle">loading...</span></h2>
+        <input
+            type="text"
+            id="input"
+            class="input"
+            placeholder="Search or enter a URL.."
+        />
+    </center>
 
-        <script is:inline>
-            function changeSub(num) {
-                document.getElementById("subtitle").innerText = tell[num];
-            }
+    <script is:inline>
+        function changeSub(num) {
+            document.getElementById('subtitle').innerText = tell[num]
+        }
 
-            var tell = [
-                "Nobodycares is a skiddy kid af",
-                "What even is that?",
-                "You need help",
-                "Ghost is crazy",
-                "CoolOnlineGames",
-                "ur funny",
-                "LOL",
-                "got taken down fr fr",
-                "help me",
-                " go crazy right now",
-                "made by a student (crazy right)",
-                "i got a glock in my rari",
-                "gren",
-                "corruptedgaming.online",
-                "griddy",
-                "im kanye west",
-                "David is the best",
-                "Ghost on crack!",
-                "astro on crack fr",
-                "76.138.200.152 (your ip)",
-                "Free for all",
-                "A wise man once told me to use Ghost",
-                "i need starz plz https://github.com/The-Ghost-Network/Ghost-Node",
-                "I Code Cool Stuff :D",
-                "Jordan was here 😱 (creator of jordansmathwork)",
-                "Ghost was skidded - Clipped",
-                "JMW is cool",
-                "cube gang",
-                "blanket????",
-                "this is the rarest one (real)",
-                "NO THIS IS THE RAREST ONE!!!",
-                "how many of these are there????",
-                "Thanks to PBS Kids for the code!",
-                "hes not real (dont trust him)",
-                "BLU GHOST???",
-                "Get on my level!",
-                "skill issue",
-                "not my fault",
-                "the skiddiest site youve ever seen"
-            ];
+        var tell = [
+            'Nobodycares is a skiddy kid af',
+            'What even is that?',
+            'You need help',
+            'Ghost is crazy',
+            'CoolOnlineGames',
+            'ur funny',
+            'LOL',
+            'got taken down fr fr',
+            'help me',
+            ' go crazy right now',
+            'made by a student (crazy right)',
+            'i got a glock in my rari',
+            'gren',
+            'griddy',
+            'and im kanye west',
+            'David is the best',
+            'Ghost on crack!',
+            'astro on crack fr',
+            '76.138.200.152 (your ip)',
+            'Free for all',
+            'A wise man once told me to use Ghost',
+            'i need starz plz https://github.com/The-Ghost-Network/Ghost-Node',
+            'I Code Cool Stuff :D',
+            'Jordan was here 😱 (creator of jordansmathwork)',
+            'Ghost was skidded - Clipped',
+            'JMW is cool',
+            'cube gang',
+            'blanket????',
+            'this is the rarest one (real)',
+            'NO THIS IS THE RAREST ONE!!!',
+            'how many of these are there????',
+            'Thanks to PBS Kids for the code!',
+            'hes not real (dont trust him)',
+            'BLU GHOST???',
+            'Get on my level!',
+            'skill issue',
+            'not my fault',
+            'the skiddiest site youve ever seen',
+        ]
 
-            var howmany = tell.length;
-            var randomIndex = Math.floor(Math.random() * howmany);
+        var howmany = tell.length
+        var randomIndex = Math.floor(Math.random() * howmany)
 
-            document.getElementById("subtitle").innerText = tell[randomIndex];
+        document.getElementById('subtitle').innerText = tell[randomIndex]
 
-            function changeSplash(num) {
-                var sub = "guh " + num + ", " + tell[num];
-                document.getElementById("subtitle").innerText = tell[num];
-                return sub;
-            }
-        </script>
+        function changeSplash(num) {
+            var sub = 'guh ' + num + ', ' + tell[num]
+            document.getElementById('subtitle').innerText = tell[num]
+            return sub
+        }
+    </script>
 </Layout>

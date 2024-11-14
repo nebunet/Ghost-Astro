@@ -4,9 +4,9 @@ self.__uv$config = {
     bare: '/bare/',
     encodeUrl: Ultraviolet.codec.base64.encode,
     decodeUrl: Ultraviolet.codec.base64.decode,
-    handler: '/u/comet.js',
-    client: '/u/atom.js',
+    handler: '/u/handoff.js',
+    client: '/u/astro.js',
     bundle: '/u/space.js',
     config: '/u/liftoff.js',
-    sw: '/u/constellation.js',
+    sw: '/u/constallations.js',
 };

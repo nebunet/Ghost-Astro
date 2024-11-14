@@ -1,6 +1,6 @@
 import { renderers } from './renderers.mjs';
 import { c as createExports, s as serverEntrypointModule } from './chunks/_@astrojs-ssr-adapter_C1LAVc87.mjs';
-import { manifest } from './manifest_CIeiGc2V.mjs';
+import { manifest } from './manifest_B0ACZSZ7.mjs';
 
 const _page0 = () => import('./pages/_image.astro.mjs');
 const _page1 = () => import('./pages/a.astro.mjs');
@@ -28,8 +28,8 @@ const _manifest = Object.assign(manifest, {
 });
 const _args = {
     "mode": "middleware",
-    "client": "file:///home/nobodycares/Downloads/ghost-astro/dist/client/",
-    "server": "file:///home/nobodycares/Downloads/ghost-astro/dist/server/",
+    "client": "file:///home/nobodycares/Documents/GitHub/Ghost-Astro/dist/client/",
+    "server": "file:///home/nobodycares/Documents/GitHub/Ghost-Astro/dist/server/",
     "host": false,
     "port": 4321,
     "assets": "_astro"
