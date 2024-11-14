@@ -11,27 +11,6 @@
     * Lots of Games
     * And A Proxy!
 
-    # Deploying
-
-    ```bash
-    git clone https://github.com/The-Ghost-Network/Ghost-Astro
-    cd Ghost-Astro
-    npm i
-    npm run build
-    npm start
-    ```
-
-    Deploying using pm2
-
-    ```bash
-    npm install -g pm2
-    git clone https://github.com/The-Ghost-Network/Ghost-Astro
-    cd Ghost-Astro
-    npm i
-    npm run build
-    pm2 start run-server.js
-    ```
-
     # Credits
 
     [Nobodycares](https://github.com/Nobodycares-lo) for most of the code!
