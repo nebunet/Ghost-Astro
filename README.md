@@ -13,7 +13,7 @@
 
     # Deploying
 
-    ```
+    ```bash
     git clone https://github.com/The-Ghost-Network/Ghost-Astro
     cd Ghost-Astro
     npm i
@@ -23,7 +23,7 @@
 
     Deploying using pm2
 
-    ```
+    ```bash
     npm install -g pm2
     git clone https://github.com/The-Ghost-Network/Ghost-Astro
     cd Ghost-Astro
