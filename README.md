@@ -1,6 +1,6 @@
 # Ghost-Astro
 
-    **Ghost-Astro is the Astro version of Ghost!**
+    Ghost-Astro is the Astro version of Ghost!
 
     # Features
 
@@ -10,6 +10,27 @@
     * Theming
     * Lots of Games
     * And A Proxy!
+
+    # Deploying
+
+    ```
+    git clone https://github.com/The-Ghost-Network/Ghost-Astro
+    cd Ghost-Astro
+    npm i
+    npm run build
+    npm start
+    ```
+
+    Deploying using pm2
+
+    ```
+    npm install -g pm2
+    git clone https://github.com/The-Ghost-Network/Ghost-Astro
+    cd Ghost-Astro
+    npm i
+    npm run build
+    pm2 start run-server.js
+    ```
 
     # Credits
 
