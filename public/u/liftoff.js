@@ -1,6 +1,6 @@
 /*global Ultraviolet*/
 self.__uv$config = {
-    prefix: '/u/query/',
+    prefix: '/u/liftoff/',
     bare: '/bare/',
     encodeUrl: Ultraviolet.codec.base64.encode,
     decodeUrl: Ultraviolet.codec.base64.decode,
@@ -9,4 +9,4 @@ self.__uv$config = {
     bundle: '/u/space.js',
     config: '/u/liftoff.js',
     sw: '/u/constallations.js',
-};
+}
