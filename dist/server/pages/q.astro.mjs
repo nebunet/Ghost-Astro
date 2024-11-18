@@ -1,6 +1,6 @@
 import { c as createComponent, r as renderTemplate, d as renderComponent, m as maybeRenderHead } from '../chunks/astro/server_CzykWKfA.mjs';
 import 'kleur/colors';
-import { $ as $$Layout } from '../chunks/Layout_DNHn7999.mjs';
+import { $ as $$Layout } from '../chunks/Layout_CivkMUVJ.mjs';
 /* empty css                             */
 export { renderers } from '../renderers.mjs';
 
@@ -84,7 +84,7 @@ const $$Q = createComponent(($$result, $$props, $$slots) => {
         }
         const geturl = frame.contentWindow.location.href
         const removedUrl = geturl.replace(
-            'https://' + location.hostname + '/u/query/',
+            'https://' + location.hostname + __uv$config.prefix,
             ''
         )
         const decodedURL = __uv$config.decodeUrl(removedUrl)
@@ -145,7 +145,7 @@ refresh
 arrow_back
 </span></button><button class="topbtn" id="bckbttn" onclick="home()" style="left: 30px;"><span class="material-symbols-outlined" style="color: white;">
 home
-</span></button><input type="text" class="input" id="forminput" placeholder="Search Or Enter A URL.."></div></div><div class="hiddenuvpanel" id="uvpanel"><button class="rammerbttn" id="rammerbttn" onclick="rammer()">Use Rammerhead</button><button class="copybttn" id="copybttn" onclick="copyurl()">Copy URL</button><button class="topbtn" id="opbttn" onclick="op()" style="left: 30px; margin-top: 10px;"><span class="material-symbols-outlined"> open_in_new</span></button></div><iframe class="mainiframe" id="frame"></iframe>` }));
+</span></button><input type="text" class="input" id="forminput" placeholder="Search Or Enter A URL.."></div></div><div class="hiddenuvpanel" id="uvpanel"><button class="copybttn" id="copybttn" onclick="copyurl()">Copy URL</button><button class="topbtn" id="opbttn" onclick="op()" style="left: 30px; margin-top: 10px;"><span class="material-symbols-outlined"> open_in_new</span></button></div><iframe class="mainiframe" id="frame"></iframe>` }));
 }, "/home/nobodycares/Documents/GitHub/Ghost-Astro/src/pages/q.astro", void 0);
 
 const $$file = "/home/nobodycares/Documents/GitHub/Ghost-Astro/src/pages/q.astro";

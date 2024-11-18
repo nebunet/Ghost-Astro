@@ -1,14 +1,14 @@
 import { c as createComponent, r as renderTemplate, d as renderComponent, m as maybeRenderHead } from '../chunks/astro/server_CzykWKfA.mjs';
 import 'kleur/colors';
-import { $ as $$Layout } from '../chunks/Layout_DNHn7999.mjs';
-import { $ as $$Nav } from '../chunks/nav_D5a6x_m3.mjs';
+import { $ as $$Layout } from '../chunks/Layout_CivkMUVJ.mjs';
+import { $ as $$Nav } from '../chunks/nav_B_3ycToN.mjs';
 export { renderers } from '../renderers.mjs';
 
 var __freeze = Object.freeze;
 var __defProp = Object.defineProperty;
 var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(cooked.slice()) }));
 var _a;
-const $$Ag = createComponent(async ($$result, $$props, $$slots) => {
+const $$C = createComponent(async ($$result, $$props, $$slots) => {
   return renderTemplate(_a || (_a = __template(["", ` <script src="/u/b.js" defer><\/script> <script src="/u/c.js" defer><\/script> <script>
     let gAPI = '/api/g/v1/'
     addEventListener('DOMContentLoaded', async (event) => {
@@ -45,14 +45,14 @@ const $$Ag = createComponent(async ($$result, $$props, $$slots) => {
     })
 <\/script>`])), renderComponent($$result, "Layout", $$Layout, { "title": "Ghost" }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Nav", $$Nav, {})} ${maybeRenderHead()}<center> <br> <br> <br> <br> <p class="ex2" style="animation: fadeIn 2s;">Ga<x>me</x>s</p> <p>
 You can request games on the <a href="https://discord.gg/dbyDXfs5dN">Dis<x>co</x>rd serv<x>er</x></a> </p> <div class="gcontainer" id="gcontainer"></div> </center> ` }));
-}, "/home/nobodycares/Documents/GitHub/Ghost-Astro/src/pages/ag.astro", void 0);
+}, "/home/nobodycares/Documents/GitHub/Ghost-Astro/src/pages/c.astro", void 0);
 
-const $$file = "/home/nobodycares/Documents/GitHub/Ghost-Astro/src/pages/ag.astro";
-const $$url = "/ag";
+const $$file = "/home/nobodycares/Documents/GitHub/Ghost-Astro/src/pages/c.astro";
+const $$url = "/c";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
     __proto__: null,
-    default: $$Ag,
+    default: $$C,
     file: $$file,
     url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));

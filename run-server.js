@@ -100,30 +100,6 @@ app.get('/', (req, res) => {
     res.sendFile('/public/index.html', { root: __dirname })
 })
 
-app.get('/s/', (req, res) => {
-    res.sendFile('/public/settings.html', { root: __dirname })
-})
-
-app.get('/w/', (req, res) => {
-    res.sendFile('/public/browser.html', { root: __dirname })
-})
-
-app.get('/b/', (req, res) => {
-    res.sendFile('/public/browser.html', { root: __dirname })
-})
-
-app.get('/c/', (req, res) => {
-    res.sendFile('/public/ag.html', { root: __dirname })
-})
-
-app.get('/a/', (req, res) => {
-    res.sendFile('/public/algebra.html', { root: __dirname })
-})
-
-app.get('/q/', (req, res) => {
-    res.sendFile('/public/g.html', { root: __dirname })
-})
-
 app.get('/api/info/v1/', (req, res) => {
     res.json([
         {

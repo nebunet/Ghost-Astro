@@ -1,14 +1,14 @@
 import { c as createComponent, r as renderTemplate, d as renderComponent, m as maybeRenderHead } from '../chunks/astro/server_CzykWKfA.mjs';
 import 'kleur/colors';
-import { $ as $$Layout } from '../chunks/Layout_DNHn7999.mjs';
-import { $ as $$Nav } from '../chunks/nav_D5a6x_m3.mjs';
+import { $ as $$Layout } from '../chunks/Layout_CivkMUVJ.mjs';
+import { $ as $$Nav } from '../chunks/nav_B_3ycToN.mjs';
 export { renderers } from '../renderers.mjs';
 
 var __freeze = Object.freeze;
 var __defProp = Object.defineProperty;
 var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(cooked.slice()) }));
 var _a;
-const $$B = createComponent(($$result, $$props, $$slots) => {
+const $$W = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Ghost" }, { "default": ($$result2) => renderTemplate(_a || (_a = __template([" ", " ", `<center> <br> <br> <br> <p class="ex2"> <img id="logo2" src="/assets/img/ghost.png" height="200"> </p> <p class="ex3">Ghost Sea<span>rch</span></p> <h2><span id="subtitle">loading...</span></h2> <input type="text" id="input" class="input" placeholder="Search or enter a URL.."> </center> <script>
         function changeSub(num) {
             document.getElementById('subtitle').innerText = tell[num]
@@ -66,14 +66,14 @@ const $$B = createComponent(($$result, $$props, $$slots) => {
             return sub
         }
     <\/script> `])), renderComponent($$result2, "Nav", $$Nav, { "body": "", "href": "", "title": "" }), maybeRenderHead()) })}`;
-}, "/home/nobodycares/Documents/GitHub/Ghost-Astro/src/pages/b.astro", void 0);
+}, "/home/nobodycares/Documents/GitHub/Ghost-Astro/src/pages/w.astro", void 0);
 
-const $$file = "/home/nobodycares/Documents/GitHub/Ghost-Astro/src/pages/b.astro";
-const $$url = "/b";
+const $$file = "/home/nobodycares/Documents/GitHub/Ghost-Astro/src/pages/w.astro";
+const $$url = "/w";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
     __proto__: null,
-    default: $$B,
+    default: $$W,
     file: $$file,
     url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));

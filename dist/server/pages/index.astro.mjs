@@ -1,7 +1,7 @@
 import { c as createComponent, r as renderTemplate, d as renderComponent, b as createAstro, m as maybeRenderHead } from '../chunks/astro/server_CzykWKfA.mjs';
 import 'kleur/colors';
-import { $ as $$Layout } from '../chunks/Layout_DNHn7999.mjs';
-import { $ as $$Nav } from '../chunks/nav_D5a6x_m3.mjs';
+import { $ as $$Layout } from '../chunks/Layout_CivkMUVJ.mjs';
+import { $ as $$Nav } from '../chunks/nav_B_3ycToN.mjs';
 export { renderers } from '../renderers.mjs';
 
 var __freeze = Object.freeze;
@@ -28,7 +28,7 @@ const $$Index = createComponent(async ($$result, $$props, $$slots) => {
                 g.setAttribute(
                     'onclick',
                     "localStorage.setItem('url', '" +
-                        '/u/query/' +
+                        __uv$config.prefix +
                         __uv$config.encodeUrl(game.href) +
                         "'); window.location.href = '/q/'"
                 )
@@ -62,7 +62,7 @@ const $$Index = createComponent(async ($$result, $$props, $$slots) => {
                 g.setAttribute(
                     'onclick',
                     "localStorage.setItem('url', '" +
-                        '/u/query/' +
+                        __uv$config.prefix +
                         __uv$config.encodeUrl(game.href) +
                         "'); window.location.href = '/q/'"
                 )
