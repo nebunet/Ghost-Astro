@@ -68,7 +68,7 @@ import Nav from '../components/nav.astro'
                 g.setAttribute(
                     'onclick',
                     "localStorage.setItem('url', '" +
-                        '/u/query/' +
+                        __uv$config.prefix +
                         __uv$config.encodeUrl(game.href) +
                         "'); window.location.href = '/q/'"
                 )
@@ -102,7 +102,7 @@ import Nav from '../components/nav.astro'
                 g.setAttribute(
                     'onclick',
                     "localStorage.setItem('url', '" +
-                        '/u/query/' +
+                        __uv$config.prefix +
                         __uv$config.encodeUrl(game.href) +
                         "'); window.location.href = '/q/'"
                 )

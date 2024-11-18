@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const query = formatSearch(input.value)
             localStorage.setItem(
                 'url',
-                '/u/query/' + __uv$config.encodeUrl(query)
+                __uv$config.prefix + __uv$config.encodeUrl(query)
             )
             window.location.href = '/q/'
         }

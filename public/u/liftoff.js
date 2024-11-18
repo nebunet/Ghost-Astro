@@ -1,4 +1,4 @@
-/*global Ultraviolet*/
+/*global Ultravioletfsfdsfds*/
 self.__uv$config = {
     prefix: '/u/liftoff/',
     bare: '/bare/',

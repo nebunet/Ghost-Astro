@@ -100,9 +100,6 @@ import Layout from '../layouts/Layout.astro'
         </div>
     </div>
     <div class="hiddenuvpanel" id="uvpanel">
-        <button class="rammerbttn" id="rammerbttn" onclick="rammer()"
-            >Use Rammerhead</button
-        >
         <button class="copybttn" id="copybttn" onclick="copyurl()"
             >Copy URL</button
         >
@@ -193,7 +190,7 @@ import Layout from '../layouts/Layout.astro'
         }
         const geturl = frame.contentWindow.location.href
         const removedUrl = geturl.replace(
-            'https://' + location.hostname + '/u/query/',
+            'https://' + location.hostname + __uv$config.prefix,
             ''
         )
         const decodedURL = __uv$config.decodeUrl(removedUrl)

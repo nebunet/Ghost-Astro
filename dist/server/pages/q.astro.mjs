@@ -1,6 +1,6 @@
 import { c as createComponent, r as renderTemplate, d as renderComponent, m as maybeRenderHead } from '../chunks/astro/server_CzykWKfA.mjs';
 import 'kleur/colors';
-import { $ as $$Layout } from '../chunks/Layout_z4vBhUTq.mjs';
+import { $ as $$Layout } from '../chunks/Layout_DNHn7999.mjs';
 /* empty css                             */
 export { renderers } from '../renderers.mjs';
 
@@ -133,17 +133,17 @@ const $$Q = createComponent(($$result, $$props, $$slots) => {
     function rammer() {
         //for later
     }
-<\/script>`])), renderComponent($$result, "Layout", $$Layout, { "title": "Google Classroom" }, { "default": ($$result2) => renderTemplate`${maybeRenderHead()}<button class="barbutton" id="barButton" onclick="openTopbar()"><span class="material-symbols-outlined">arrow_downward</span></button><div class="topbar" id="topbar" style="color: black;"><div class="topbar-content"><button class="topbtn" id="topbttn" onclick="closeTopbar()"><span class="material-symbols-outlined" style="color: var(--Symbols-Color)">
+<\/script>`])), renderComponent($$result, "Layout", $$Layout, { "title": "Google Classroom" }, { "default": ($$result2) => renderTemplate`${maybeRenderHead()}<button class="barbutton" id="barButton" onclick="openTopbar()"><span class="material-symbols-outlined">arrow_downward</span></button><div class="topbar" id="topbar" style="color: white;"><div class="topbar-content"><button class="topbtn" id="topbttn" onclick="closeTopbar()"><span class="material-symbols-outlined" style="color: white;">
 arrow_upward
-</span></button><button class="topbtn" id="panelbttn" onclick="openswitchpanel()"><span class="material-symbols-outlined" style="color: var(--Symbols-Color)">
+</span></button><button class="topbtn" id="panelbttn" onclick="openswitchpanel()"><span class="material-symbols-outlined" style="color: white;">
 page_info
-</span></button><button class="topbtn" id="fwdbttn" onclick="forward()" style="left: 10px;"><span class="material-symbols-outlined" style="color: var(--Symbols-Color);">
+</span></button><button class="topbtn" id="fwdbttn" onclick="forward()" style="left: 10px;"><span class="material-symbols-outlined" style="color: white;">
 arrow_forward
-</span></button><button class="topbtn" id="rfshbttn" onclick="refresh()" style="left: 30px;"><span class="material-symbols-outlined" style="color: var(--Symbols-Color)">
+</span></button><button class="topbtn" id="rfshbttn" onclick="refresh()" style="left: 30px;"><span class="material-symbols-outlined" style="color: white;">
 refresh
-</span></button><button class="topbtn" id="bckbttn" onclick="back()" style="left: 30px;"><span class="material-symbols-outlined" style="color: var(--Symbols-Color)">
+</span></button><button class="topbtn" id="bckbttn" onclick="back()" style="left: 30px;"><span class="material-symbols-outlined" style="color: white;">
 arrow_back
-</span></button><button class="topbtn" id="bckbttn" onclick="home()" style="left: 30px;"><span class="material-symbols-outlined" style="color: var(--Symbols-Color)">
+</span></button><button class="topbtn" id="bckbttn" onclick="home()" style="left: 30px;"><span class="material-symbols-outlined" style="color: white;">
 home
 </span></button><input type="text" class="input" id="forminput" placeholder="Search Or Enter A URL.."></div></div><div class="hiddenuvpanel" id="uvpanel"><button class="rammerbttn" id="rammerbttn" onclick="rammer()">Use Rammerhead</button><button class="copybttn" id="copybttn" onclick="copyurl()">Copy URL</button><button class="topbtn" id="opbttn" onclick="op()" style="left: 30px; margin-top: 10px;"><span class="material-symbols-outlined"> open_in_new</span></button></div><iframe class="mainiframe" id="frame"></iframe>` }));
 }, "/home/nobodycares/Documents/GitHub/Ghost-Astro/src/pages/q.astro", void 0);
