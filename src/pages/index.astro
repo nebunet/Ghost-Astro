@@ -4,8 +4,9 @@ import Nav from '../components/nav.astro'
 ---
 
 <Layout title="Ghost">
-    <main>
-        <Nav title="" body="" href="" />
+    <div id="particles-js" style="z-index: -1;"></div>
+    <main style="z-index: 100;">
+        <Nav />
 
         <center>
             <br />
@@ -14,17 +15,16 @@ import Nav from '../components/nav.astro'
             <br />
             <p class="ex2" style="animation: fadeIn 2s;">Ghost</p>
             <p>
-                <span style="animation: owo .5s;">Now</span>
-                <span style="animation: owo 1s; animation-delay: .5s"
-                    >Remade</span
+                <span style="animation: owo .5s;">A</span>
+                <span style="animation: owo 1s; animation-delay: .5s">Very</span
                 >
                 <span
-                    style="animation: owo 1s; animation-delay: 1s; color: #f84545;"
-                    >In</span
+                    style="animation: owo 1s; animation-delay: 1s; color: #78c05a;"
+                    >Festive</span
                 >
                 <span
-                    style="animation: owo 1s; animation-delay: 1.5s; color: #f84545;"
-                    >Astro!</span
+                    style="animation: owo 1s; animation-delay: 1.5s; color: #78c05a;"
+                    >Site!</span
                 >
                 <span
                     style="animation: owo 1s; animation-delay: 2s; color: #f84545;"
@@ -50,8 +50,6 @@ import Nav from '../components/nav.astro'
             <div class="trendingbottom" id="trendinga"></div>
         </center>
     </main>
-    <script is:inline src="/u/b.js" defer></script>
-    <script is:inline src="/u/c.js" defer></script>
     <script is:inline>
         let rgAPI = '/api/rg/v1/'
         //load g and a i think )
@@ -64,7 +62,7 @@ import Nav from '../components/nav.astro'
             gData.forEach((game) => {
                 const i = document.getElementById('trendingg')
                 const g = document.createElement('div')
-                g.classList.add('game-icon')
+                g.classList.add('g-icon')
                 g.setAttribute(
                     'onclick',
                     "localStorage.setItem('url', '" +
@@ -98,7 +96,7 @@ import Nav from '../components/nav.astro'
                 const i = document.getElementById('trendinga')
 
                 const g = document.createElement('div')
-                g.classList.add('game-icon')
+                g.classList.add('g-icon')
                 g.setAttribute(
                     'onclick',
                     "localStorage.setItem('url', '" +
@@ -163,7 +161,7 @@ import Nav from '../components/nav.astro'
         }
 
         function search() {
-            window.location.href = '/b/'
+            window.location.href = '/w/'
         }
     </script>
 </Layout>

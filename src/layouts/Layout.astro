@@ -4,7 +4,6 @@ interface Props {
 }
 
 const { title } = Astro.props
-import Nav from '../components/nav.astro'
 ---
 
 <!DOCTYPE html>
@@ -38,12 +37,42 @@ import Nav from '../components/nav.astro'
         <script is:inline src="/u/space.js" defer></script>
         <script is:inline src="/u/liftoff.js" defer></script>
         <script src="/js/galaxy.js?rocket=true" is:inline></script>
+        <script is:inline src="/js/particles.min.js"></script>
+        <script is:inline>
+            /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+            particlesJS.load(
+                'particles-js',
+                '/assets/particles.json',
+                function () {
+                    console.log('callback - particles.js config loaded')
+                }
+            )
+        </script>
     </head>
     <body>
         <slot />
     </body>
 </html>
 <style is:global>
+    #particles-js canvas {
+        display: block;
+        vertical-align: bottom;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+        -webkit-transition: opacity 0.8s ease, -webkit-transform 1.4s ease;
+        transition: opacity 0.8s ease, transform 1.4s ease;
+    }
+
+    #particles-js {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: -10;
+        top: 0;
+        left: 0;
+    }
     /*litterally copy pasted from node lmao*/
     .nav {
         background-color: var(--Secondary-Color);
@@ -55,6 +84,7 @@ import Nav from '../components/nav.astro'
         position: fixed;
         z-index: 10;
         margin-top: 10px;
+        font-family: 'Be Vietnam Pro', sans-serif;
     }
 
     .container {
@@ -64,10 +94,24 @@ import Nav from '../components/nav.astro'
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 20px;
+        max-height: 50px;
     }
 
-    .navimg:hover {
+    .mainIMG:hover {
         cursor: pointer;
+        animation: spin 0.5s;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(20deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
     }
 
     .nav-links {
@@ -96,12 +140,12 @@ import Nav from '../components/nav.astro'
     /* use root and classes for theming */
     /* I'd just like to interject for a moment. What you're referring to as Linux, is in fact, GNU/Linux, or as I've recently taken to calling it, GNU plus Linux. Linux is not an operating system unto itself, but rather another free component of a fully functioning GNU system made useful by the GNU corelibs, shell utilities and vital system components comprising a full OS as defined by POSIX. Many computer users run a modified version of the GNU system every day, without realizing it. Through a peculiar turn of events, the version of GNU which is widely used today is often called “Linux,” and many of its users are not aware that it is basically the GNU system, developed by the GNU Project. There really is a Linux, and these people are using it, but it is just a part of the system they use. */
     :root {
-        --Background-Color: #171717;
+        --Background-Color: #17181f;
         --text-color: white;
         --Primary-Color: #f84545;
-        --Secondary-Color: #333333;
+        --Secondary-Color: #2e2d32;
         --Third-Color: #f84545;
-        --Symbols-Color: white;
+        --Game-Color: #202025;
     }
 
     .catp {
@@ -111,6 +155,7 @@ import Nav from '../components/nav.astro'
         --Secondary-Color: #5b6078;
         --Third-Color: #a5adcb;
         --Symbols-Color: white;
+        --Game-Color: #575b6d;
     }
 
     .blue {
@@ -120,6 +165,7 @@ import Nav from '../components/nav.astro'
         --Secondary-Color: #e1eaf3;
         --Third-Color: #1361a1;
         --Symbols-Color: white;
+        --Game-Color: #6ca2d8;
     }
 
     .pink {
@@ -129,6 +175,7 @@ import Nav from '../components/nav.astro'
         --Secondary-Color: #e1eaf3;
         --Third-Color: #cbbec9;
         --Symbols-Color: black;
+        --Game-Color: #e3b9cf;
     }
 
     .green {
@@ -138,6 +185,7 @@ import Nav from '../components/nav.astro'
         --Secondary-Color: #84ab90;
         --Third-Color: #a2ccb0;
         --Symbols-Color: white;
+        --Game-Color: #a5e6b9;
     }
 
     .greendark {
@@ -147,6 +195,7 @@ import Nav from '../components/nav.astro'
         --Secondary-Color: #17642b;
         --Third-Color: #2e7f39;
         --Symbols-Color: white;
+        --Game-Color: #37974f;
     }
 
     .pinkdark {
@@ -156,6 +205,7 @@ import Nav from '../components/nav.astro'
         --Secondary-Color: #924a66;
         --Third-Color: #5b2536;
         --Symbols-Color: white;
+        --Game-Color: #964059;
     }
 
     .bluedark {
@@ -165,6 +215,7 @@ import Nav from '../components/nav.astro'
         --Secondary-Color: #4791b6;
         --Third-Color: #175473;
         --Symbols-Color: white;
+        --Game-Color: #2e6684;
     }
 
     .purple {
@@ -174,11 +225,7 @@ import Nav from '../components/nav.astro'
         --Secondary-Color: #7f7ca5;
         --Third-Color: #8e8ab4;
         --Symbols-Color: white;
-    }
-
-    @font-face {
-        font-family: 'Be Vietnam Pro';
-        src: url(/assets/font2.woff2) format('woff2');
+        --Game-Color: #706ab0;
     }
 
     @font-face {
@@ -283,7 +330,7 @@ import Nav from '../components/nav.astro'
 
     .settingsdisplay {
         align-items: center;
-        display: inline-block;
+        display: block;
     }
 
     #uv-error {
@@ -495,6 +542,20 @@ import Nav from '../components/nav.astro'
         border-radius: 7px;
         color: black;
         transition: 0.2s cubic-bezier(0.35, 0.56, 0.85, 0.77);
+        animation: goOut 1s;
+    }
+
+    @keyframes goOut {
+        0% {
+            width: 200px;
+            opacity: 0.5;
+            transform: translateY(20px);
+        }
+        100% {
+            width: 700px;
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     .input:hover {
@@ -575,17 +636,32 @@ import Nav from '../components/nav.astro'
         color: var(--Primary-Color);
     }
 
+    @keyframes rotating {
+        0% {
+            --a: 0deg;
+        }
+
+        100% {
+            --a: 360deg;
+        }
+    }
+
     .game-icon {
+        max-height: 200px;
+        max-width: 240px;
         text-align: center;
-        width: 120px;
-        height: 120px;
+        width: 240px;
+        height: 200px;
         position: relative;
-        animation: fadeIn 2s;
+        animation: fadeIn 1s;
         transition: 0.2s cubic-bezier(0.35, 0.56, 0.85, 0.77);
         border-radius: 10px;
         margin: 15px;
         display: inline-block;
         flex-wrap: wrap;
+        background-color: var(--Game-Color);
+        border: 3px solid transparent;
+        box-shadow: 16px 8px 16px 8px rgba(39, 39, 39, 0.2);
     }
 
     .game-icon button {
@@ -600,8 +676,10 @@ import Nav from '../components/nav.astro'
     }
 
     .game-icon img {
+        position: absolute;
+        top: 0;
         width: 100%;
-        height: 100%;
+        height: 80%;
         object-fit: cover;
         display: block;
         margin: 0 auto;
@@ -610,6 +688,74 @@ import Nav from '../components/nav.astro'
     }
 
     .game-icon p {
+        text-align: center;
+        padding-top: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-top: 10px;
+        font-size: 20px;
+        color: #fff;
+        position: absolute;
+        bottom: -30px;
+        left: 20%;
+        transform: translateX(-25%);
+        font-family: 'Be Vietnam Pro', sans-serif;
+        opacity: 1;
+        transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        border-radius: 10px;
+    }
+
+    .game-icon p:hover {
+        cursor: pointer;
+    }
+
+    .game-icon:hover {
+        cursor: pointer;
+        transform: translateY(-10px);
+        transition: 0.2s cubic-bezier(0.35, 0.56, 0.85, 0.77);
+    }
+
+    .game-icon:active {
+        .game-icon button {
+            background: #d0d0d0;
+        }
+    }
+
+    .g-icon {
+        text-align: center;
+        width: 120px;
+        height: 120px;
+        position: relative;
+        animation: fadeIn 2s;
+        transition: transform 0.3s ease-in-out;
+        border-radius: 10px;
+        margin: 15px;
+        display: inline-block;
+        flex-wrap: wrap;
+    }
+
+    .g-icon button {
+        border: none;
+        background: none;
+        padding: 0;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .g-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+        transition: transform 0.3s ease-in-out;
+        border-radius: 10px;
+    }
+
+    .g-icon p {
         margin-top: 10px;
         color: #fff;
         position: absolute;
@@ -624,40 +770,18 @@ import Nav from '../components/nav.astro'
         border-radius: 10px;
     }
 
-    .game-icon:hover {
+    .g-icon:hover {
         transform: scale(1.1);
     }
 
-    .game-icon:hover img {
-        transform: translateY(-5px);
+    .g-icon:hover img {
         transform: scale(1.1);
         border-radius: 15px;
     }
 
-    .game-icon:hover p {
-        cursor: pointer;
+    .g-icon:hover p {
         bottom: 0;
         opacity: 1;
-    }
-
-    .game-icon:active {
-        .game-icon button {
-            background: #d0d0d0;
-        }
-    }
-
-    .gicon {
-        background-color: #2f2e2e;
-        text-align: center;
-        width: 240px;
-        height: 180px;
-        position: relative;
-        animation: fadeIn 2s;
-        transition: 0.2s cubic-bezier(0.35, 0.56, 0.85, 0.77);
-        border-radius: 10px;
-        margin: 15px;
-        display: inline-block;
-        flex-wrap: wrap;
     }
 
     .lbox {
@@ -851,13 +975,8 @@ import Nav from '../components/nav.astro'
     }
 
     .settingsdisplay {
-        display: flex;
-        float: center;
-    }
-
-    .settingsdisplay2 {
-        display: flex;
-        float: center;
+        display: inline-block;
+        position: relative;
     }
 
     .switch {
@@ -986,5 +1105,58 @@ import Nav from '../components/nav.astro'
 
     .mainIMG:hover {
         cursor: pointer;
+    }
+
+    .ext-make {
+        width: 250px;
+        height: 100px;
+        color: white;
+        background-color: var(--Secondary-Color);
+        border-radius: 5px;
+        transition: cubic-bezier(1, 1.82, 1, 1.31) 0.25s;
+    }
+
+    .ext-make button {
+        border: none;
+        background: none;
+        padding: 0;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .ext-make:hover {
+        border: 1px solid var(--Primary-Color);
+        transform: translateY(-20px);
+    }
+
+    .input-ext {
+        color: white;
+        background-color: #171717;
+        border: 1px solid #333333;
+        transition: 0.2s cubic-bezier(0.35, 0.56, 0.85, 0.77);
+        font-family: 'Be Vietnam Pro', sans-serif;
+        width: 700px;
+        height: 150px;
+        animation: goOut 1s;
+    }
+
+    .input-ext-url {
+        color: white;
+        background-color: #171717;
+        border: 1px solid #333333;
+        transition: 0.2s cubic-bezier(0.35, 0.56, 0.85, 0.77);
+        font-family: 'Be Vietnam Pro', sans-serif;
+        width: 700px;
+        height: 40px;
+        animation: goOut 1s;
+    }
+
+    .extentionwrapper {
+        display: inline-block;
+        position: relative;
     }
 </style>

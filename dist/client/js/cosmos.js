@@ -11,7 +11,25 @@ function clickoff() {
             localStorage.setItem('clickoff', 'on')
             break
     }
-    location.href = '/'
+    location.href = '/s/'
+}
+
+function unregisterSW() {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+        for (const registration of registrations) {
+            registration.unregister()
+        }
+    })
+}
+
+function uv() {
+    localStorage.setItem('pr', 'uv')
+    unregisterSW()
+}
+
+function SCRAM() {
+    localStorage.setItem('pr', 'scram!!!')
+    unregisterSW()
 }
 
 function tabs() {
@@ -24,7 +42,7 @@ function tabs() {
             localStorage.setItem('tabs', 'off')
             break
     }
-    location.href = '/'
+    location.href = '/s/'
 }
 
 function clickoff() {
@@ -56,7 +74,7 @@ function noleave() {
             localStorage.setItem('leave', 'on')
             break
     }
-    location.href = '/'
+    location.href = '/s/'
 }
 
 function icondocs() {
@@ -176,14 +194,6 @@ addEventListener('DOMContentLoaded', (event) => {
     const a = localStorage.getItem('abt')
     const cla = localStorage.getItem('leave')
 
-    switch (er) {
-        case 'on':
-            switch1.checked = 'true'
-            break
-        case 'off':
-            break
-    }
-
     switch (cli) {
         case 'on':
             switch2.checked = 'true'
@@ -209,3 +219,5 @@ addEventListener('DOMContentLoaded', (event) => {
     }
 })
 //Meow :3
+
+

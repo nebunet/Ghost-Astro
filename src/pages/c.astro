@@ -3,56 +3,59 @@ import Layout from '../layouts/Layout.astro'
 import Nav from '../components/nav.astro'
 ---
 
-<Layout title="Ghost">
-    <Nav />
-    <center>
-        <br />
-        <br />
-        <br />
-        <br />
-        <p class="ex2" style="animation: fadeIn 2s;">Ga<x>me</x>s</p>
-        <p>
-            You can request games on the <a href="https://discord.gg/dbyDXfs5dN"
-                >Dis<x>co</x>rd serv<x>er</x></a>
-        </p>
+<main style="z-index: 100;">
+    <div id="particles-js" style="z-index: -1;"></div>
+    <Layout title="Ghost">
+        <Nav />
+        <center>
+            <br />
+            <br />
+            <br />
+            <br />
+            <p class="ex2" style="animation: fadeIn 1s;">Ga<x>me</x>s</p>
+            <p>
+                You can request games on the <a
+                    href="https://discord.gg/dbyDXfs5dN"
+                    >Dis<x>co</x>rd serv<x>er</x></a
+                >
+            </p>
 
-        <div class="gcontainer" id="gcontainer"></div>
-    </center>
-</Layout>
-<script is:inline src="/u/b.js" defer></script>
-<script is:inline src="/u/c.js" defer></script>
-<script is:inline>
-    let gAPI = '/api/g/v1/'
-    addEventListener('DOMContentLoaded', async (event) => {
-        const gData = await fetch(gAPI)
-            .then((response) => response.text())
-            .then((text) => {
-                return JSON.parse(text)
+            <div class="gcontainer" id="gcontainer"></div>
+        </center>
+    </Layout>
+    <script is:inline>
+        let gAPI = '/api/g/v1/'
+        addEventListener('DOMContentLoaded', async (event) => {
+            const gData = await fetch(gAPI)
+                .then((response) => response.text())
+                .then((text) => {
+                    return JSON.parse(text)
+                })
+            gData.forEach((game) => {
+                const gameicons = document.getElementById('gcontainer')
+
+                const games = document.createElement('div')
+                games.classList.add('game-icon')
+                games.setAttribute(
+                    'onclick',
+                    "localStorage.setItem('url', '" +
+                        __uv$config.prefix +
+                        __uv$config.encodeUrl(game.href) +
+                        "'); window.location.href = '/q/'"
+                )
+
+                const gameimg = document.createElement('button')
+                const gameimage = document.createElement('img')
+                gameimage.src = game.img
+
+                const gamename = document.createElement('p')
+                gamename.innerText = game.name
+
+                gameimg.appendChild(gameimage)
+                games.appendChild(gameimg)
+                games.appendChild(gamename)
+                gameicons.appendChild(games)
             })
-        gData.forEach((game) => {
-            const gameicons = document.getElementById('gcontainer')
-
-            const games = document.createElement('div')
-            games.classList.add('game-icon')
-            games.setAttribute(
-                'onclick',
-                "localStorage.setItem('url', '" +
-                    __uv$config.prefix +
-                    __uv$config.encodeUrl(game.href) +
-                    "'); window.location.href = '/q/'"
-            )
-
-            const gameimg = document.createElement('button')
-            const gameimage = document.createElement('img')
-            gameimage.src = game.img
-
-            const gamename = document.createElement('p')
-            gamename.innerText = game.name
-
-            gameimg.appendChild(gameimage)
-            games.appendChild(gameimg)
-            games.appendChild(gamename)
-            gameicons.appendChild(games)
         })
-    })
-</script>
+    </script>
+</main>

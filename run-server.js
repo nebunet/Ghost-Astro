@@ -4,13 +4,11 @@ import express from 'express'
 import g from './serverlib/games.mjs'
 import a from './serverlib/apps.mjs'
 import { handler as ssrHandler } from './dist/server/entry.mjs'
-import createRammerhead from 'rammerhead/src/server/index.js'
-import { expand } from 'dotenv-expand'
-import { config } from 'dotenv-flow'
+//import createRammerhead from 'rammerhead/src/server/index.js'
+//import { expand } from 'dotenv-expand'
+//import { config } from 'dotenv-flow'
 
-expand(config())
-
-console.log('Starting...')
+//expand(config())
 
 const bare = createBareServer('/bare/')
 const server = http.createServer()
@@ -21,12 +19,14 @@ const base = '/'
 app.use(base, express.static('dist/client/'))
 app.use(ssrHandler)
 
+//dont know if this will work lmao
 server.on('request', (req, res) => {
     if (bare.shouldRoute(req)) {
         bare.routeRequest(req, res)
-    } else if (shouldRouteRh(req)) {
-        routeRhRequest(req, res)
-    } else {
+    } //else if (shouldRouteRh(req)) {
+    ///routeRhRequest(req, res)
+    //}
+    else {
         app(req, res)
     }
 })
@@ -34,9 +34,10 @@ server.on('request', (req, res) => {
 server.on('upgrade', (req, socket, head) => {
     if (bare.shouldRoute(req)) {
         bare.routeUpgrade(req, socket, head)
-    } else if (shouldRouteRh(req)) {
-        routeRhUpgrade(req, socket, head)
-    } else {
+    } // else if (shouldRouteRh(req)) {
+    //routeRhUpgrade(req, socket, head)
+    //}
+    else {
         socket.end()
     }
 })
@@ -45,7 +46,7 @@ server.on('upgrade', (req, socket, head) => {
 
 //not skidded from divide (e9x)
 
-const rh = createRammerhead()
+/* const rh = createRammerhead()
 
 // used when forwarding the script
 const rammerheadScopes = [
@@ -79,7 +80,7 @@ function shouldRouteRh(req) {
  *
  * @param {import('node:http').IncomingRequest} req
  * @param {import('node:http').ServerResponse} res
- */
+
 function routeRhRequest(req, res) {
     rh.emit('request', req, res)
 }
@@ -89,10 +90,12 @@ function routeRhRequest(req, res) {
  * @param {import('node:http').IncomingRequest} req
  * @param {import('node:stream').Duplex} socket
  * @param {Buffer} head
- */
+
 function routeRhUpgrade(req, socket, head) {
     rh.emit('upgrade', req, socket, head)
 }
+
+*/
 
 app.use(express.static(__dirname + '/public'))
 

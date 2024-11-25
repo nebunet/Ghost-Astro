@@ -29,7 +29,7 @@ Ghost has a lot of features including
     cd Ghost-Astro
     npm i
     npm run build
-    pm2 start run-server.js
+    pm2 start run-server.js --name Ghost-Astro
     ```
 
     # Credits

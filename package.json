@@ -14,6 +14,7 @@
         "@astrojs/node": "^8.3.4",
         "@tomphttp/bare-server-node": "^2.0.3",
         "astro": "^4.16.8",
+        "astro-particles": "^2.10.0",
         "dotenv": "^16.4.5",
         "dotenv-expand": "^11.0.6",
         "dotenv-flow": "^4.1.0",
@@ -22,6 +23,7 @@
         "prettier": "^2.8.8",
         "prettier-plugin-astro": "^0.8.1",
         "rammerhead": "https://github.com/holy-unblocker/rammerhead/releases/download/v1.2.41-holy.5/rammerhead-1.2.41-holy.5.tgz",
+        "tsparticles-engine": "^2.12.0",
         "typescript": "^5.6.3"
     },
     "prettier": {

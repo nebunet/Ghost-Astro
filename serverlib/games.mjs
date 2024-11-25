@@ -15,6 +15,11 @@ const g = [
         href: 'https://g.immortal2willlose.xyz/ghost/minecraft-15/',
     },
     {
+        name: 'Ai minecraft',
+        img: '/assets/img/assets/minecraft.png',
+        href: 'https://oasis.decart.ai',
+    },
+    {
         name: 'Minecraft 1.8',
         img: '/assets/img/assets/minecraft.png',
         href: 'https://g.immortal2willlose.xyz/ghost/minecraft-18/',
@@ -25,9 +30,29 @@ const g = [
         href: 'https://g.immortal2willlose.xyz/ghost/justoneboss/web/',
     },
     {
+        name: 'Rodha',
+        img: '/assets/img/assets/rodha.png',
+        href: 'https://games.crazygames.com/en_US/rodha/index.html?v=1.311',
+    },
+    {
+        name: 'Football Bros',
+        img: '/assets/img/assets/footballbros.png',
+        href: 'https://footballbros.io/',
+    },
+    {
         name: 'Phisibox',
         img: '/assets/img/assets/physibox.png',
         href: 'https://g.immortal2willlose.xyz/ghost/phisibox/',
+    },
+    {
+        name: 'Idle Dice',
+        img: '/assets/img/assets/idledice.png',
+        href: 'https://luts91.github.io/idle-dices/',
+    },
+    {
+        name: 'Idle Breakout',
+        img: '/assets/img/assets/idlebreakout.png',
+        href: 'https://idle-breakout.neocities.org/',
     },
     {
         name: 'Bitlife',
@@ -35,9 +60,19 @@ const g = [
         href: 'https://g.immortal2willlose.xyz/ghost/bitlife/',
     },
     {
+        name: 'Crusher Clicker',
+        img: '/assets/img/assets/crusher.png',
+        href: 'https://games.crazygames.com/en_US/crusher-clicker/index.html?v=1.311',
+    },
+    {
         name: 'Monkey mart',
         img: '/assets/img/assets/monkeymart.png',
         href: 'https://g.immortal2willlose.xyz/ghost/MonkeyMart/',
+    },
+    {
+        name: 'Slope 3',
+        img: '/assets/img/assets/slope3.png',
+        href: 'https://tinyplay.io/game/slope-3-v2/',
     },
     {
         name: 'Motox3m',
@@ -581,7 +616,7 @@ const g = [
     },
     {
         name: 'BNTTS',
-        img: '/assets/img/assets/BNTTS.png',
+        img: '/assets/img/assets/bntts.png',
         href: 'https://g.immortal2willlose.xyz/ghost/bntts/',
     },
     {
@@ -668,6 +703,11 @@ const g = [
         name: 'Flappy Bird',
         img: '/assets/img/assets/flappybird.png',
         href: 'https://g.immortal2willlose.xyz/ghost/flappy-bird/',
+    },
+    {
+        name: 'Roblox',
+        img: '/assets/img/assets/roblox.png',
+        href: 'https://now.gg/apps/a/10020/b.html',
     },
 ]
 
