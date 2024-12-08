@@ -12,12 +12,9 @@ const meow = {
             const char = str[i]
             result += i % 2 ? String.fromCharCode(char.charCodeAt(0) ^ 2) : char
         }
-        console.log('unreplaced url is' + result)
         //put back https but encode it diff
 
         var endresult = result.replace('hvtrs8/-', 'https%3A%2F%2F')
-
-        console.log('replaced url is ' + endresult)
 
         return encodeURIComponent(endresult)
     },
