@@ -5,25 +5,23 @@
     "scripts": {
         "dev": "astro dev",
         "start": "node run-server.js",
-        "build": "astro check && astro build",
+        "build": "astro build",
         "preview": "astro preview",
         "astro": "astro"
     },
     "dependencies": {
         "@astrojs/check": "^0.9.4",
         "@astrojs/node": "^8.3.4",
-        "@tomphttp/bare-server-node": "^2.0.3",
+        "@mercuryworkshop/bare-mux": "^2.1.7",
+        "@mercuryworkshop/epoxy-transport": "^2.1.26",
+        "@mercuryworkshop/wisp-js": "^0.3.3",
+        "@tomphttp/bare-server-node": "^2.0.2",
         "astro": "^4.16.8",
         "astro-particles": "^2.10.0",
-        "dotenv": "^16.4.5",
-        "dotenv-expand": "^11.0.6",
-        "dotenv-flow": "^4.1.0",
         "express": "^4.21.1",
         "http": "^0.0.1-security",
         "prettier": "^2.8.8",
         "prettier-plugin-astro": "^0.8.1",
-        "rammerhead": "https://github.com/holy-unblocker/rammerhead/releases/download/v1.2.41-holy.5/rammerhead-1.2.41-holy.5.tgz",
-        "tsparticles-engine": "^2.12.0",
         "typescript": "^5.6.3"
     },
     "prettier": {

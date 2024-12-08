@@ -8,9 +8,6 @@ import Nav from '../components/nav.astro'
     <Nav body="" href="" title="" />
     <center>
         <br />
-        <br />
-        <br />
-        <br />
         <p class="ex2" style="animation: fadeIn 1s;">Settings</p>
         <div class="settingsdisplay" style="animation: fadeIn 1s;">
             <div class="settingspanel">
@@ -90,6 +87,16 @@ import Nav from '../components/nav.astro'
                         <option value="https://search.brave.com/search?q="
                             >Brave</option
                         >
+                        <option
+                            value="https://www.irs.gov/site-index-search?search="
+                            >IRS</option
+                        >
+                        <option value="https://www.bbc.com/search?q="
+                            >BBC</option
+                        >
+                        <option value="https://www.cnn.com/search?q="
+                            >CNN</option
+                        >
                     </select>
                 </center>
             </div>
@@ -115,38 +122,6 @@ import Nav from '../components/nav.astro'
                 src="/js/cosmos.js?req=8bd2s-aj3m&id=8fba1md-km28xz"
                 is:inline
             ></script>
-            <script is:inline>
-                addEventListener('DOMContentLoaded', (event) => {
-                    const ads = localStorage.getItem('ads')
-                    const abtt = localStorage.getItem('blanker')
-                    const click = localStorage.getItem('clickoff')
-                    const tabs = localStorage.getItem('tabs')
-                    const close = localStorage.getItem('leave')
-                    if (tabs === 'on') {
-                        const tab = document.getElementById('tabs')
-                        tab.id.checked = 'true'
-                    }
-
-                    if (ads === 'on') {
-                        const ad = document.getElementById('ads')
-                        ad.id.checked = 'true'
-                    }
-
-                    if (abtt === 'on') {
-                        const bl = document.getElementById('abt')
-                        bl.id.checked = 'true'
-                    }
-                    if (click === 'true') {
-                        const clickoff = document.getElementById('clickoff')
-                        clickoff.id.checked = 'true'
-                    }
-                    if (close === 'on') {
-                        const leave = document.getElementById('close')
-                        leave.id.checked = 'true'
-                    }
-                    console.log('loaded setting!')
-                })
-            </script>
         </div>
     </center>
 </Layout>

@@ -10,7 +10,9 @@ const blanke = localStorage.getItem('abt')
 const themeload = localStorage.getItem('themeload')
 const swAllowedHostnames = ['localhost', '127.0.0.1']
 const stockSW3 = '/u/sw.js'
-const SwRegistered = localStorage.getItem('ServiceWorkerRegistered')
+const SwRegistered = localStorage.getItem('uvregistered')
+const scramSW = '/scram/sw.js'
+const p = localStorage.getItem('p')
 
 addEventListener('DOMContentLoaded', async (event) => {
     initTheme()
@@ -20,6 +22,10 @@ addEventListener('DOMContentLoaded', async (event) => {
             break
         case 'off':
             break
+    }
+
+    if (p === null) {
+        localStorage.setItem('p', 'uv')
     }
 
     switch (icon) {
@@ -65,12 +71,9 @@ addEventListener('DOMContentLoaded', async (event) => {
     if (SwRegistered === null) {
         console.log('Registering SW')
         unregisterSW()
-        localStorage.setItem('ServiceWorkerRegistered', 'true')
+        localStorage.setItem('uvregistered', 'true')
+        localStorage.removeItem('ServiceWorkerRegistered')
         location.reload()
-    }
-    if (SwRegistered === 'true') {
-        registerSWv2()
-        localStorage.setItem('ServiceWorkerRegistered', 'true2')
     } else {
     }
 
@@ -173,5 +176,4 @@ function unregisterSW() {
         }
     })
 }
-
 registerSWv2()

@@ -50,6 +50,11 @@ const a = [
         href: 'https://discord.com',
     },
     {
+        name: 'Amazon Luna',
+        img: '/assets//img/apps/luna.png',
+        href: 'https://luna.amazon.com',
+    },
+    {
         name: 'c.ai',
         img: '/assets//img/apps/cai.png',
         href: 'https://c.ai',

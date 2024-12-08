@@ -218,6 +218,38 @@ addEventListener('DOMContentLoaded', (event) => {
             break
     }
 })
-//Meow :3
+
+addEventListener('DOMContentLoaded', (event) => {
+    const ads = localStorage.getItem('ads')
+    const abtt = localStorage.getItem('blanker')
+    const click = localStorage.getItem('clickoff')
+    const tabs = localStorage.getItem('tabs')
+    const close = localStorage.getItem('leave')
+    if (tabs === 'on') {
+        const tab = document.getElementById('tabs')
+        tab.id.checked = 'true'
+    }
+
+    if (ads === 'on') {
+        const ad = document.getElementById('ads')
+        ad.id.checked = 'true'
+    }
+
+    if (abtt === 'on') {
+        const bl = document.getElementById('abt')
+        bl.id.checked = 'true'
+    }
+    if (click === 'true') {
+        const clickoff = document.getElementById('clickoff')
+        clickoff.id.checked = 'true'
+    }
+    if (close === 'on') {
+        const leave = document.getElementById('close')
+        leave.id.checked = 'true'
+    }
+    console.log('loaded setting!')
+})
+
+//mewo :3
 
 

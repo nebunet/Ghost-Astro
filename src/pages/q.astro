@@ -107,13 +107,21 @@ import Layout from '../layouts/Layout.astro'
                     arrow_upward
                 </span>
             </button>
-
             <button class="topbtn" id="panelbttn" onclick="openswitchpanel()">
                 <span class="material-symbols-outlined" style="color: white;">
                     page_info
                 </span>
             </button>
-
+            <button
+                class="topbtn"
+                id="bckbttn"
+                onclick="home()"
+                style="left: 30px;"
+            >
+                <span class="material-symbols-outlined" style="color: white;">
+                    home
+                </span>
+            </button>
             <button
                 class="topbtn"
                 id="fwdbttn"
@@ -142,16 +150,6 @@ import Layout from '../layouts/Layout.astro'
             >
                 <span class="material-symbols-outlined" style="color: white;">
                     arrow_back
-                </span>
-            </button>
-            <button
-                class="topbtn"
-                id="bckbttn"
-                onclick="home()"
-                style="left: 30px;"
-            >
-                <span class="material-symbols-outlined" style="color: white;">
-                    home
                 </span>
             </button>
             <input
@@ -186,22 +184,14 @@ import Layout from '../layouts/Layout.astro'
     </div>
     <iframe class="mainiframe" id="frame"></iframe>
 </Layout>
-
 <script is:inline>
     const frame = document.getElementById('frame')
     const form = document.getElementById('forminput')
     const topbar = document.getElementById('topbar')
     localStorage.setItem('nav', '0')
-    const nav = document.getElementById('topbar')
-    const navbttn = document.getElementById('navbttn1')
-    const uvurl = localStorage.getItem('url')
-    const spanel = document.getElementById('spanel')
     const panelbttn = document.getElementById('panelbttn')
     const uvpanel = document.getElementById('uvpanel')
-    const panel2bttn = document.getElementById('pnlbttn')
     const url = localStorage.getItem('url')
-    const input = document.querySelector('.search')
-    const stockSWv2 = '/u/sw.js'
     const barbutton = document.getElementById('barButton')
     const iframe = document.getElementById('frame')
 
