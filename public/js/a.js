@@ -9,7 +9,7 @@ addEventListener('DOMContentLoaded', async (event) => {
         const gameicons = document.getElementById('acontainer')
 
         const games = document.createElement('div')
-        games.classList.add('game-icon')
+        games.classList.add('g-icon')
         games.setAttribute(
             'onclick',
             "localStorage.setItem('url', '" +

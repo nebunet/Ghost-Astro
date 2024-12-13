@@ -10,7 +10,7 @@ addEventListener('DOMContentLoaded', async (event) => {
         const gameicons = document.getElementById('gcontainer')
 
         const games = document.createElement('div')
-        games.classList.add('game-icon')
+        games.classList.add('g-icon')
         games.setAttribute(
             'onclick',
             "localStorage.setItem('url', '" +
@@ -40,7 +40,7 @@ addEventListener('DOMContentLoaded', async (event) => {
         const gameicons = document.getElementById('gcontainer')
 
         const games = document.createElement('div')
-        games.classList.add('game-icon')
+        games.classList.add('g-icon')
         games.setAttribute(
             'onclick',
             "window.location.href = '" + game.href + "'"
