@@ -1,0 +1,12 @@
+{
+"name": "Ghost",
+"short_name": "Ghost",
+  "icons": [
+    { "src": "/assets/img/ghost.png", "type": "image/png" },
+    { "src": "/assets/img/ghost.png", "type": "image/png" }
+],
+"start_url": ".",
+"display": "standalone",
+"theme_color": "#f84545",
+"background_color": "#17181f"
+}
