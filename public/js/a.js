@@ -9,7 +9,7 @@ addEventListener('DOMContentLoaded', async (event) => {
         const gameicons = document.getElementById('acontainer')
 
         const games = document.createElement('div')
-        games.classList.add('g-icon')
+        games.classList.add('ga-icon')
         games.setAttribute(
             'onclick',
             "localStorage.setItem('url', '" +
@@ -19,13 +19,11 @@ addEventListener('DOMContentLoaded', async (event) => {
         )
 
         const gameimg = document.createElement('button')
-        const gameimage = document.createElement('img')
-        gameimage.src = game.img
+        games.setAttribute("style", `background-image: url("${game.img}");`)
 
         const gamename = document.createElement('p')
         gamename.innerText = game.name
 
-        gameimg.appendChild(gameimage)
         games.appendChild(gameimg)
         games.appendChild(gamename)
         gameicons.appendChild(games)

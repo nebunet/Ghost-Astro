@@ -74,28 +74,28 @@ const { title } = Astro.props
         top: 0;
         left: 0;
     }
-    /*litterally copy pasted from node lmao*/
-    .nav {
+    /*as an ai i cannot work on shit code please try agian.*/
+        .nav {
         background-color: var(--Secondary-Color);
         color: #fff;
         padding: 10px 0;
-        width: 98%;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 20%;
         margin-left: 1%;
-        border-radius: 10px;
+        border-radius: 20px;
         position: fixed;
         z-index: 10;
         margin-top: 10px;
-        font-family: 'Be Vietnam Pro', sans-serif;
+        font-family: 'Be Vietnam Pro';
+        animation: fadeIn .4s;
     }
 
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-        max-height: 50px;
+    .nav button {
+        background-color: transparent;
+        border: none;
+        height: 100%;
+        width: fit-content;
     }
 
     .mainIMG:hover {
@@ -114,37 +114,17 @@ const { title } = Astro.props
             transform: rotate(0deg);
         }
     }
-
-    .nav-links {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .nav-links li {
-        display: inline;
-        margin-left: 5px;
-    }
-
-    .nav-links li:first-child {
-        margin-left: 0;
-    }
-
-    .nav-links li a {
-        text-decoration: none;
-        color: var(--text-color);
-        transition: color 0.3s ease;
-    }
 </style>
 
 <style is:global>
+    @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     /* use root and classes for theming */
     /* I'd just like to interject for a moment. What you're referring to as Linux, is in fact, GNU/Linux, or as I've recently taken to calling it, GNU plus Linux. Linux is not an operating system unto itself, but rather another free component of a fully functioning GNU system made useful by the GNU corelibs, shell utilities and vital system components comprising a full OS as defined by POSIX. Many computer users run a modified version of the GNU system every day, without realizing it. Through a peculiar turn of events, the version of GNU which is widely used today is often called “Linux,” and many of its users are not aware that it is basically the GNU system, developed by the GNU Project. There really is a Linux, and these people are using it, but it is just a part of the system they use. */
     :root {
-        --Background-Color: #17181f;
+        --Background-Color: #12151c;
         --text-color: white;
         --Primary-Color: #f84545;
-        --Secondary-Color: #2e2d32;
+        --Secondary-Color: #1b222c;
         --Third-Color: #f84545;
         --Game-Color: #202025;
     }
@@ -210,13 +190,13 @@ const { title } = Astro.props
     }
 
     .bluedark {
-        --Background-Color: #2a7399;
+        --Background-Color: #63c7df;
         --text-color: white;
-        --Primary-Color: #1f6c95;
-        --Secondary-Color: #4791b6;
-        --Third-Color: #175473;
+        --Primary-Color: #8dfeff; 
+        --Secondary-Color: #83bdda;
+        --Third-Color: #63c7df;
         --Symbols-Color: white;
-        --Game-Color: #2e6684;
+        --Game-Color: #78a2b5;
     }
 
     .purple {
@@ -285,7 +265,7 @@ const { title } = Astro.props
     }
 
     .button {
-        font-family: 'Be Vietnam Pro', sans-serif;
+        font-family: 'Be Vietnam Pro';
         border-radius: 5px;
         width: 7%;
         height: 5%;
@@ -321,34 +301,8 @@ const { title } = Astro.props
         height: 50px;
     }
 
-    #uv-frame {
-        width: 99%;
-        left: 0.5%;
-        height: 97%;
-        border-radius: 10px;
-        border: none;
-    }
-
     .settingsdisplay {
         align-items: center;
-        display: block;
-    }
-
-    #uv-error {
-        color: #ff6666 !important;
-        white-space: pre-wrap;
-    }
-
-    ::selection {
-        color: var(--Secondary-Color);
-        background-color: var(--Primary-Color);
-    }
-
-    #uv-register-sw:active {
-        background: var(--Secondary-Color);
-    }
-
-    #uv-register-sw.show {
         display: block;
     }
 
@@ -392,7 +346,8 @@ const { title } = Astro.props
         color: #fff;
         padding: 10px 0;
         width: 100%;
-        position: fixed;
+        position: absolute;
+        bottom: 0px;
         z-index: 10;
     }
 
@@ -530,6 +485,20 @@ const { title } = Astro.props
         font-size: 30;
     }
 
+    .gcontainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+        gap: 0px;
+        overflow: show;
+    }
+
+    .acontainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+        gap: 0px;
+        overflow: show;
+    }
+
     .input {
         background: (--Secondary-Color);
         font-family: 'Be Vietnam Pro', sans-serif;
@@ -647,86 +616,10 @@ const { title } = Astro.props
         }
     }
 
-    .game-icon {
-        max-height: 200px;
-        max-width: 240px;
-        text-align: center;
-        width: 240px;
-        height: 200px;
-        position: relative;
-        animation: fadeIn 1s;
-        transition: 0.2s cubic-bezier(0.35, 0.56, 0.85, 0.77);
-        border-radius: 10px;
-        margin: 15px;
-        display: inline-block;
-        flex-wrap: wrap;
-        background-color: var(--Game-Color);
-        border: 3px solid transparent;
-        box-shadow: 16px 8px 16px 8px rgba(39, 39, 39, 0.2);
-    }
-
-    .game-icon button {
-        border: none;
-        background: none;
-        padding: 0;
-        cursor: pointer;
-        display: block;
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-    }
-
-    .game-icon img {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 80%;
-        object-fit: cover;
-        display: block;
-        margin: 0 auto;
-        transition: 0.2s cubic-bezier(0.35, 0.56, 0.85, 0.77);
-        border-radius: 10px;
-    }
-
-    .game-icon p {
-        text-align: center;
-        padding-top: 0;
-        overflow: hidden;
-        white-space: nowrap;
-        margin-top: 10px;
-        font-size: 20px;
-        color: #fff;
-        position: absolute;
-        bottom: -30px;
-        left: 20%;
-        transform: translateX(-25%);
-        font-family: 'Be Vietnam Pro', sans-serif;
-        opacity: 1;
-        transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        border-radius: 10px;
-    }
-
-    .game-icon p:hover {
-        cursor: pointer;
-    }
-
-    .game-icon:hover {
-        cursor: pointer;
-        transform: translateY(-10px);
-        transition: 0.2s cubic-bezier(0.35, 0.56, 0.85, 0.77);
-    }
-
-    .game-icon:active {
-        .game-icon button {
-            background: #d0d0d0;
-        }
-    }
-
     .g-icon {
         text-align: center;
         width: 120px;
         height: 120px;
-        position: relative;
         animation: fadeIn 2s;
         transition: transform 0.3s ease-in-out;
         border-radius: 10px;
@@ -754,6 +647,53 @@ const { title } = Astro.props
         margin: 0 auto;
         transition: transform 0.3s ease-in-out;
         border-radius: 10px;
+    }
+
+    .ga-icon {
+        display: flex;
+        flex-direction: row-reverse;
+        align-self: center;
+        white-space: nowrap;
+        animation: fadeIn .5s;
+        cursor: pointer;
+        width: 215px;
+        height: 125px;
+        background-color: #111217;
+        border: 1px solid #333333;
+        border-radius: 10px;
+        align-content: center;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-left: 3%;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    .ga-icon button {
+        border: none;
+        background: none;
+        padding: 0;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .ga-icon p {
+        white-space: nowrap;
+        overflow: none;
+        border-radius: 5px;
+        padding: 5px;
+        background-color: var(--Background-Color);
+        border: 1px solid #333333;
+        position: aboslute;
+        bottom: 0;
+        color: white;
+        margin: 8px;
+        height: 20px;
     }
 
     .g-icon p {
@@ -850,6 +790,23 @@ const { title } = Astro.props
         margin-top: 5px;
         cursor: pointer;
         margin-right: 10px;
+        font-size: 1px;
+        padding-bottom: 2px;
+        padding: 0px;
+    }
+
+    .topbtn span {
+        font-size: 17px;
+        animation: spin 1s;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(180deg);
+        }
+        100% {
+            transform: rotate(180deg);
+        }
     }
 
     @keyframes growOut {
@@ -937,7 +894,7 @@ const { title } = Astro.props
     }
 
     /*insert settings panel css here lol :D*/
-    .settingspanel {
+ .settingspanel {
         background-color: var(--Secondary-Color);
         border-radius: 10px;
         width: 25vw;

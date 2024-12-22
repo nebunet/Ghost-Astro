@@ -10,6 +10,11 @@ const a = [
         href: 'https://youtube.com',
     },
     {
+        name: 'Soundcloud',
+        img: '/assets/img/assets/soundcloud.png',
+        href: 'https://soundcloud.com',
+    },
+    {
         name: 'Crazygames',
         img: '/assets//img/apps/crazygames.png',
         href: 'https://crazygames.com',
@@ -85,7 +90,7 @@ const a = [
         href: 'https://github.com',
     },
     {
-        name: 'Gamini',
+        name: 'Gemini',
         img: '/assets//img/apps/gem.png',
         href: 'https://gemini.google.com',
     },

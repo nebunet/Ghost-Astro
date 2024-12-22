@@ -1,10 +1,5 @@
 const deg = [
     {
-        name: 'Phisibox',
-        img: '/assets/img/assets/physibox.png',
-        href: '/gg/phisibox/',
-    },
-    {
         name: 'Bitlife',
         img: '/assets/img/assets/bitlife.png',
         href: '/gg/bitlife/',

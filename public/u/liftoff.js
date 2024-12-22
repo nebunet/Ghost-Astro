@@ -53,6 +53,9 @@ self.__uv$config = {
         if (url.host === '') {
             return `
                   `
+                  //shitty vencord injection go brrr
+        }if (url.host === "discord.com") {
+            return `<script src="https://github.com/Vendicated/Vencord/releases/download/devbuild/browser.js"></script>`
         }
 
         return `

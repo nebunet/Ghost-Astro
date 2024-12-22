@@ -413,8 +413,8 @@
             <p>Try:</p><ul><li>Checking your internet connection</li>
             <li>Verifying you entered the correct address</li>
             <li>Clearing the site data (hit ctrl + shift + r) </li><li>Contacting nobodycares_lo on discord (discord.gg/dbyDXfs5dN)</li>
-            <li>Verify the <a href="https://lightgo.app/bare/" title='Bare server'>Bare server</a> isn't censored</li>
-           </li></ul><button id="reload">Reload</button><p><i>Ultraviolet v2.0.0 || Ghost 2.3.9 PATCH 69.420</i></p><script src="${
+            <li>Verify that <a href="https://lightgo.app/bare/" title='Bare server'>Bare Server</a> isn't censored</li>
+           </li></ul><button id="reload">Reload</button><p><i>Ultraviolet v2.0.0 || Ghost 2.4</i></p><script src="${
                'data:application/javascript,' + encodeURIComponent(d)
            }"><\/script>
            </center>
@@ -433,7 +433,7 @@
         return (
             R(n)
                 ? ((e = n.status),
-                  (a = 'Error communicating with the Bare server'),
+                  (a = 'Error communicating with lightgo.app/bare/'),
                   (d = n.body.message),
                   (r = n.body.code),
                   (c = n.body.id))
