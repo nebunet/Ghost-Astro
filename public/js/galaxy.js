@@ -28,6 +28,27 @@ addEventListener('DOMContentLoaded', async (event) => {
         localStorage.setItem('p', 'uv')
     }
 
+
+      const code = ["s", "p", "r", "i", "t", "e"];
+      const codekeys = {83:"s", 80:"p", 82:"r", 73:"i", 84:"t", 69:"e"}
+      let codepos = 0;
+      
+      document.addEventListener("keydown", function (e) {
+        console.log("keydown" + e.keyCode)
+        const thekey = codekeys[e.keyCode]
+        const SPRITECRANBERRY = code[codepos]
+        if(thekey === SPRITECRANBERRY) {
+            console.log("keydown2")
+            codepos++
+            if(codepos === 6) {
+            var audio = new Audio("/assets/sprite.mp3")
+            audio.play();
+            }
+        }else {
+            codepos = 0
+        }
+      });
+
     switch (icon) {
         case 'docs':
             favicon.href = '/assets/img/docs.png'
