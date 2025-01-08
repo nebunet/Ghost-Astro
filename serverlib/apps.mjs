@@ -100,9 +100,9 @@ const a = [
         "href": "https://scratch.mit.edu"
     },
     {
-        "name": "X",
-        "img": "/assets/img/apps/x.png",
-        "href": "https://x.com"
+        name: 'X',
+        img: '/assets//img/apps/x.png',
+        href: 'https://x.com',
     },
     {
         "name": "Twitch",
