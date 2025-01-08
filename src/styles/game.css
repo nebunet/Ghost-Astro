@@ -1,0 +1,49 @@
+/*HAHA ITS OFF CENTER AND IM NOT FIXING ITHAHAHAHAHAHAH*/
+
+.ga-icon {
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: center;
+    white-space: nowrap;
+    animation: fadeIn .5s;
+    cursor: pointer;
+    width: 215px;
+    height: 125px;
+    background-color: #111217;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    align-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    margin-left: 4%;
+    text-align: left;
+}
+
+.ga-icon button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    display: block;
+    width: 215px;
+    height: 125px;
+    border-radius: 10px;
+    z-index: 10;
+    position: absolute;
+}
+
+.ga-icon p {
+    white-space: nowrap;
+    overflow: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: var(--Background-Color);
+    border: 1px solid #333333;
+    position: aboslute;
+    bottom: 0;
+    color: white;
+    margin: 8px;
+    height: 20px;
+}

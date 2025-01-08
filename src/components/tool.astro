@@ -1,0 +1,17 @@
+---
+interface Props {
+  name: string;
+  redir: string;
+  desc: string;
+}
+
+const {name, redir, desc} = Astro.props
+---
+
+<div class="tool">
+    <h1 style="font-size: 20px;">{name}</h1>
+    <p id="desc">{desc}</p>
+    <button>
+        <a href={redir}>Launch <i class="fa-solid fa-rocket"></i></a>
+    </button>
+</div>

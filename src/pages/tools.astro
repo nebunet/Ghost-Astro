@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Nav from '../components/nav.astro'
+import Tool from '../components/tool.astro';
+import "../styles/tool.css";
+---
+
+<Layout title="Ghost">
+    <Nav/>
+    <center>
+    <p class="ex2">Tools</p>
+    <div class="toolContianer" id="toolContainer">
+        <Tool name="FilterChecker" redir="/check/" desc="Check Your Links On Different filters!"/>
+        <Tool name="Song Downloader" redir="/dl/" desc="Download Your favorite songs!"/>
+    </div>
+    </center>
+</Layout>

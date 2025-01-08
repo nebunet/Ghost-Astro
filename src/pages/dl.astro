@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Nav from '../components/nav.astro'
+---
+
+<Layout title="Ghost">
+    <Nav/>
+    <center>
+    <p class="ex2">song downloader</p>
+    <p>enter a link to download music</p>
+    <p style="color: var(--Primary-Color)">supports soundcloud, youtube And more. <span style="color: white;"> powered by <a href="https://cobalt.tools" style="color: var(--Primary-Color)">cobalt</a></span></p>
+    <input class="input" placeholder="Enter A URL" id="input">
+    <div class="output">
+        <p id="output"></p>
+    </div>
+</center>
+    <script is:inline>
+    const input = document.querySelector(".input");
+    input.addEventListener("keydown", handleInput);
+
+    async function handleInput(e) {
+        if (e.key !== "Enter") return;
+        const url = input.value;
+        const output = document.getElementById("output")
+        output.innerText = "Requesting Tunnel..."
+        fetch('/api/dl/v1/', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+          },
+          body: JSON.stringify({
+            "url": url,
+            "audioFormat": "mp3",
+            "filenameStyle": "pretty",
+            "youtubeHLS": true
+          })
+      }
+    )
+    .then(response => {
+        if (!response.ok) {
+        output.innerText = "i cannot get this song! are you sure you entered the right url?"
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+        output.innerText = "downloading..."
+        const url2 = data.url.replace("http://localhost:9000", "https://" + location.host + "/api/dl/v1/")
+        window.open(url2);
+        output.innerText = "downloaded!"
+      })
+}
+    </script>
+    </Layout>

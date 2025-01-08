@@ -1,10 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Nav from '../components/nav.astro'
+import Layout from '../layouts/Layout.astro';
+import Game from '../components/game.astro';
+import Nav from '../components/nav.astro';
+import data from "../json/games.json";
+import ddata from "..//json/deg.json"; 
 ---
 
 <main style="z-index: 100;">
-    <div id="particles-js" style="z-index: -1;"></div>
     <Layout title="Ghost">
         <Nav />
         <center>
@@ -17,9 +19,11 @@ import Nav from '../components/nav.astro'
                 >
             </p>
             <center>
-            <div class="gcontainer" id="gcontainer"></div>
+                <div class="gcontainer">
+                    {data.map((data: { name: string; href: string; img: string; }) => <Game name={data.name} href={data.href} img={data.img} />)}
+                {ddata.map((ddata: { name: string; href: string; img: string; }) => <Game name={ddata.name} href={"window.location.href = '" + ddata.href + "'"} img={ddata.img} />)}
+            </div>
         </center>
         </center>
     </Layout>
-    <script src="/js/g.js" is:inline></script>
 </main>

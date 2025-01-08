@@ -1,0 +1,16 @@
+---
+import "../styles/game.css"
+
+const { name, href, img } = Astro.props;
+
+interface Props {
+    name: string;
+    href: string;
+    img: string;
+} 
+---
+
+<div class="ga-icon" style={img}>
+    <button onclick={href}></button>
+    <p>{name}</p>
+</div>

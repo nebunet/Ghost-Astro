@@ -37,43 +37,31 @@ const { title } = Astro.props
         <script is:inline src="/u/space.js" defer></script>
         <script is:inline src="/u/liftoff.js" defer></script>
         <script src="/js/galaxy.js?rocket=true" is:inline></script>
-        <link rel="manifest" href="/manifest.json">
-        <script is:inline src="/js/particles.min.js"></script>
-        <script is:inline>
-            /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-            particlesJS.load(
-                'particles-js',
-                '/assets/particles.json',
-                function () {
-                    console.log('callback - particles.js config loaded')
-                }
-            )
+		<script is:inline>
+           /* const scramjet = new ScramjetController({
+	            files: {
+		            wasm: "/learn/wikipedia.wasm.js",
+		            worker: "/learn/work.js",
+		            client: "/learn/clients.js",
+		            shared: "/learn/desmos.shared.js",
+		            sync: "/learn/sync.js",
+	            },
+	            flags: {
+		                serviceworkers: true,
+		                syncxhr: true,
+		                scramitize: true,
+	            },
+});
+
+scramjet.init(); */
         </script>
+        <link rel="manifest" href="/manifest.json">
     </head>
     <body>
         <slot />
     </body>
 </html>
 <style is:global>
-    #particles-js canvas {
-        display: block;
-        vertical-align: bottom;
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1);
-        opacity: 1;
-        -webkit-transition: opacity 0.8s ease, -webkit-transform 1.4s ease;
-        transition: opacity 0.8s ease, transform 1.4s ease;
-    }
-
-    #particles-js {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        z-index: -10;
-        top: 0;
-        left: 0;
-    }
     /*as an ai i cannot work on shit code please try agian.*/
         .nav {
         background-color: var(--Secondary-Color);
@@ -81,7 +69,7 @@ const { title } = Astro.props
         padding: 10px 0;
         padding-left: 15px;
         padding-right: 15px;
-        width: 20%;
+        width: fit-content;
         margin-left: 1%;
         border-radius: 20px;
         position: fixed;
@@ -96,6 +84,8 @@ const { title } = Astro.props
         border: none;
         height: 100%;
         width: fit-content;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 
     .mainIMG:hover {
@@ -260,10 +250,6 @@ const { title } = Astro.props
         }
     }
 
-    .fa-magnifying-glass {
-        color: var(--text-color);
-    }
-
     .button {
         font-family: 'Be Vietnam Pro';
         border-radius: 5px;
@@ -277,26 +263,11 @@ const { title } = Astro.props
         color: var(--Primary-Color);
     }
 
-    .ex3 {
-        color: var(--text-color);
-        font-size: 30px;
-    }
-
     #subtitle {
         color: var(--text-color);
         font-size: 25px;
     }
 
-    .flex-center {
-        display: flex;
-        justify-content: center;
-    }
-
-    .header-center {
-        align-items: center;
-        flex-direction: column;
-        margin-top: 10%;
-    }
     .desc left-margin {
         height: 50px;
     }
@@ -327,30 +298,6 @@ const { title } = Astro.props
         height: 150px;
     }
 
-    .logo-wrapper .text {
-        font-size: 75px;
-        color: var(--text-color);
-    }
-
-    .logo-wrapper h1 {
-        color: var(--text-color);
-    }
-
-    .desc p {
-        width: 450px;
-        color: rgba(253, 253, 253, 0.514);
-    }
-
-    .navbar {
-        background-color: var(--Secondary-Color);
-        color: #fff;
-        padding: 10px 0;
-        width: 100%;
-        position: absolute;
-        bottom: 0px;
-        z-index: 10;
-    }
-
     .icon {
         background-color: var(--Primary-Color);
         width: 50px;
@@ -365,6 +312,7 @@ const { title } = Astro.props
         margin: 0 auto;
         padding: 0 20px;
     }
+    
     ::-webkit-scrollbar {
         width: 3px;
     }
@@ -380,7 +328,7 @@ const { title } = Astro.props
     }
 
     ::-webkit-scrollbar-thumb:hover {
-        background: #16263e;
+        background: #0e167e;
     }
 
     .logo {
@@ -481,21 +429,17 @@ const { title } = Astro.props
         padding: 20px 15px;
     }
 
-    xn {
-        font-size: 30;
-    }
-
     .gcontainer {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
-        gap: 0px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 5px;
         overflow: show;
     }
 
     .acontainer {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
-        gap: 0px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 5px;
         overflow: show;
     }
 
@@ -647,53 +591,6 @@ const { title } = Astro.props
         margin: 0 auto;
         transition: transform 0.3s ease-in-out;
         border-radius: 10px;
-    }
-
-    .ga-icon {
-        display: flex;
-        flex-direction: row-reverse;
-        align-self: center;
-        white-space: nowrap;
-        animation: fadeIn .5s;
-        cursor: pointer;
-        width: 215px;
-        height: 125px;
-        background-color: #111217;
-        border: 1px solid #333333;
-        border-radius: 10px;
-        align-content: center;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        margin-left: 3%;
-        margin-right: 5px;
-        margin-bottom: 10px;
-        text-align: left;
-    }
-
-    .ga-icon button {
-        border: none;
-        background: none;
-        padding: 0;
-        cursor: pointer;
-        display: block;
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-    }
-
-    .ga-icon p {
-        white-space: nowrap;
-        overflow: none;
-        border-radius: 5px;
-        padding: 5px;
-        background-color: var(--Background-Color);
-        border: 1px solid #333333;
-        position: aboslute;
-        bottom: 0;
-        color: white;
-        margin: 8px;
-        height: 20px;
     }
 
     .g-icon p {
@@ -1053,73 +950,5 @@ const { title } = Astro.props
 
     .mainIMG:hover {
         cursor: pointer;
-    }
-
-    .ext-make {
-        width: 250px;
-        height: 100px;
-        color: white;
-        background-color: var(--Secondary-Color);
-        border-radius: 5px;
-        transition: cubic-bezier(1, 1.82, 1, 1.31) 0.25s;
-    }
-
-    .ext-make button {
-        border: none;
-        background: none;
-        padding: 0;
-        cursor: pointer;
-        display: block;
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        position: relative;
-    }
-
-    .ext-make:hover {
-        border: 1px solid var(--Primary-Color);
-        transform: translateY(-20px);
-    }
-
-    .input-ext {
-        color: white;
-        background-color: #171717;
-        border: 1px solid #333333;
-        transition: 0.2s cubic-bezier(0.35, 0.56, 0.85, 0.77);
-        font-family: 'Be Vietnam Pro', sans-serif;
-        width: 700px;
-        height: 150px;
-        animation: goOut 1s;
-    }
-
-    .input-ext-url {
-        color: white;
-        background-color: #171717;
-        border: 1px solid #333333;
-        transition: 0.2s cubic-bezier(0.35, 0.56, 0.85, 0.77);
-        font-family: 'Be Vietnam Pro', sans-serif;
-        width: 700px;
-        height: 40px;
-        animation: goOut 1s;
-    }
-
-    .extentionwrapper {
-        display: inline-block;
-        position: relative;
-    }
-
-    /* oobe*/
-
-    .oobePanel {
-        width: 60%;
-        height: 60vh;
-        max-width: 800px;
-        color: white;
-        background-color: #292828;
-        border: 1px solid #1e1d1d;
-        border-radius: 10px;
-        margin-top: 0%;
-        margin: 20%;
-        padding: 30px;
     }
 </style>

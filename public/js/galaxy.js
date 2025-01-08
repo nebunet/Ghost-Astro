@@ -11,7 +11,7 @@ const themeload = localStorage.getItem('themeload')
 const swAllowedHostnames = ['localhost', '127.0.0.1']
 const stockSW3 = '/u/sw.js'
 const SwRegistered = localStorage.getItem('uvregistered')
-const scramSW = '/scram/sw.js'
+//const scramSW = '/scram/sw.js'
 const p = localStorage.getItem('p')
 
 addEventListener('DOMContentLoaded', async (event) => {
@@ -27,27 +27,6 @@ addEventListener('DOMContentLoaded', async (event) => {
     if (p === null) {
         localStorage.setItem('p', 'uv')
     }
-
-
-      const code = ["s", "p", "r", "i", "t", "e"];
-      const codekeys = {83:"s", 80:"p", 82:"r", 73:"i", 84:"t", 69:"e"}
-      let codepos = 0;
-      
-      document.addEventListener("keydown", function (e) {
-        console.log("keydown" + e.keyCode)
-        const thekey = codekeys[e.keyCode]
-        const SPRITECRANBERRY = code[codepos]
-        if(thekey === SPRITECRANBERRY) {
-            console.log("keydown2")
-            codepos++
-            if(codepos === 6) {
-            var audio = new Audio("/assets/sprite.mp3")
-            audio.play();
-            }
-        }else {
-            codepos = 0
-        }
-      });
 
     switch (icon) {
         case 'docs':
