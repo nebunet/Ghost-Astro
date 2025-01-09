@@ -17,9 +17,19 @@ import Nav from '../components/nav.astro'
     <script is:inline>
     const input = document.querySelector(".input");
     input.addEventListener("keydown", handleInput);
+    const urlParams = new URLSearchParams(window.location.search); 
+    const param = urlParams.get('url');
+
+    if(param) {
+      input.value = param;
+      downloadMusic();
+    }
 
     async function handleInput(e) {
-        if (e.key !== "Enter") return;
+      if (e.key !== "Enter") return;
+      downloadMusic();
+    }
+        function downloadMusic() {
         const url = input.value;
         const output = document.getElementById("output")
         output.innerText = "Requesting Tunnel..."
