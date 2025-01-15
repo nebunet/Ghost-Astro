@@ -1,5 +1,6 @@
 import { createBareServer } from '@tomphttp/bare-server-node';
 import http from 'node:http';
+import * as https from 'https';
 import express from 'express';
 import g from './serverlib/games.mjs';
 import a from './serverlib/apps.mjs';
@@ -8,6 +9,7 @@ import fetch from "node-fetch";
 import { server as wisp } from "@mercuryworkshop/wisp-js";
 import { epoxyPath } from "@mercuryworkshop/epoxy-transport";
 import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
+import dumpPage from './serverlib/corsProxy.js';
 
 const server = http.createServer();
 const bare = createBareServer('/bare/');
@@ -29,6 +31,22 @@ server.on('request', (req, res) => {
         app(req, res)
     }
 })
+// BROKEN FOR NOW ILL FIX IT LATER OK
+app.get('/api/cp/v1', async (req, res) => {
+  const url = req.query.q;
+  if (!url) {
+    return res.status(400).json({ error: '404' });
+  }
+  try {
+    const d = await dumpPage(url);
+    res.send(d); 
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: error.message }); 
+  }
+});
+
+
 
 server.on('upgrade', (req, socket, head) => {
     if (bare.shouldRoute(req)) {

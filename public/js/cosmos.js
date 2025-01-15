@@ -81,14 +81,14 @@ function icondocs() {
     const favicon = document.getElementById('favicon')
     favicon.href = '/assets/img/docs.png'
     localStorage.setItem('icon', 'docs')
-    document.title = 'Docs'
+    document.title = 'Google Docs'
 }
 
 function icondrive() {
     const favicon = document.getElementById('favicon')
     favicon.href = '/assets/img/drive.png'
     localStorage.setItem('icon', 'drive')
-    document.title = 'Drive'
+    document.title = 'Home - Google Drive'
 }
 
 function icondesmos() {
@@ -109,7 +109,7 @@ function iconclass() {
     const favicon = document.getElementById('favicon')
     favicon.href = '/assets/img/classroom.png'
     localStorage.setItem('icon', 'classroom')
-    document.title = 'Classes'
+    document.title = 'Home'
 }
 
 function recordkey() {
