@@ -114,10 +114,6 @@ function iconclass() {
 
 function recordkey() {
     function handleKeyDown(event) {
-        console.log(
-            'this is that key you pressed i think dont quote me on that',
-            event.key
-        )
         localStorage.setItem('key', event.key)
         document.removeEventListener('keydown', handleKeyDown)
     }
@@ -247,7 +243,6 @@ addEventListener('DOMContentLoaded', (event) => {
         const leave = document.getElementById('close')
         leave.id.checked = 'true'
     }
-    console.log('loaded setting!')
 })
 
 //mewo :3

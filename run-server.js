@@ -13,7 +13,7 @@ import dumpPage from './serverlib/corsProxy.js';
 
 const server = http.createServer();
 const bare = createBareServer('/bare/');
-const PORT = 1921;
+const PORT = 1921; // why is the port.. that
 const app = express();
 const __dirname = process.cwd();
 const base = '/';

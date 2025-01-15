@@ -345,8 +345,7 @@ import Layout from '../layouts/Layout.astro'
         }
 
         function formatSearch(query) {
-            const engine = localStorage.getItem('engine')
-            if (engine === null) {
+            if (localStorage.getItem('engine') === null) {
                 localStorage.setItem(
                     'engine',
                     'https://www.google.com/search?q='
