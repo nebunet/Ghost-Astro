@@ -4,8 +4,7 @@ const meow = {
     encode(str) {
         if (!str) return str
         let result = ''
-        let len = str.length
-        let fs = 'https://'
+        let len = str.length        
         for (let i = 0; i < len; i++) {
             //take out https
             str.replace('https://', '')

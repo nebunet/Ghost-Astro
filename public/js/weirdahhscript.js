@@ -84,7 +84,7 @@ function getRandomLink() {
 function blank() {
     var currentUrl = top.location.href
     if (currentUrl === 'about:blank') {
-        console.log(currentUrl)
+        return;
     } else {
         var win = window.open()
         var url = '/'

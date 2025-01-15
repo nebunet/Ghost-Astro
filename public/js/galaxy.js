@@ -35,7 +35,7 @@ addEventListener('DOMContentLoaded', async (event) => {
             break
         case 'drive':
             favicon.href = '/assets/img/drive.png'
-            document.title = 'Google Drive'
+            document.title = 'Home - Google Drive'
             break
         case 'desmos':
             favicon.href = '/assets/img/desmos.png'
@@ -47,11 +47,11 @@ addEventListener('DOMContentLoaded', async (event) => {
             break
         case 'classroom':
             favicon.href = '/assets/img/classroom.png'
-            document.title = 'Google Classroom'
+            document.title = 'Home'
             break
         case null:
             favicon.href = '/assets/img/classroom.png'
-            document.title = 'Google Classroom'
+            document.title = 'Home'
             break
     }
 
@@ -69,7 +69,6 @@ addEventListener('DOMContentLoaded', async (event) => {
     }
 
     if (SwRegistered === null) {
-        console.log('Registering SW')
         unregisterSW()
         localStorage.setItem('uvregistered', 'true')
         localStorage.removeItem('ServiceWorkerRegistered')
