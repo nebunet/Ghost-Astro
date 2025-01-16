@@ -25,23 +25,11 @@ import Nav from '../components/nav.astro'
         <p style="color: white;">
             Using <span id="p-name" style="color: var(--Primary-Color)"></span>
         </p>
-        <div id="container-d00b3b529c7e75cacbb98e16680c5373"></div>
     </center>
 
     <script is:inline>
         document.addEventListener('DOMContentLoaded', () => {
-            const pname = localStorage.getItem('pr')
-            switch (pname) {
-                case 'uv':
-                    document.getElementById('p-name').innerText = 'Ultraviolet'
-                    break
-                case 'scram!!!':
-                    document.getElementById('p-name').innerText = 'ScramJet'
-
-                case null:
-                    document.getElementById('p-name').innerText = 'Ultraviolet'
-                    break
-            }
+        document.getElementById('p-name').innerText = 'Ultraviolet'
             const input = document.querySelector('.input')
             input.addEventListener('keydown', handleInput)
 

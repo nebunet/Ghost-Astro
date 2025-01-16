@@ -4,19 +4,21 @@ import Nav from '../components/nav.astro'
 ---
 
 <Layout title="Ghost">
-    <head>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2779999647710891"
- crossorigin="anonymous"></script>
-    </head>
     <Nav/>
-    <center>
-        <br />
-        <p class="ex2" style="animation: fadeIn 1s;">Settings</p>
-        <div class="settingsdisplay" style="animation: fadeIn 1s;">
-            <div class="settingspanel">
-                <center>
-                    <h1>Themes</h1>
-                    <button class="button1" onclick="theme1()"
+    <section class="settings">
+        <h2 class="setting__title">Settings</h2>
+        <div class="setting__description">
+         Welcome to endless customization!
+        </div>
+        <div class="setting__info-container container">
+          <div class="setting__info-wrapper">
+            <div class="setting__info-card">
+              <div class="setting__info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M600-40H440q-17 0-28.5-11.5T400-80v-240q0-17 11.5-28.5T440-360h40v-120H160q-33 0-56.5-23.5T80-560v-160q0-33 23.5-56.5T160-800h80v-40q0-17 11.5-28.5T280-880h480q17 0 28.5 11.5T800-840v160q0 17-11.5 28.5T760-640H280q-17 0-28.5-11.5T240-680v-40h-80v160h320q33 0 56.5 23.5T560-480v120h40q17 0 28.5 11.5T640-320v240q0 17-11.5 28.5T600-40Zm-120-80h80v-160h-80v160ZM320-720h400v-80H320v80Zm160 600h80-80ZM320-720v-80 80Z"/></svg>
+              </div>
+              <div class="text-content">
+                <h3 class="setting__info-title">Themes</h3>
+                <button class="button1" onclick="theme1()"
                         >Catppuccin</button
                     >
                     <button onclick="theme2()" class="button1">Ghost</button>
@@ -39,12 +41,17 @@ import Nav from '../components/nav.astro'
                         >Blue(Dark)</button
                     >
                     <button onclick="theme10()" class="button1">Purple</button>
-                </center>
+              </div>
             </div>
-            <div class="settingspanel">
-                <center>
-                    <h2>Cloak</h2>
-                    <button class="button1" onclick="icondocs()"
+          </div>
+          <div class="setting__info-wrapper">
+            <div class="setting__info-card">
+              <div class="setting__info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h200v720H200Zm280 0q-17 0-28.5-11.5T440-160q0-17 11.5-28.5T480-200q17 0 28.5 11.5T520-160q0 17-11.5 28.5T480-120Zm0-160q-17 0-28.5-11.5T440-320q0-17 11.5-28.5T480-360q17 0 28.5 11.5T520-320q0 17-11.5 28.5T480-280Zm0-160q-17 0-28.5-11.5T440-480q0-17 11.5-28.5T480-520q17 0 28.5 11.5T520-480q0 17-11.5 28.5T480-440Zm0-160q-17 0-28.5-11.5T440-640q0-17 11.5-28.5T480-680q17 0 28.5 11.5T520-640q0 17-11.5 28.5T480-600Zm0-160q-17 0-28.5-11.5T440-800q0-17 11.5-28.5T480-840q17 0 28.5 11.5T520-800q0 17-11.5 28.5T480-760Zm80 560q-17 0-28.5-11.5T520-240q0-17 11.5-28.5T560-280q17 0 28.5 11.5T600-240q0 17-11.5 28.5T560-200Zm0-160q-17 0-28.5-11.5T520-400q0-17 11.5-28.5T560-440q17 0 28.5 11.5T600-400q0 17-11.5 28.5T560-360Zm0-160q-17 0-28.5-11.5T520-560q0-17 11.5-28.5T560-600q17 0 28.5 11.5T600-560q0 17-11.5 28.5T560-520Zm0-160q-17 0-28.5-11.5T520-720q0-17 11.5-28.5T560-760q17 0 28.5 11.5T600-720q0 17-11.5 28.5T560-680Zm80 560q-17 0-28.5-11.5T600-160q0-17 11.5-28.5T640-200q17 0 28.5 11.5T680-160q0 17-11.5 28.5T640-120Zm0-160q-17 0-28.5-11.5T600-320q0-17 11.5-28.5T640-360q17 0 28.5 11.5T680-320q0 17-11.5 28.5T640-280Zm0-160q-17 0-28.5-11.5T600-480q0-17 11.5-28.5T640-520q17 0 28.5 11.5T680-480q0 17-11.5 28.5T640-440Zm0-160q-17 0-28.5-11.5T600-640q0-17 11.5-28.5T640-680q17 0 28.5 11.5T680-640q0 17-11.5 28.5T640-600Zm0-160q-17 0-28.5-11.5T600-800q0-17 11.5-28.5T640-840q17 0 28.5 11.5T680-800q0 17-11.5 28.5T640-760Zm80 560q-17 0-28.5-11.5T680-240q0-17 11.5-28.5T720-280q17 0 28.5 11.5T760-240q0 17-11.5 28.5T720-200Zm0-160q-17 0-28.5-11.5T680-400q0-17 11.5-28.5T720-440q17 0 28.5 11.5T760-400q0 17-11.5 28.5T720-360Zm0-160q-17 0-28.5-11.5T680-560q0-17 11.5-28.5T720-600q17 0 28.5 11.5T760-560q0 17-11.5 28.5T720-520Zm0-160q-17 0-28.5-11.5T680-720q0-17 11.5-28.5T720-760q17 0 28.5 11.5T760-720q0 17-11.5 28.5T720-680Zm80 560q-17 0-28.5-11.5T760-160q0-17 11.5-28.5T800-200q17 0 28.5 11.5T840-160q0 17-11.5 28.5T800-120Zm0-160q-17 0-28.5-11.5T760-320q0-17 11.5-28.5T800-360q17 0 28.5 11.5T840-320q0 17-11.5 28.5T800-280Zm0-160q-17 0-28.5-11.5T760-480q0-17 11.5-28.5T800-520q17 0 28.5 11.5T840-480q0 17-11.5 28.5T800-440Zm0-160q-17 0-28.5-11.5T760-640q0-17 11.5-28.5T800-680q17 0 28.5 11.5T840-640q0 17-11.5 28.5T800-600Zm0-160q-17 0-28.5-11.5T760-800q0-17 11.5-28.5T800-840q17 0 28.5 11.5T840-800q0 17-11.5 28.5T800-760Z"/></svg>
+              </div>
+              <div class="text-content">
+                <h3 class="setting__info-title">Cloak</h3>
+                <button class="button1" onclick="icondocs()"
                         >Google Docs</button
                     >
                     <button class="button1" onclick="icondrive()"
@@ -59,72 +66,89 @@ import Nav from '../components/nav.astro'
                     <button class="button1" onclick="iconclass()">
                         Google Classroom</button
                     >
-                </center>
+              </div>
             </div>
-            <div class="settingspanel">
-                <center>
-                    <h2>Anti Tab Close</h2>
-                    <label class="switch">
-                        <input type="checkbox" id="close" />
-                        <span class="slider round" onclick="noleave()"></span>
-                    </label>
-                    <h1>Panic Key</h1>
-                    <button class="button1" onclick="recordkey()"
-                        >Record Key</button
-                    >
-                </center>
+          </div>
+          <div class="setting__info-wrapper">
+            <div class="setting__info-card">
+              <div class="setting__info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m336-280 144-144 144 144 56-56-144-144 144-144-56-56-144 144-144-144-56 56 144 144-144 144 56 56ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg>
+              </div>
+              <div class="text-content">
+                <h3 class="setting__info-title">
+                  Anti Tab Close
+                </h3>
+                <label class="switch">
+                  <input type="checkbox" id="close" />
+                  <span class="slider round" onclick="noleave()"></span>
+              </label>
+              <h1>Panic Key</h1>
+              <button class="button1" onclick="recordkey()"
+                  >Record Key</button
+              >
+              </div>
             </div>
-            <div class="settingspanel">
-                <center>
-                    <h2>Search Engine</h2>
-                    <select class="engines" id="engineSWITCHER">
-                        <option value="https://www.google.com/search?="
-                            >Google</option
-                        >
-                        <option value="https://www.bing.com/search?form=&q="
-                            >Bing</option
-                        >
-                        <option value="https://duckduckgo.com/?t=h_&q="
-                            >DuckDuckGo</option
-                        >
-                        <option value="https://search.brave.com/search?q="
-                            >Brave</option
-                        >
-                        <option
-                            value="https://www.irs.gov/site-index-search?search="
-                            >IRS</option
-                        >
-                        <option value="https://www.bbc.com/search?q="
-                            >BBC</option
-                        >
-                        <option value="https://www.cnn.com/search?q="
-                            >CNN</option
-                        >
-                    </select>
-                </center>
+          </div>
+          <div class="setting__info-wrapper">
+            <div class="setting__info-card">
+              <div class="setting__info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M380-320q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l224 224q11 11 11 28t-11 28q-11 11-28 11t-28-11L532-372q-30 24-69 38t-83 14Zm0-80q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+              </div>
+              <div class="text-content">
+                <h3 class="setting__info-title">
+                  Search Engine
+                </h3>
+                <select class="engines" id="engineSWITCHER">
+                  <option value="https://www.google.com/search?="
+                      >Google</option
+                  >
+                  <option value="https://www.bing.com/search?form=&q="
+                      >Bing</option
+                  >
+                  <option value="https://duckduckgo.com/?t=h_&q="
+                      >DuckDuckGo</option
+                  >
+                  <option value="https://search.brave.com/search?q="
+                      >Brave</option
+                  >
+                  <option
+                      value="https://www.irs.gov/site-index-search?search="
+                      >IRS</option
+                  >
+                  <option value="https://www.bbc.com/search?q="
+                      >BBC</option
+                  >
+                  <option value="https://www.cnn.com/search?q="
+                      >CNN</option
+                  >
+              </select>
+              </div>
             </div>
-
-            <div class="settingspanel">
-                <center>
-                    <h2>Auto Abo<x>ut:B</x>lank</h2>
-                    <label class="switch">
-                        <input type="checkbox" id="abt" />
-                        <span class="slider round" onclick="abt()"></span>
-                    </label>
-                    <h2>Click Off Tab C<x>lo</x>aking</h2>
-                    <label class="switch">
-                        <input type="checkbox" id="clickoff" />
-                        <span
-                            class="slider round"
-                            onclick="clickoff()"
-                            id="cloak"></span>
-                    </label>
-                </center>
+          </div>
+          <div class="setting__info-wrapper">
+            <div class="setting__info-card">
+              <div class="setting__info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m840-234-80-80v-446H314l-80-80h526q33 0 56.5 23.5T840-760v526ZM792-56l-64-64H200q-33 0-56.5-23.5T120-200v-528l-64-64 56-56 736 736-56 56ZM240-280l120-160 90 120 33-44-283-283v447h447l-80-80H240Zm297-257ZM424-424Z"/></svg>
+              </div>
+              <div class="text-content">
+                <h3 class="setting__info-title">
+                  Auto About:Blank
+                </h3>
+                <label class="switch">
+                  <input type="checkbox" id="abt" />
+                  <span class="slider round" onclick="abt()"></span>
+              </label>
+              <h2>Click Off Tab Cloaking</h2>
+              <label class="switch">
+                  <input type="checkbox" id="clickoff" />
+                  <span
+                      class="slider round"
+                      onclick="clickoff()"
+                      id="cloak"></span>
+              </label>
+              </div>
             </div>
-            <script
-                src="/js/cosmos.js?req=8bd2s-aj3m&id=8fba1md-km28xz"
-                is:inline
-            ></script>
-        </div>
-    </center>
+          </div>
+      </section>
+    <script src="/js/cosmos.js?version=2&block=true" is:inline></script>
 </Layout>
