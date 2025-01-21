@@ -148,5 +148,6 @@
     {"CategoryNumber": 201, "CategoryName": "twitter", "Allow": "0"},
     {"CategoryNumber": 202, "CategoryName": "instagram", "Allow": "0"},
     {"CategoryNumber": 203, "CategoryName": "pinterest", "Allow": "0"},
-    {"CategoryNumber": 900, "CategoryName": "education.videos", "Allow": "1"}
+    {"CategoryNumber": 900, "CategoryName": "education.videos", "Allow": "1"},
+{"CategoryNumber": -1, "CategoryName": "not reviewed", "Allow": "0"}
 ]
