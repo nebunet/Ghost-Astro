@@ -20,14 +20,14 @@ async function handleInput(e) {
   results.innerText = "Checking...";
   //have to have backend to do this do NOT reverse proxy through caddy please
   let ls =  await fetch("/api/fl/lightspeed/v1?url=" + formattedURL)
-  //let fort = await fetch("/api/fl/fortigaurd/v1?url=" + formattedURL)
+  let fort = await fetch("/api/fl/fortigaurd/v1?url=" + formattedURL)
   let palo = await fetch("/api/fl/paloalto/v1?url=" + formattedURL)
   let blocksi = await fetch("/api/fl/blocksi/v1?url=" + formattedURL)
 
   
   let lightspeedData = await ls.json();
   let blocksijson = await blocksi.json(); 
-  //let fortiguardData = await fort.json();
+  let fortiguardData = await fort.json();
   let paloaltoData = await palo.json();
   let paloaltoshit = JSON.parse(paloaltoData);
 
@@ -35,11 +35,11 @@ async function handleInput(e) {
   let categorizedLSF = await catagorizeLSF(lightspeedData);
   let categorizedLSR = await catagorizeLSR(lightspeedData);
   let categorizedBlocksi = await catagorizeBlocksi(blocksijson);
-  //let categorizedFort = await catagorizeFort(fortiguardData);
+  let categorizedFort = await catagorizeFort(fortiguardData);
   let categorizedPalo = await categorizePalo(paloaltoshit);
 
  results.innerText = `Results:
-       Fortigaurd: forigaurd is down lmao
+       Fortigaurd: ${categorizedFort}
        Lightspeed Filter: ${categorizedLSF}
        Lightspeed Rocket: ${categorizedLSR}
        Palo Alto: ${categorizedPalo}
