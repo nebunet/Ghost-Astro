@@ -11,6 +11,7 @@ const themeload = localStorage.getItem('themeload')
 const swAllowedHostnames = ['localhost', '127.0.0.1']
 const stockSW3 = '/u/sw.js'
 const SwRegistered = localStorage.getItem('uvregistered')
+const alert = localStorage.getItem("alert")
 //const scramSW = '/scram/sw.js'
 const p = localStorage.getItem('p')
 
@@ -22,6 +23,15 @@ addEventListener('DOMContentLoaded', async (event) => {
             break
         case 'off':
             break
+    }
+
+    switch(alert) {
+        case null:
+        alert("join the discord for more links!!! discord.gg/clever (were like 50 away from 1000 🙏)")
+        localStorage.setItem("alert", "alerted")
+        break;
+        case "alerted":
+        break;
     }
 
     if (p === null) {
