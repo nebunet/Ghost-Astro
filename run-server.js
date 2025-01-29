@@ -69,80 +69,32 @@ app.get('/api/info/v1/', (req, res) => {
 //forward the api req to lightspeed
 //if your in here then you are either a skid or just wondering how this works 
 //either way get out :3
-app.get("/api/fl/lightspeed/v1/", (req, res) => {
+ app.get("/api/fl/lightspeed/v1/", async (req, res) => {
     const url = req.query.url;
-    fetch(
-      "https://production-archive-proxy-api.lightspeedsystems.com/archiveproxy",
-      {
-        method: "POST",
-        body: JSON.stringify({
-          query:
-            "query getDeviceCategorization($itemA: CustomHostLookupInput!, $itemB: CustomHostLookupInput!){ a: custom_HostLookup(item: $itemA) {cat}  b: custom_HostLookup(item: $itemB) {cat}}",
-          variables: {
-            itemA: { hostname: url },
-            itemB: { hostname: url },
-          },
-        }),
-        headers: {
-          "Content-Type": "application/json",
-          "x-api-key": "onEkoztnFpTi3VG7XQEq6skQWN3aFm3h",
-        },
-      },
-    )
-      .then((response) => {
-        if (!response.ok) {
-          return res.json(["Error"]);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        res.json(data);
-      })
-      .catch((error) => {
-        res.json(["Error", error]);
-      });
+    let r = await fetch(`https://ghostapis.useghost.pro/api/fl/lightspeed/v1/?url=${url}`)
+    let d = await r.json() 
+    res.json(d)
   });
   
-
-//fortigaurd
-app.get("/api/fl/fortigaurd/v1/", async (req, res) => {
+  app.get("/api/fl/fortigaurd/v1/", async (req, res) => {
     const url = req.query.url;
-    let r = await fetch("https://www.fortiguard.com/learnmore/dns",
-      {
-        method: "POST",
-        body: JSON.stringify({
-            "value": url,
-            "version": 9
-        }),
-        headers: {
-        "Content-Type": "application/json",
-        "Accept": "*/*"
-        }
-      },
-    )
-    let data = await r.json()
-        res.json(data);
+    let r = await fetch(`https://ghostapis.useghost.pro/api/fl/fortigaurd/v1/?url=${url}`)
+    let d = await r.json() 
+    res.json(d)
   });
-
-//blocksi
-app.get("/api/fl/blocksi/v1/", async (req, res) => {
-  const url = req.query.url;
-  let r = await fetch(`https://service1.blocksi.net/getRating.json?url=${url}`)
-  let d = await r.json() 
-  res.json(d)
-});
-
-//palo alto
-app.get("/api/fl/paloalto/v1/", async (req, res) => {
+  
+  app.get("/api/fl/paloalto/v1", async (req, res) => {
     const url = req.query.url;
-    let r = await fetch(`https://urlfiltering.paloaltonetworks.com/single_cr/?url=${url}`)
-    let data = await r.text()
-    //janky weird way of parsing it
-    let cutstr = data.substring(data.indexOf("<label class=\"control-label col-sm-2 col-lg-2 \" for=\"id_new_category\">Current Risk Level</label>") + 1, data.lastIndexOf("<!-- New Dropdown -->")).replace("label class=\"control-label col-sm-2 col-lg-2 \" for=\"id_new_category\">Current Risk Level</label>\n                        <div class=\" col-sm-10 col-lg-10 form-text\">\n                            \n    ", "")
-    let thestr = cutstr.replace("\n                            \n                        </div>\n                    </div>\n                \n                <div class=\"form-group\">\n                    <label class=\"control-label col-sm-2 col-lg-2 \" for=\"id_new_category\">Current Category</label>\n                    <div class=\" col-sm-10 col-lg-10 form-text\">\n                        \n                             \n       ", "|")
-    let str = thestr.replace("\n                            \n                        \n                        \n                    </div>\n                </div>", "|")
-    let resp = str.replace(/\s/g, '')
-    res.json(`{"risk": "${resp.split('|')[0]}", "e": {"categoryname": "${resp.split('|')[1]}"}}`);
+    let r = await fetch(`https://ghostapis.useghost.pro/api/fl/paloalto/v1/?url=${url}`)
+    let d = await r.json() 
+    res.json(d)
+  });
+  
+  app.get("/api/fl/blocksi/v1/", async (req, res) => {
+    const url = req.query.url;
+    let r = await fetch(`https://ghostapis.useghost.pro/api/fl/blocksi/v1/?url=${url}`)
+    let d = await r.json() 
+    res.json(d)
   });
 
 
