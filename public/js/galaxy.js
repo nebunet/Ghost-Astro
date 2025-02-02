@@ -15,6 +15,20 @@ const aalert = localStorage.getItem("alert")
 //const scramSW = '/scram/sw.js'
 const p = localStorage.getItem('p')
 
+function randCloak() {
+    let urls = [
+        "https://www.google.com",
+        "https://www.drive.google.com",
+        "https://notion.com",
+        "https://www.google.com/search?q=google+drive"
+    ]
+    top.location.replace(urls[
+        Math.floor(
+            Math.random() * urls.length
+        )
+    ])
+}
+
 addEventListener('DOMContentLoaded', async (event) => {
     initTheme()
     switch (blanke) {
@@ -114,17 +128,7 @@ addEventListener('DOMContentLoaded', async (event) => {
 
     document.addEventListener('keydown', function (event) {
         if (event.key === key) {
-            let urls = [
-                "https://www.google.com",
-                "https://www.drive.google.com",
-                "https://notion.com",
-                "https://www.google.com/search?q=google+drive"
-            ]
-            top.location.replace(urls[
-                Math.floor(
-                    Math.random() * urls.length
-                )
-            ])
+            randCloak();
         }
     })
 
@@ -152,12 +156,12 @@ function initTheme() {
 function blank() {
     var currentUrl = top.location.href
     if (currentUrl === 'about:blank') {
-        console.log(currentUrl)
+        return; // blanking in about blank = bad idea
     } else {
         var url = '/'
         var win = window.open()
         var iframe = win.document.createElement('iframe')
-        top.location.replace('https://google.com')
+        randCloak()
         iframe.style.position = 'fixed'
         iframe.style.top = 0
         iframe.style.bottom = 0
