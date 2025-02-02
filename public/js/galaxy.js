@@ -37,7 +37,7 @@ addEventListener('DOMContentLoaded', async (event) => {
             break
         case 'off':
             break
-    }
+    } 
 
     switch(aalert) {
         case null:
@@ -154,8 +154,7 @@ function initTheme() {
 }
 
 function blank() {
-    var currentUrl = top.location.href
-    if (currentUrl === 'about:blank') {
+    if (top.location.href === 'about:blank') {
         return; 
     }
     var win = window.open()

@@ -81,7 +81,7 @@ function icondocs() {
     const favicon = document.getElementById('favicon')
     favicon.href = '/assets/img/docs.png'
     localStorage.setItem('icon', 'docs')
-    document.title = 'Google Docs'
+    document.title = 'Untitled document'
 }
 
 function icondrive() {
