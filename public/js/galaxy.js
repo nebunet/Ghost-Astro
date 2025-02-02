@@ -156,25 +156,18 @@ function initTheme() {
 function blank() {
     var currentUrl = top.location.href
     if (currentUrl === 'about:blank') {
-        return; // blanking in about blank = bad idea
-    } else {
-        var url = '/'
-        var win = window.open()
-        var iframe = win.document.createElement('iframe')
-        randCloak()
-        iframe.style.position = 'fixed'
-        iframe.style.top = 0
-        iframe.style.bottom = 0
-        iframe.style.left = 0
-        iframe.style.right = 0
-        iframe.style.border = 'none'
-        iframe.style.outline = 'none'
-        iframe.style.width = '100%'
-        iframe.style.height = '100%'
-        iframe.src = url
-
-        win.document.body.appendChild(iframe)
+        return; 
     }
+    var win = window.open()
+    var iframe = win.document.createElement('iframe')
+    randCloak()
+    iframe.style.position = 'fixed'
+    iframe.style.top = iframe.style.bottom = iframe.style.left = iframe.style.right = 0
+    iframe.style.border = iframe.style.outline = 'none'
+    iframe.style.width = iframe.style.height = '100%'
+    iframe.src = "/"
+    
+    win.document.body.appendChild(iframe)
 }
 
 async function registerSWv2() {
