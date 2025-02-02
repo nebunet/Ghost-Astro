@@ -114,7 +114,17 @@ addEventListener('DOMContentLoaded', async (event) => {
 
     document.addEventListener('keydown', function (event) {
         if (event.key === key) {
-            top.location.replace('https://www.google.com')
+            let urls = [
+                "https://www.google.com",
+                "https://www.drive.google.com",
+                "https://notion.com",
+                "https://www.google.com/search?q=google+drive"
+            ]
+            top.location.replace(urls[
+                Math.floor(
+                    Math.random() * urls.length
+                )
+            ])
         }
     })
 
