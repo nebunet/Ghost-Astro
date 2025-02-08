@@ -31,21 +31,6 @@ server.on('request', (req, res) => {
         app(req, res)
     }
 })
-// BROKEN FOR NOW ILL FIX IT LATER OK
-app.get('/api/cp/v1', async (req, res) => {
-  const url = req.query.q;
-  if (!url) {
-    return res.status(400).json({ error: '404' });
-  }
-  try {
-    const d = await dumpPage(url);
-    res.send(d); 
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ error: error.message }); 
-  }
-});
-
 
 
 server.on('upgrade', (req, socket, head) => {
