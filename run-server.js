@@ -9,14 +9,24 @@ import fetch from "node-fetch";
 import { server as wisp } from "@mercuryworkshop/wisp-js";
 import { epoxyPath } from "@mercuryworkshop/epoxy-transport";
 import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
-import dumpPage from './serverlib/corsProxy.js';
+import { SocksProxyAgent } from 'socks-proxy-agent';
 
 const server = http.createServer();
-const bare = createBareServer('/bare/');
+const bare = createBareServer('/b/');
+
 const PORT = 1921; // why is the port.. that
 const app = express();
 const __dirname = process.cwd();
 const base = '/';
+
+const socksProxyAgent = new SocksProxyAgent(
+	`socks://127.0.0.1:${process.env.TOR_PORT || '8090'}`,
+);
+// todo: fix this hot mess
+const torBare = createBareServer('/tbare/', {
+    //httpAgent: socksProxyAgent,
+	//httpsAgent: socksProxyAgent,
+})
 
 //https://en.wikipedia.org/wiki/Epoxy
 app.use("/epoxy/", express.static(epoxyPath));
@@ -27,6 +37,8 @@ app.use(ssrHandler);
 server.on('request', (req, res) => {
     if (bare.shouldRoute(req)) {
         bare.routeRequest(req, res)
+    } else if (torBare.shouldRoute(req)) { 
+        torBare.routeRequest(req, res)
     } else {
         app(req, res)
     }
@@ -36,6 +48,8 @@ server.on('request', (req, res) => {
 server.on('upgrade', (req, socket, head) => {
     if (bare.shouldRoute(req)) {
         bare.routeUpgrade(req, socket, head)
+    } else if (torBare.shouldRoute(req)) {
+        torBare.routeUpgrade(req, socket, head)
     } else {
         wisp.routeRequest(socket, head);
     }

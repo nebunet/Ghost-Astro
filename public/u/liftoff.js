@@ -33,7 +33,7 @@ const meow = {
 
 self.__uv$config = {
     prefix: '/u/liftoff/',
-    bare: '/bare/',
+    bare: '/b/',
     encodeUrl: meow.encode,
     decodeUrl: meow.decode,
     handler: '/u/handoff.js',
