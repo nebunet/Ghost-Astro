@@ -12,7 +12,26 @@
         <meta charset='utf-8' />
         <title>Error</title>
         <style>
-        * { background-color: white }
+        body, html {
+         background-color: rgb(41, 41, 41);
+         text-align: center;
+         color: #eeeeeeee;
+         }
+         h1 {
+         color: #eeeeeeee; 
+         }
+         li {
+            rgb(255, 255, 255)
+         }
+         #reload {
+        color: rgb(35, 35, 35);
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+        transition: opacity 0.3s;         }
         </style>
         </head>
         <body>
@@ -26,14 +45,9 @@
         <li>Checking your internet connection</li>
         <li>Verifying you entered the correct address</li>
         <li>Clearing the site data</li>
-        <li>Contacting <b id="uvHostname"></b>'s administrator</li>
+        <li>Contacting Nobodycares (nobodycares_io) or Segfault (Shrey719) on discord</li>
         <li>Verify the server isn't censored</li>
         </ul>
-        <p>If you're the administrator of <b id="uvHostname"></b>, try:</p>
-        <ul>
-        <li>Restarting your server</li>
-        <li>Updating Ultraviolet</li>
-        <li>Troubleshooting the error on the <a href="https://github.com/titaniumnetwork-dev/Ultraviolet" target="_blank">GitHub repository</a></li>
         </ul>
         <button id="reload">Reload</button>
         <hr />
