@@ -12,6 +12,8 @@ const swAllowedHostnames = ['localhost', '127.0.0.1']
 const stockSW3 = '/u/sw.js'
 const SwRegistered = localStorage.getItem('uvregistered')
 const aalert = localStorage.getItem("alert")
+const u3SW = '/violet/sww.js'
+
 //const scramSW = '/scram/sw.js'
 const p = localStorage.getItem('p')
 
@@ -182,6 +184,12 @@ async function registerSWv2() {
         throw new Error("Your browser doesn't support service workers.")
     }
     await navigator.serviceWorker.register(stockSW3)
+    await navigator.serviceWorker.register(u3SW)
+    const connection = new BareMux.BareMuxConnection("/baremux/worker.js")
+    let wispUrl = (location.protocol === "https:" ? "wss" : "ws") + "://" + location.host + "/wisp/";
+    // TODO - Make the transport be switchable (libcurl and epoxy)
+    connection.setTransport("/epoxy/index.mjs", [{ wisp: wispUrl }]);
+    registerSW()
 }
 
 function unregisterSW() {

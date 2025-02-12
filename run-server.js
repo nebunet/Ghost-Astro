@@ -16,7 +16,7 @@ wisp.options.dns_method = "resolve";
 wisp.options.dns_servers = ["1.1.1.3", "1.0.0.3", "94.140.14.14"]; // porn blocking and ad blocking
                                                                    // 1.1.1.3 = cloudflare 
                                                                    // 1.0.0.3 = cloudflare 
-                                                                   // 94.140.14.14 = adguard dns        
+                                                                   //  = adguard dns        
 wisp.options.dns_result_order = "ipv4first";
 
 
@@ -59,8 +59,8 @@ server.on('upgrade', (req, socket, head) => {
         bare.routeUpgrade(req, socket, head)
     } else if (torBare.shouldRoute(req)) {
         torBare.routeUpgrade(req, socket, head)
-    } else {
-        wisp.routeRequest(socket, head);
+    } else if (req.url.endsWith("/wisp/")){
+        wisp.routeRequest(req, socket, head);
     }
 })
 
