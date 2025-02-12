@@ -24,7 +24,8 @@
             rgb(255, 255, 255)
          }
          #reload {
-        color: rgb(35, 35, 35);
+        background-color: rgb(35, 35, 35);
+        color: rgb(218, 218, 218);
         padding: 14px 20px;
         margin: 8px 0;
         border: none;
@@ -42,11 +43,11 @@
         <textarea id="errorTrace" cols="40" rows="10" readonly></textarea>
         <p>Try:</p>
         <ul>
-        <li>Checking your internet connection</li>
-        <li>Verifying you entered the correct address</li>
-        <li>Clearing the site data</li>
-        <li>Contacting Nobodycares (nobodycares_io) or Segfault (Shrey719) on discord</li>
-        <li>Verify the server isn't censored</li>
+        <p>Checking your internet connection</p>
+        <p>Verifying you entered the correct address</p>
+        <p>Clearing the site data</p>
+        <p>Contacting Nobodycares (nobodycares_io) or Segfault (Shrey719) on discord</p>
+        <p>Verify the server isn't censored</p>
         </ul>
         </ul>
         <button id="reload">Reload</button>
