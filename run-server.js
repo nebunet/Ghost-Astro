@@ -14,6 +14,9 @@ import { SocksProxyAgent } from 'socks-proxy-agent';
 // fuck them ad companies
 wisp.options.dns_method = "resolve";
 wisp.options.dns_servers = ["1.1.1.3", "1.0.0.3", "94.140.14.14"]; // porn blocking and ad blocking
+                                                                   // 1.1.1.3 = cloudflare 
+                                                                   // 1.0.0.3 = cloudflare 
+                                                                   // 94.140.14.14 = adguard dns        
 wisp.options.dns_result_order = "ipv4first";
 
 
