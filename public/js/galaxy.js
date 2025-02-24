@@ -54,7 +54,12 @@ addEventListener('DOMContentLoaded', async (event) => {
         localStorage.setItem('p', 'uv')
     }
 
-    switch (icon) {
+    
+    if(localStorage.getItem("engine") === "https://www.google.com/search?q=") {
+    localStorage.setItem("engine", "https://search.brave.com/search?q=")
+    }
+
+    switch (icon) {    
         case 'docs':
             favicon.href = '/assets/img/docs.png'
             document.title = 'Google Docs'
