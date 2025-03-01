@@ -229,7 +229,10 @@ import Layout from '../layouts/Layout.astro'
         }
     }
 
-    async function setURL() {
+    async function setURL() {   
+      if (__uv$config.decodeUrl(frame.contentWindow.location.href.replace(`https://${location.host}`, "").replace(__uv$config.prefix, "")) === "https://x.com/") {
+         frame.src = __uv$config.prefix + __uv$config.encodeUrl("https://eli.gift") 
+}
         frame.contentWindow.window.open = async function (
             url,
             windowName,
