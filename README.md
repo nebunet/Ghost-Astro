@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://placehold.co/400x200?text=Ghost%20Proxy%20Banner%20:3" alt="Ghost-Astro Banner" width="400px" height="200px" />
+  <img src="https://raw.githubusercontent.com/The-Ghost-Network/Ghost-Astro/refs/heads/main/public/assets/img/GHOST%20(1).png" alt="Ghost-Astro Banner" width="400px" height="200px" />
 </p>
 
 <h1 align="center"><strong>Ghost</strong></h1>
