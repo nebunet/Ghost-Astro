@@ -79,28 +79,28 @@ app.get('/api/info/v1/', (req, res) => {
 //either way get out :3
  app.get("/api/fl/lightspeed/v1/", async (req, res) => {
     const url = req.query.url;
-    let r = await fetch(`https://ghostapis.useghost.pro/api/fl/lightspeed/v1/?url=${url}`)
+    let r = await fetch(`https://apis.useghost.pro/api/fl/lightspeed/v1/?url=${url}`)
     let d = await r.json() 
     res.json(d)
   });
   
   app.get("/api/fl/fortigaurd/v1/", async (req, res) => {
     const url = req.query.url;
-    let r = await fetch(`https://ghostapis.useghost.pro/api/fl/fortigaurd/v1/?url=${url}`)
+    let r = await fetch(`https://apis.useghost.pro/api/fl/fortigaurd/v1/?url=${url}`)
     let d = await r.json() 
     res.json(d)
   });
   
   app.get("/api/fl/paloalto/v1", async (req, res) => {
     const url = req.query.url;
-    let r = await fetch(`https://ghostapis.useghost.pro/api/fl/paloalto/v1/?url=${url}`)
+    let r = await fetch(`https://apis.useghost.pro/api/fl/paloalto/v1/?url=${url}`)
     let d = await r.json() 
     res.json(d)
   });
   
   app.get("/api/fl/blocksi/v1/", async (req, res) => {
     const url = req.query.url;
-    let r = await fetch(`https://ghostapis.useghost.pro/api/fl/blocksi/v1/?url=${url}`)
+    let r = await fetch(`https://apis.useghost.pro/api/fl/blocksi/v1/?url=${url}`)
     let d = await r.json() 
     res.json(d)
   });
