@@ -7,7 +7,7 @@
 
 <p align="center">
   <strong>Ghost is a web proxy created by a big man named nobodycares :3</strong><br>
-  <strong>Games | Apps | Cloaking | Customizable Searche Engine | Proxy Selections</strong>
+  <strong>Games | Apps | Cloaking | Customizable Search Engine | Proxy Selections</strong>
 </p>
 
 ---
