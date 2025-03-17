@@ -1,147 +1,147 @@
 [
 {
     "name": "Tik Tok",
-    "img": "background-image: url('/assets/img/apps/tiktok.jpg')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://tiktok.com')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/tiktok.webp')",
+    "href": "https://tiktok.com"
 },
 {
     "name": "Youtube",
-    "img": "background-image: url('/assets/img/apps/youtube.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://youtube.com')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/youtube.webp')",
+    "href": "https://youtube.com"
 },
 {
     "name": "Soundcloud",
-    "img": "background-image: url('/assets/img/assets/soundcloud.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://soundcloud.com')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/assets/soundcloud.webp')",
+    "href": "https://soundcloud.com"
 },
 {
     "name": "HiAnime",
-    "img": "background-image: url('/assets/img/apps/hianime.jpg')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://hianime.to/')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/hianime.webp')",
+    "href": "https://hianime.to/"
 },
 {
     "name": "Crazygames",
-    "img": "background-image: url('/assets/img/apps/crazygames.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://crazygames.com')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/crazygames.webp')",
+    "href": "https://crazygames.com"
 },
 {
     "name": "Xbox Cloud Gaming",
-    "img": "background-image: url('/assets/img/apps/xbox.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://xbox.com/play')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/xbox.webp')",
+    "href": "https://xbox.com/play"
 },
 {
     "name": "Figgs AI",
-    "img": "background-image: url('/assets/img/apps/fig.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://www.figgs.ai/')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/fig.webp')",
+    "href": "https://www.figgs.ai/"
 },
 {
     "name": "Spotify",
-    "img": "background-image: url('/assets/img/apps/spotify2.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://spotify.com')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/spotify2.webp')",
+    "href": "https://spotify.com"
 },
 {
     "name": "Now.gg",
-    "img": "background-image: url('/assets/img/apps/nowgg2.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://now.gg')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/nowgg2.webp')",
+    "href": "https://now.gg"
 },
 {
     "name": "VS Code",
-    "img": "background-image: url('/assets/img/apps/vscode2.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://vscode.dev')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/vscode2.webp')",
+    "href": "https://vscode.dev"
 },
 {
     "name": "Coolmathgames",
-    "img": "background-image: url('/assets/img/apps/cmg2.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://coolmathgames.com')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/cmg2.webp')",
+    "href": "https://coolmathgames.com"
 },
 {
     "name": "Discord",
-    "img": "background-image: url('/assets/img/apps/discord.jpg",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://discord.com')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/discord.webp')",
+    "href": "https://discord.com"
 },
 {
     "name": "Amazon Luna",
-    "img": "background-image: url('/assets/img/apps/luna.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://luna.amazon.com')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/luna.webp')",
+    "href": "https://luna.amazon.com"
 },
 {
     "name": "c.ai",
-    "img": "background-image: url('/assets/img/apps/cai.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://c.ai')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/cai.webp')",
+    "href": "https://c.ai"
 },
 {
     "name": "Geforce Now",
-    "img": "background-image: url('/assets/img/apps/geforce.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://play.geforcenow.com')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/geforce.webp')",
+    "href": "https://play.geforcenow.com"
 },
 {
     "name": "ChatGPT",
-    "img": "background-image: url('/assets/img/apps/chat.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://chatgpt.com')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/chat.webp')",
+    "href": "https://chatgpt.com"
 },
 {
     "name": "Amazon",
-    "img": "background-image: url('/assets/img/apps/amazon.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://amazon.com')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/amazon.webp')",
+    "href": "https://amazon.com"
 },
 {
     "name": "Gmail",
-    "img": "background-image: url('/assets/img/apps/gmail.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://gmail.com')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/gmail.webp')",
+    "href": "https://gmail.com"
 },
 {
     "name": "Github",
-    "img": "background-image: url('/assets/img/apps/github.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://github.com')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/github.webp')",
+    "href": "https://github.com"
 },
 {
     "name": "Gemini",
-    "img": "background-image: url('/assets//img/apps/gem.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://gemini.google.com')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets//img/apps/gem.webp')",
+    "href": "https://gemini.google.com"
 },
 {
     "name": "Scratch",
-    "img": "background-image: url('/assets/img/apps/scratch.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://scratch.mit.edu')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/scratch.webp')",
+    "href": "https://scratch.mit.edu"
 },
 {
     "name": "X",
-    "img": "background-image: url('/assets/img/apps/x.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://x.com')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/x.webp')",
+    "href": "https://x.com"
 },
 {
     "name": "Twitch",
-    "img": "background-image: url('/assets/img/apps/twitch.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://twitch.tv')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/twitch.webp')",
+    "href": "https://twitch.tv"
 },
 {
     "name": "Youtube Music",
-    "img": "background-image: url('/assets/img/apps/youtubem.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://music.youtube.com')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/youtubem.webp')",
+    "href": "https://music.youtube.com"
 },
 {
     "name": "Replit",
-    "img": "background-image: url('/assets/img/apps/replit.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://replit.com')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/replit.webp')",
+    "href": "https://replit.com"
 },
 {
     "name": "Pintrest",
-    "img": "background-image: url('/assets/img/apps/pintrest.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://pinterest.com')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/pintrest.webp')",
+    "href": "https://pinterest.com"
 },
 {
     "name": "Duck Duck Go",
-    "img": "background-image: url('/assets/img/apps/ddg.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://duckduckgo.com')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/ddg.webp')",
+    "href": "https://duckduckgo.com"
 },
 {
     "name": "Bing",
-    "img": "background-image: url('/assets/img/apps/bing.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://bing.com')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/bing.webp')",
+    "href": "https://bing.com"
 },
 {
     "name": "Yahoo Mail",
-    "img": "background-image: url('/assets/img/apps/yahoo.png')",
-    "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://mail.yahoo.com')); window.location.href = '/q/';"
+    "img": "background-image: url('/assets/img/apps/yahoo.webp')",
+    "href": "https://mail.yahoo.com"
 }
 ]

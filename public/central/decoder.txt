@@ -1,0 +1,6 @@
+wrapper.js = clients
+workers.js = worker
+web.js = wasm
+stargazing = sync
+sharing = shared
+controls = controller

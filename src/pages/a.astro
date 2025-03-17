@@ -1,25 +1,33 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Nav from '../components/nav.astro'
-import data from "../json/apps.json";
+import Layout from '../layouts/Layout.astro';
 import Game from '../components/game.astro';
+import Nav from '../components/nav.astro';
+import data from "../json/apps.json";
 ---
 
-<main style="z-index: 100;">
+<main>
     <Layout title="Ghost">
         <Nav />
         <center>
-            <p class="ex2" style="animation: fadeIn .4s;">Αp<x>p</x>s</p>
+            <br />
+            <p class="ex2" style="animation: fadeIn 1s;"><x>A</x>p<x>p</x>s</p>
             <p>
-                You can request games on the <a
+                You can request <x>A</x>p<x>p</x>s on the <a
                     href="https://discord.gg/dbyDXfs5dN"
-                    >Dіs<x>co</x>rd serv<x>er</x></a
+                    >D<x>i</x>s<x>co</x>rd<x> ser</x>v<x>er</x></a
                 >
             </p>
-                <div class="acontainer" id="acontainer">
-                {data.map((data: { name: string; href: string; img: string; }) => <Game name={data.name} href={data.href} img={data.img} />)}
-
+            <center>
+                <div class="gcontainer">
+                    {data.map((data: { name: string; href: string; img: string; }) => <Game name={data.name} href={`e('${data.href}')`} img={data.img} />)}
             </div>
         </center>
+        </center>
+        <script is:inline>
+         function e(url) {
+                localStorage.setItem("url", __uv$config.prefix + __uv$config.encodeUrl(url)); window.location.href = "/edu/";
+            }
+                </script>
     </Layout>
+    <audio src="" id="audio" controls autoplay hidden transition:persist transition:name="media-player"></audio>
 </main>

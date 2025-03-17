@@ -29,13 +29,13 @@ const meowo = {
         return endresult
     },
 }
-self.__u3$config = {
-    prefix: '/violet/~/',
+self.__edu$conf = {
+    prefix: '/kittykat/',
     encodeUrl: meowo.encode,
     decodeUrl: meowo.decode,
-    handler: './handle.js',
-    client: './client.js',
-    bundle: './bundle.js',
-    config: './config.js',
-    sw: './uve.sw.js',
+    handler: '/violet/handle.js',
+    client: '/violet/client.js',
+    bundle: '/violet/bundle.js',
+    config: '/violet/config.js',
+    sw: '/violet/uve.sw.js',
 };

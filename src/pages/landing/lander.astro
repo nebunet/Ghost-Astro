@@ -1,0 +1,231 @@
+---
+import Layout from '../../layouts/Layout.astro'
+---
+
+<Layout title="New Tab">
+    <style>
+        /*yes yes ik akane about the skidded looking inline styles*/
+        /* shut up about it */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: var(--Secondary-Color);
+            padding-left: 13px;
+            border-radius: 7px;
+            flex-grow: 1;
+            margin: 0 20px;
+            width: 50%;
+            margin-top: 25px;
+        }
+    </style>
+    <center>
+        <br />
+        <h1 class="ex2">Ghost</h1>
+        <h2><span id="subtitle">loading...</span></h2>
+        <div class="search-bar">
+            <object
+                type="image/svg+xml"
+                id="searchIcon"
+                data="/assets/google.svg"
+                class="search-icon"></object>
+            <div class="separator"></div>
+            <svg
+                class="search-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+            >
+                <path
+                    d="M10 2a8 8 0 016.32 12.906l4.387 4.387a1 1 0 01-1.414 1.414l-4.387-4.387A8 8 0 1110 2zm0 2a6 6 0 100 12 6 6 0 000-12z"
+                ></path>
+            </svg>
+            <input
+                type="text"
+                class="search-input"
+                id="search-input"
+                placeholder="Search The Web.."
+            />
+        </div>
+        <p style="color: white;">
+            Using <span id="p-name" style="color: var(--Primary-Color)"></span>
+        </p>
+    </center>
+
+    <style>
+        .input:hover {
+        cursor: pointer;
+        background-color: #dcdcdc;
+        transition: 0.2s cubic-bezier(0.35, 0.56, 0.85, 0.77);
+        transform: translateY(-5px);
+    }
+    </style>
+
+    <script is:inline>
+        document.addEventListener('DOMContentLoaded', () => {
+            const pname = localStorage.getItem('pr')
+            switch (pname) {
+                case 'uv':
+                    document.getElementById('p-name').innerText = 'Ultraviolet'
+                    break;
+                case 'rh':
+                    document.getElementById('p-name').innerText = 'Rammerhead'
+                    break;
+                case 'u3': 
+                    document.getElementById('p-name').innerText = 'Ultraviolet (with Wisp)'
+                    break;
+                case null:
+                    document.getElementById('p-name').innerText = 'Ultraviolet'
+                    break;
+            }
+            const input = document.querySelector('.search-input')
+            input.addEventListener('keydown', handleInput)
+
+            async function handleInput(e) {
+                if (e.key !== 'Enter') return
+                if (containsBlockedKeyword(input.value, blocked)) {
+                    window.location.replace('/blocked.html')
+                } else {
+                    const query = formatSearch(input.value)
+                    window.location.href = await encodeUrl(query)
+                }
+            }
+
+            function containsBlockedKeyword(input, blockedList) {
+                for (let i = 0; i < blockedList.length; i++) {
+                    if (input.includes(blockedList[i])) {
+                        return true
+                    }
+                }
+                return false
+            }
+
+            function formatSearch(query) {
+                const engine = localStorage.getItem('engine')
+                if (engine === null) {
+                    localStorage.setItem(
+                        'engine',
+                        'https://search.brave.com/search?q='
+                    )
+                }
+
+                try {
+                    return new URL(query).toString()
+                } catch (e) {}
+
+                try {
+                    const url = new URL(`https://${query}`)
+                    if (url.hostname.includes('.')) return url.toString()
+                } catch (e) {}
+
+                return new URL(engine + `${query}`).toString()
+            }
+
+            const blocked = [
+                'porn',
+                'sex',
+                'xxx',
+                'hentai',
+                'pornhub.com',
+                'xxx.com',
+                '4chan.org',
+            ]
+        })
+
+        const pr = localStorage.getItem("pr")
+        async function encodeUrl(url) {
+        switch(pr) {
+            case "uv":
+                return __uv$config.prefix + __uv$config.encodeUrl(url)
+            case "rh":
+               return  "/" + await RammerheadEncode(url)
+            case null: 
+            return __uv$config.prefix + __uv$config.encodeUrl(url)
+        }
+    }
+    </script>
+
+    <script is:inline>
+        function changeSub(num) {
+            document.getElementById('subtitle').innerText = tell[num]
+        }
+
+        var tell = [
+            'Nobodycares is a skiddy kid af',
+            'What even is that?',
+            'You need help',
+            'Ghost is crazy',
+            'CoolOnlineGames',
+            'ur funny',
+            'LOL',
+            'got taken down fr fr',
+            'help me',
+            ' go crazy right now',
+            'made by a student (crazy right)',
+            'i got a glock in my rari',
+            'gren',
+            'griddy',
+            'and im kanye west',
+            'David is the best',
+            'Ghost on crack!',
+            'astro on crack fr',
+            '76.138.200.152 (your ip)',
+            'Woofplayz_dev7 is the best javascript coder out there',
+            'Woofplayz_dev7 is my daddy',
+            'Stop liking men, its not funny',
+            'R.I.P Sunset',
+            'Free for all',
+            'A wise man once told me to use Ghost',
+            'i need starz plz https://github.com/The-Ghost-Network/Ghost-Node',
+            'I Code Cool Stuff :D',
+            'Jordan was here 😱 (creator of jordansmathwork)',
+            'Ghost was skidded - Clipped',
+            'JMW is cool',
+            'cube gang',
+            'blanket????',
+            'this is the rarest one (real)',
+            'NO THIS IS THE RAREST ONE!!!',
+            'how many of these are there????',
+            'Thanks to PBS Kids for the code!',
+            'hes not real (dont trust him)',
+            'BLU GHOST???',
+            'Get on my level!',
+            'skill issue',
+            'not my fault',
+            'the skiddiest site youve ever seen',
+            'Search with the onion from now on',
+            'I am the onion',
+            'Shrek is love, Shrek is life',
+            'Shrek was never the same',
+            'Shrek is the best',
+            'Shrek is the best movie',
+            'Shrek is the best movie ever',
+            'Shrek is the best movie ever made',
+            'Shrek is the best movie ever made in the world',
+            'Shrek is the best movie ever made in the world ever',
+            'Shrek is the best movie ever made in the world ever in the history of the world',
+            'Shrek is the best movie ever made in the world ever in the history of the world ever',
+            'Shrek is the best movie ever made in the world ever in the history of the world ever in the universe',
+            'Shrek is the best movie ever made in the world ever in the history of the world ever in the universe ever',
+            'Shrek is the best movie ever made in the world ever in the history of the world ever in the universe ever in the galaxy',
+            'Shrek is the best movie ever made in the world ever in the history of the world ever in the universe ever in the galaxy ever',
+            'Shrek is the best movie ever made in the world ever in the history of the world ever in the universe ever in the galaxy ever in the universe',
+            'Shrek is the best movie ever made in the world ever in the history of the world ever in the universe ever in the galaxy ever in the universe ever',
+            'Shrek is the best movie ever made in the world ever in the history of the world ever in the universe ever in the galaxy ever in the universe ever in the world',
+            'Shrek is the best movie ever made in the world ever in the history of the world ever in the universe ever in the galaxy ever in the universe ever in the world ever',
+            'Shrek is the best movie ever made in the world ever in the history of the world ever in the universe ever in the galaxy ever in the universe ever in the world ever in the universe',
+            'I am shrekshually attracted to shrek',
+            'all the devs of this are fembois fr'
+        ]
+
+        var howmany = tell.length
+        var randomIndex = Math.floor(Math.random() * howmany)
+
+        document.getElementById('subtitle').innerText = tell[randomIndex]
+
+        function changeSplash(num) {
+            var sub = 'guh ' + num + ', ' + tell[num]
+            document.getElementById('subtitle').innerText = tell[num]
+            return sub
+        }
+    </script>
+</Layout>

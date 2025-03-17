@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <title>Classes</title>
-<link rel="icon" id="favicon" type="image/svg+xml" href="/img/classroom.png" />
+<link rel="icon" id="favicon" type="image/svg+xml" href="/img/classroom.webp" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <style is:global>
     * {
@@ -177,7 +177,7 @@ import Layout from '../layouts/Layout.astro'
     const iframe = document.getElementById('frame')
 
     document.addEventListener('DOMContentLoaded', async (event) => {
-       LoadURL()
+        await LoadURL()
     })
 
     function closeTopbar() {
@@ -224,40 +224,91 @@ import Layout from '../layouts/Layout.astro'
         switch(pp) {
             case "uv":
                return __uv$config.prefix + __uv$config.encodeUrl(url)
+            case "rh":
+               return  "/" + await RammerheadEncode(url)
             case null:
             __uv$config.prefix + __uv$config.encodeUrl(url)
         }
     }
 
-    async function setURL() {   
-      if (__uv$config.decodeUrl(frame.contentWindow.location.href.replace(`https://${location.host}`, "").replace(__uv$config.prefix, "")) === "https://x.com/") {
-         frame.src = __uv$config.prefix + __uv$config.encodeUrl("https://eli.gift") 
-}
+    async function setURL() {
         frame.contentWindow.window.open = async function (
             url,
             windowName,
             windowFeatures
         ) {
-            iframe.src = __uv$config.prefix + __uv$config.encodeUrl(url)
+            iframe.src = await encodeUrl(url)
         }
         if (document.activeElement === document.getElementById('forminput')) {
         } else {
             const geturl = frame.contentWindow.location.href
+            const pro = localStorage.getItem("pr")
+            switch(pro) {
+            case "uv":
             const removedUrl = geturl.replace(
                 'https://' + location.hostname + '/u/liftoff/',
                 ''
             )
             form.value = __uv$config.decodeUrl(removedUrl)
+            break;
+            case "rh":
+            const rmUrl = geturl.replace('https://' + location.hostname + '/', '')
+            form.value = RammerDecode(rmUrl)
+            localStorage.setItem('url', frame.src)
+            break;
+            case null:
+            const removedUrll = geturl.replace(
+                'https://' + location.hostname + '/u/liftoff/',
+                ''
+            )
+            form.value = __uv$config.decodeUrl(removedUrll)
+            break;
             }
+        }
+    }
+
+    function RammerDecode(str) {
+            const shuffledIndicator = '_rhs';
+            const mod = (n, m) => ((n % m) + m) % m;
+            const baseDictionary = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz~-';
+            if (!str.startsWith(shuffledIndicator)) {
+                return str;
+            }
+
+            str = str.slice(shuffledIndicator.length);
+
+            let unshuffledStr = '';
+            for (let i = 0; i < str.length; i++) {
+                const char = str.charAt(i);
+                const idx = this.dictionary.indexOf(char);
+                if (char === '%' && str.length - i >= 3) {
+                    unshuffledStr += char;
+                    unshuffledStr += str.charAt(++i);
+                    unshuffledStr += str.charAt(++i);
+                } else if (idx === -1) {
+                    unshuffledStr += char;
+                } else {
+                    unshuffledStr += baseDictionary.charAt(mod(idx - i, baseDictionary.length));
+                }
+            }
+            return unshuffledStr;
         }
 
     setInterval(function () {
         setURL()
     }, 1000)
 
-    function LoadURL() {
+    const urlREDIR = localStorage.getItem("urlREDIR")
+    async function LoadURL() {
+        if(urlREDIR === null) {
+            //proceed
             console.log(url)
             frame.src = url
+            localStorage.removeItem("urlREDIR")
+        }else {
+            frame.src = "/" + await RammerheadEncode(urlREDIR);
+            localStorage.removeItem("urlREDIR")
+        }
     }
 
     function openswitchpanel() {
@@ -274,7 +325,7 @@ import Layout from '../layouts/Layout.astro'
 
     function op() {
         var win = window.open()
-        var url = '/q/'
+        var url = '/edu/'
         var iframe = win.document.createElement('iframe')
         iframe.style.position = 'fixed'
         iframe.style.top = 0
@@ -304,7 +355,7 @@ import Layout from '../layouts/Layout.astro'
                 window.location.replace('/blocked.html')
             } else {
                 const query = formatSearch(input.value)
-                document.getElementById('frame').src = __uv$config.prefix + __uv$config.encodeUrl(query);
+                document.getElementById('frame').src = await encodeUrl(query);
             }
         }
 

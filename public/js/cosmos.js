@@ -24,12 +24,16 @@ function unregisterSW() {
 
 function uv() {
     localStorage.setItem('pr', 'uv')
-    unregisterSW()
+}
+function u3() {
+    localStorage.setItem('pr', 'u3')
+}
+function rh() {
+    localStorage.setItem('pr', 'rh')
 }
 
 function SCRAM() {
     localStorage.setItem('pr', 'scram!!!')
-    unregisterSW()
 }
 
 function tabs() {
@@ -77,39 +81,27 @@ function noleave() {
     location.href = '/s/'
 }
 
-function icondocs() {
-    const favicon = document.getElementById('favicon')
-    favicon.href = '/assets/img/docs.png'
-    localStorage.setItem('icon', 'docs')
-    document.title = 'Untitled document'
-}
+function icon(favicon) {
+    document.getElementById('favicon').href = `/assets/img/${favicon}.webp`
+    localStorage.setItem('icon', favicon)
 
-function icondrive() {
-    const favicon = document.getElementById('favicon')
-    favicon.href = '/assets/img/drive.png'
-    localStorage.setItem('icon', 'drive')
-    document.title = 'Home - Google Drive'
-}
-
-function icondesmos() {
-    const favicon = document.getElementById('favicon')
-    favicon.href = '/assets/img/desmos.png'
-    localStorage.setItem('icon', 'desmos')
-    document.title = 'Desmos'
-}
-
-function iconcanvas() {
-    const favicon = document.getElementById('favicon')
-    favicon.href = '/assets/img/canvas.png'
-    localStorage.setItem('icon', 'canvas')
-    document.title = 'Canvas'
-}
-
-function iconclass() {
-    const favicon = document.getElementById('favicon')
-    favicon.href = '/assets/img/classroom.png'
-    localStorage.setItem('icon', 'classroom')
-    document.title = 'Home'
+    switch (favicon) {
+        case 'Docs':
+            document.title = 'Google Docs'
+            break
+        case 'Drive':
+            document.title = 'Home - Google Drive'
+            break
+        case 'Desmos':
+            document.title = 'Desmos | Beautiful free math.'
+            break
+        case 'Canvas':
+            document.title = 'Canvas'
+            break
+        case 'Classroom':
+            document.title = 'Home'
+            break
+    }
 }
 
 function recordkey() {
@@ -131,43 +123,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     })
 })
 
-function theme1() {
-    localStorage.setItem('theme', 'catp')
-    document.body.setAttribute('class', 'catp')
+function theme(theme) {
+    localStorage.setItem('theme', theme)
+    document.body.setAttribute('class', theme)
 }
-function theme2() {
-    localStorage.setItem('theme', 'ghost')
-    document.body.setAttribute('class', '')
-}
-function theme4() {
-    localStorage.setItem('theme', 'pink')
-    document.body.setAttribute('class', 'pink')
-}
-function theme5() {
-    localStorage.setItem('theme', 'blue')
-    document.body.setAttribute('class', 'blue')
-}
-function theme6() {
-    localStorage.setItem('theme', 'green')
-    document.body.setAttribute('class', 'green')
-}
-function theme7() {
-    localStorage.setItem('theme', 'greendark')
-    document.body.setAttribute('class', 'greendark')
-}
-function theme8() {
-    localStorage.setItem('theme', 'pinkdark')
-    document.body.setAttribute('class', 'pinkdark')
-}
-function theme9() {
-    localStorage.setItem('theme', 'bluedark')
-    document.body.setAttribute('class', 'bluedark')
-}
-function theme10() {
-    localStorage.setItem('theme', 'purple')
-    document.body.setAttribute('class', 'purple')
-}
-function tabs() {}
 
 function abt() {
     const abtt = localStorage.getItem('abt')
@@ -181,70 +140,18 @@ function abt() {
     }
 }
 
-addEventListener('DOMContentLoaded', (event) => {
-    const switch1 = document.getElementById('eruda')
-    const switch2 = document.getElementById('clickoff')
-    const switch3 = document.getElementById('abt')
-    const switch4 = document.getElementById('close')
-    const cli = localStorage.getItem('clickoff')
-    const a = localStorage.getItem('abt')
-    const cla = localStorage.getItem('leave')
+document.addEventListener('DOMContentLoaded', (event) => {
+    const clickSwitch = document.getElementById('clickoff')
+    const aboutblankSwitch = document.getElementById('abt')
+    const closeSwitch = document.getElementById('close')
 
-    switch (cli) {
-        case 'on':
-            switch2.checked = 'true'
-            break
-        case 'off':
-            break
-    }
-
-    switch (a) {
-        case 'on':
-            switch3.checked = 'true'
-            break
-        case 'off':
-            break
-    }
-
-    switch (cla) {
-        case 'on':
-            switch4.checked = 'true'
-            break
-        case 'off':
-            break
-    }
-})
-
-addEventListener('DOMContentLoaded', (event) => {
-    const ads = localStorage.getItem('ads')
-    const abtt = localStorage.getItem('blanker')
-    const click = localStorage.getItem('clickoff')
-    const tabs = localStorage.getItem('tabs')
+    const clickOff = localStorage.getItem('clickoff')
     const close = localStorage.getItem('leave')
-    if (tabs === 'on') {
-        const tab = document.getElementById('tabs')
-        tab.id.checked = 'true'
-    }
+    const aboutBlank = localStorage.getItem('blanker')
 
-    if (ads === 'on') {
-        const ad = document.getElementById('ads')
-        ad.id.checked = 'true'
-    }
-
-    if (abtt === 'on') {
-        const bl = document.getElementById('abt')
-        bl.id.checked = 'true'
-    }
-    if (click === 'true') {
-        const clickoff = document.getElementById('clickoff')
-        clickoff.id.checked = 'true'
-    }
-    if (close === 'on') {
-        const leave = document.getElementById('close')
-        leave.id.checked = 'true'
-    }
+    if (clickOff === 'true') clickSwitch.checked = 'true'
+    if (close === 'true') closeSwitch.checked = 'true'
+    if (aboutBlank === 'true') aboutblankSwitch.checked = 'true'
 })
 
 //mewo :3
-
-

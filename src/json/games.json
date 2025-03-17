@@ -1,397 +1,407 @@
 [
     {
         "name": "Taiko Web",
-        "img": "background-image: url('/assets/img/assets/taiko.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://cjdgrevival.com/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/taiko.webp')",
+        "href": "https://cjdgrevival.com/ "
     },
     {
         "name": "jstris",
-        "img": "background-image: url('/assets/img/assets/jstris.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://jstris.jezevec10.com/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/jstris.webp')",
+        "href": "https://jstris.jezevec10.com/ "
     },
     {
         "name": "osuweb",
-        "img": "background-image: url('/assets/img/assets/osu.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://webosu.online/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/osu.webp')",
+        "href": "https://webosu.online/ "
     },
     {
         "name": "pulsus",
-        "img": "background-image: url('/assets/img/assets/pulsus.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://www.pulsus.cc/play/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/pulsus.webp')",
+        "href": "https://www.pulsus.cc/play/ "
     },
     {
         "name": "html5b",
-        "img": "background-image: url('/assets/img/assets/html5b.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://coppersalts.github.io/HTML5b/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/html5b.webp')",
+        "href": "https://coppersalts.github.io/HTML5b/ "
     },
     {
         "name": "1v1.LOL",
-        "img": "background-image: url('/assets/img/assets/1v1.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://1v1.lol')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/1v1.webp')",
+        "href": "https://1v1.lol "
     },
     {
         "name": "Ai minecraft",
-        "img": "background-image: url('/assets/img/assets/minecraft.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://oasis.decart.ai')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/minecraft.webp')",
+        "href": "https://oasis.decart.ai "
     },
     {
         "name": "Rodha",
-        "img": "background-image: url('/assets/img/assets/rodha.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://games.crazygames.com/en_US/rodha/index.html?v=1.311')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/rodha.webp')",
+        "href": "https://games.crazygames.com/en_US/rodha/index.html?v=1.311 "
     },
     {
         "name": "Football Bros",
-        "img": "background-image: url('/assets/img/assets/footballbros.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://footballbros.io/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/footballbros.webp')",
+        "href": "https://footballbros.io/ "
     },
     {
         "name": "Idle Dice",
-        "img": "background-image: url('/assets/img/assets/idledice.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://luts91.github.io/idle-dices/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/idledice.webp')",
+        "href": "https://luts91.github.io/idle-dices/ "
     },
     {
         "name": "Idle Breakout",
-        "img": "background-image: url('/assets/img/assets/idlebreakout.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://idle-breakout.neocities.org/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/idlebreakout.webp')",
+        "href": "https://idle-breakout.neocities.org/ "
     },
     {
         "name": "Crusher Clicker",
-        "img": "background-image: url('/assets/img/assets/crusher.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://games.crazygames.com/en_US/crusher-clicker/index.html?v=1.311')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/crusher.webp')",
+        "href": "https://games.crazygames.com/en_US/crusher-clicker/index.html?v=1.311 "
     },
     {
         "name": "Slope 3",
-        "img": "background-image: url('/assets/img/assets/slope3.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://tinyplay.io/game/slope-3-v2/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/slope3.webp')",
+        "href": "https://tinyplay.io/game/slope-3-v2/ "
     },
     {
         "name": "Doom 1",
-        "img": "background-image: url('/assets/img/assets/doom.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://bestdosgames.com/games/doom/play')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/doom.webp')",
+        "href": "https://bestdosgames.com/games/doom/play "
     },
     {
         "name": "Doom 2",
-        "img": "background-image: url('/assets/img/assets/doom2.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://bestdosgames.com/games/doom-ii/play')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/doom2.webp')",
+        "href": "https://bestdosgames.com/games/doom-ii/play "
     },
     {
         "name": "1 On 1 BasketBall",
-        "img": "background-image: url('/assets/img/assets/1on1.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://basketball-stars.me/g/41')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/1on1.webp')",
+        "href": "https://basketball-stars.me/g/41 "
     },
     {
         "name": "Space Wars",
-        "img": "background-image: url('/assets/img/assets/spacewars.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://games.crazygames.com/en_US/space-wars-battleground/index.html?v=1.301')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/spacewars.webp')",
+        "href": "https://games.crazygames.com/en_US/space-wars-battleground/index.html?v=1.301 "
     },
     {
         "name": "1 On 1 Soccer",
-        "img": "background-image: url('/assets/img/assets/1o1football.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://frivez.com/flashgame?load=1-on-1-soccer')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/1o1football.webp')",
+        "href": "https://frivez.com/flashgame?load=1-on-1-soccer "
     },
     {
         "name": "Rainbow Tower",
-        "img": "background-image: url('/assets/img/assets/rainbowtower.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://www.mathplayground.com/mobile_rainbow_tower/index.html')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/rainbowtower.webp')",
+        "href": "https://www.mathplayground.com/mobile_rainbow_tower/index.html "
     },
     {
         "name": "Shell Shockers",
-        "img": "background-image: url('/assets/img/assets/shock.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://shellshock.io/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/shock.webp')",
+        "href": "https://shellshock.io/ "
     },
     {
         "name": "BasketBros",
-        "img": "background-image: url('/assets/img/assets/basketbros.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://basket-bros.github.io/a7/basket-bros')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/basketbros.webp')",
+        "href": "https://basket-bros.github.io/a7/basket-bros "
     },
     {
         "name": "Slope",
-        "img": "background-image: url('/assets/img/assets/slope.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://slope.lol/games/slope/index.html')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/slope.webp')",
+        "href": "https://slope.lol/games/slope/index.html "
     },
     {
         "name": "Baldi's Basics",
-        "img": "background-image: url('/assets/img/assets/baldi.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://mathisbes.global.ssl.fastly.net/baldis-basics/index.html')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/baldi.webp')",
+        "href": "https://mathisbes.global.ssl.fastly.net/baldi/index.html "
     },
     {
         "name": "Vex 6",
-        "img": "background-image: url('/assets/img/assets/vex6.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://mathisbes.global.ssl.fastly.net/vex6/index.html')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/vex6.webp')",
+        "href": "https://mathisbes.global.ssl.fastly.net/vex6/index.html "
     },
     {
         "name": "BasketBall Stars",
-        "img": "background-image: url('/assets/img/assets/basketball-stars.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://basketball-stars.me/g/41')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/basketball-stars.webp')",
+        "href": "https://basketball-stars.me/g/41 "
     },
     {
         "name": "2048",
-        "img": "background-image: url('/assets/img/assets/2048.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://play2048.co/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/2048.webp')",
+        "href": "https://play2048.co/ "
     },
     {
         "name": "Awesome Tanks",
-        "img": "background-image: url('/assets/img/assets/atank.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://mountain658.github.io/zawesometanks.html')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/atank.webp')",
+        "href": "https://mountain658.github.io/zawesometanks.html "
     },
     {
         "name": "Super Mario 64",
-        "img": "background-image: url('/assets/img/assets/sm64.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://supermario64online.github.io/file/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/sm64.webp')",
+        "href": "https://supermario64online.github.io/file/ "
     },
     {
         "name": "8 Ball Pool",
-        "img": "background-image: url('/assets/img/assets/8ball.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://8ballpoolonline.github.io/file/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/8ball.webp')",
+        "href": "https://8ballpoolonline.github.io/file/ "
     },
     {
         "name": "Elastic Man",
-        "img": "background-image: url('/assets/img/assets/eman.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://d21u3ic0kp9e91.cloudfront.net/elasticman/0/index.html')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/eman.webp')",
+        "href": "https://d21u3ic0kp9e91.cloudfront.net/elasticman/0/index.html "
     },
     {
         "name": "OvO",
-        "img": "background-image: url('/assets/img/assets/OvO.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://ovoclassic.github.io/file/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/OvO.webp')",
+        "href": "https://ovoclassic.github.io/file/ "
     },
     {
         "name": "OvO 2",
-        "img": "background-image: url('/assets/img/assets/OvO2.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://dedragames.com/games/ovo2/0.2alpha/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/OvO2.webp')",
+        "href": "https://dedragames.com/games/ovo2/0.2alpha/ "
     },
     {
         "name": "TimeShooter",
-        "img": "background-image: url('/assets/img/assets/shoot.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://gnhustgames.github.io/timeshooter2/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/shoot.webp')",
+        "href": "https://gnhustgames.github.io/timeshooter2/ "
     },
     {
         "name": "Drift Boss",
-        "img": "background-image: url('/assets/img/assets/driftboss.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://www.hoodamath.com/mobile/games/drift-boss/game.html?nocheckorient=1')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/driftboss.webp')",
+        "href": "https://www.hoodamath.com/mobile/games/drift-boss/game.html?nocheckorient=1 "
     },
     {
         "name": "Vex 5",
-        "img": "background-image: url('/assets/img/assets/vex5.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://html5.gamedistribution.com/f120262ab72743039fbce88c1f370df8/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/vex5.webp')",
+        "href": "https://html5.gamedistribution.com/f120262ab72743039fbce88c1f370df8/ "
     },
     {
         "name": "Retrobowl",
-        "img": "background-image: url('/assets/img/assets/retrobowl.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://mathisbes.global.ssl.fastly.net/retrobowl/index.html')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/retrobowl.webp')",
+        "href": "https://mathisbes.global.ssl.fastly.net/retrobowl/index.html "
     },
     {
         "name": "Balloons Tower Defence",
-        "img": "background-image: url('/assets/img/assets/btd.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://bloons-tower-defense.github.io/file/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/btd.webp')",
+        "href": "https://bloons-tower-defense.github.io/file/ "
     },
     {
         "name": "Angry Birds",
-        "img": "background-image: url('/assets/img/assets/angrybirds.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://smartcart1.github.io/s88/angry-birds/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/angrybirds.webp')",
+        "href": "https://smartcart1.github.io/s88/angry-birds/ "
     },
     {
         "name": "Stumble Guys",
-        "img": "background-image: url('/assets/img/assets/stumble.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://www.stumbleguys.com/play')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/stumble.webp')",
+        "href": "https://www.stumbleguys.com/play "
     },
     {
         "name": "Portal",
-        "img": "background-image: url('/assets/img/assets/portal.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://games.crazygames.com/en_US/portal-2d/index.html')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/portal.webp')",
+        "href": "https://games.crazygames.com/en_US/portal-2d/index.html "
     },
     {
         "name": "Subway Surfers",
-        "img": "background-image: url('/assets/img/assets/subwaysurfers.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://szhong.4399.com/4399swf//upload_swf/ftp35/liuxinyu/20210324/jj01/index.html')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/subwaysurfers.webp')",
+        "href": "https://szhong.4399.com/4399swf//upload_swf/ftp35/liuxinyu/20210324/jj01/index.html "
     },
     {
         "name": "CSGO clicker",
-        "img": "background-image: url('/assets/img/assets/csgo.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://mtsl.dk/csgo/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/csgo.webp')",
+        "href": "https://mtsl.dk/csgo/ "
     },
     {
         "name": "Tag",
-        "img": "background-image: url('/assets/img/assets/tag.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://abinbins.github.io/a3/tag')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/tag.webp')",
+        "href": "https://abinbins.github.io/a3/tag "
     },
     {
         "name": "Temple Run",
-        "img": "background-image: url('/assets/img/assets/trun.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://burgerbounty.github.io/s8/temple-run-2')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/trun.webp')",
+        "href": "https://burgerbounty.github.io/s8/temple-run-2 "
     },
     {
         "name": "Jelly Truck",
-        "img": "background-image: url('/assets/img/assets/jellytruck.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://webglmath.github.io/jelly-truck/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/jellytruck.webp')",
+        "href": "https://webglmath.github.io/jelly-truck/ "
     },
     {
         "name": "Stickman Golf",
-        "img": "background-image: url('/assets/img/assets/stickmangolf.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://www.silvergames.com/en/stickman-golf/gameframe')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/stickmangolf.webp')",
+        "href": "https://www.silvergames.com/en/stickman-golf/gameframe "
     },
     {
         "name": "There is No Game",
-        "img": "background-image: url('/assets/img/assets/thereisnogame.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://game258367.konggames.com/gamez/0025/8367/live/index.html')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/thereisnogame.webp')",
+        "href": "https://game258367.konggames.com/gamez/0025/8367/live/index.html "
     },
     {
         "name": "Helix Jump",
-        "img": "background-image: url('/assets/img/assets/helixjump.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://html5.gamedistribution.com/630d7b91a96145949f86128ce8f1c4eb/?gd_sdk_referrer_url=https%3A%2F%2Fwww.gamedistribution.com%2Fgame%2F630d7b91a96145949f86128ce8f1c4eb')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/helixjump.webp')",
+        "href": "https://html5.gamedistribution.com/630d7b91a96145949f86128ce8f1c4eb/?gd_sdk_referrer_url=https%3A%2F%2Fwww.gamedistribution.com%2Fgame%2F630d7b91a96145949f86128ce8f1c4eb "
     },
     {
         "name": "Basket Random",
-        "img": "background-image: url('/assets/img/assets/basketrandom.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://www.twoplayergames.org/embed/basket-random')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/basketrandom.webp')",
+        "href": "https://www.twoplayergames.org/embed/basket-random "
     },
     {
         "name": "Pokemon Gold",
-        "img": "background-image: url('/assets/img/assets/pokemongold.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://static.arcadespot.com/retroemulator.php?system=gbc&game=2016/07/pokemon-gold.zip')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/pokemongold.webp')",
+        "href": "https://static.arcadespot.com/retroemulator.php?system=gbc&game=2016/07/pokemon-gold.zip "
     },
     {
         "name": "The Impossible Quiz",
-        "img": "background-image: url('/assets/img/assets/impossiblequiz.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://23azostore.github.io/s8/the-impossible-quiz')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/impossiblequiz.webp')",
+        "href": "https://23azostore.github.io/s8/the-impossible-quiz "
     },
     {
         "name": "Pokemon Crystal",
-        "img": "background-image: url('/assets/img/assets/pokemonecrystal.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://static.arcadespot.com/retroemulator.php?system=gbc&game=2016/07/pokemon-gold.zip')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/pokemonecrystal.webp')",
+        "href": "https://static.arcadespot.com/retroemulator.php?system=gbc&game=2016/07/pokemon-gold.zip "
     },
     {
         "name": "Adventure Capitalist",
-        "img": "background-image: url('/assets/img/assets/adventure.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://than1089.github.io/adventure-capitalist/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/adventure.webp')",
+        "href": "https://than1089.github.io/adventure-capitalist/ "
     },
     {
         "name": "Backrooms",
-        "img": "background-image: url('/assets/img/assets/backrooms.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://backroomsgame.io/game/backrooms/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/backrooms.webp')",
+        "href": "https://backroomsgame.io/game/backrooms/ "
     },
     {
         "name": "Funny Shooter",
-        "img": "background-image: url('/assets/img/assets/funnyshooter.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://funnyshooter.github.io/file/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/funnyshooter.webp')",
+        "href": "https://funnyshooter.github.io/file/ "
     },
     {
         "name": "Bad time simulator",
-        "img": "background-image: url('/assets/img/assets/badtimesimulator.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://jcw87.github.io/c2-sans-fight')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/badtimesimulator.webp')",
+        "href": "https://jcw87.github.io/c2-sans-fight "
     },
     {
         "name": "Bob The Robber 2",
-        "img": "background-image: url('/assets/img/assets/btr2.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://html5.gamedistribution.com/34d6aae0257d4e4c8068cbdfc11a8758/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/btr2.webp')",
+        "href": "https://html5.gamedistribution.com/34d6aae0257d4e4c8068cbdfc11a8758/ "
     },
     {
         "name": "Hole.io",
-        "img": "background-image: url('/assets/img/assets/holeio.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://jmw-v5.pages.dev/english/src/hole-io/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/holeio.webp')",
+        "href": "https://jmw-v5.pages.dev/english/src/hole-io/ "
     },
     {
         "name": "Cookie Clicker",
-        "img": "background-image: url('/assets/img/assets/cookie1.jpeg')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://orteil.dashnet.org/cookieclicker/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/cookie1.webp')",
+        "href": "https://orteil.dashnet.org/cookieclicker/ "
     },
     {
         "name": "Infinite Craft",
-        "img": "background-image: url('/assets/img/assets/icraft.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://neal.fun/infinite-craft/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/icraft.webp')",
+        "href": "https://neal.fun/infinite-craft/ "
     },
     {
         "name": "10 Minutes Till Dawn",
-        "img": "background-image: url('/assets/img/assets/10min.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://games.crazygames.com/en_US/10-minutes-till-dawn/index.html?v=1.292')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/10min.webp')",
+        "href": "https://games.crazygames.com/en_US/10-minutes-till-dawn/index.html?v=1.292 "
     },
     {
         "name": "Run 3",
-        "img": "background-image: url('/assets/img/assets/run3.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://player03.com/run/3/beta/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/run3.webp')",
+        "href": "https://player03.com/run/3/beta/ "
     },
     {
         "name": "Krunker.io",
-        "img": "background-image: url('/assets/img/assets/krunkerio.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://krunker.io/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/krunkerio.webp')",
+        "href": "https://krunker.io/ "
     },
     {
         "name": "Penalty Kick Online",
-        "img": "background-image: url('/assets/img/assets/pkick.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://boxing2.github.io/b/penalty-kick-online/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/pkick.webp')",
+        "href": "https://boxing2.github.io/b/penalty-kick-online/ "
     },
     {
         "name": "Alien Hominid",
-        "img": "background-image: url('/assets/img/assets/alienhominid.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://math-lessons.online/_games/alienhominid/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/alienhominid.webp')",
+        "href": "https://math-lessons.online/_games/alienhominid/ "
     },
     {
         "name": "Baloons TD",
-        "img": "background-image: url('/assets/img/assets/btd1.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://bloons-tower-defense.github.io/file/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/btd1.webp')",
+        "href": "https://bloons-tower-defense.github.io/file/ "
     },
     {
         "name": "Bob The Robber",
-        "img": "background-image: url('/assets/img/assets/bobr.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://html5.gamedistribution.com/18d28481ea514f3c838f9a5a355fb0f7/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/bobr.webp')",
+        "href": "https://html5.gamedistribution.com/18d28481ea514f3c838f9a5a355fb0f7/ "
     },
     {
         "name": "Cell Machine",
-        "img": "background-image: url('/assets/img/assets/cellmachine.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://static.playunblocked.com/2020/11/cell-machine/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/cellmachine.webp')",
+        "href": "https://static.playunblocked.com/2020/11/cell-machine/ "
     },
     {
         "name": "Crossy Road",
-        "img": "background-image: url('/assets/img/assets/crossyroad.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://boxing2.github.io/b/crossy-road')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/crossyroad.webp')",
+        "href": "https://boxing2.github.io/b/crossy-road "
     },
     {
         "name": "Cut the rope Holiday",
-        "img": "background-image: url('/assets/img/assets/ctrholiday.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://sz-games.github.io/Games5/ctr-holiday')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/ctrholiday.webp')",
+        "href": "https://sz-games.github.io/Games5/ctr-holiday "
     },
     {
         "name": "Papa's Cupcakearia",
-        "img": "background-image: url('/assets/img/assets/papascupcakearia.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://www.gameslol.net/data/waflash/index.php?g=109')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/papascupcakearia.webp')",
+        "href": "https://www.gameslol.net/data/waflash/index.php?g=109 "
     },
     {
         "name": "Hobo 1",
-        "img": "background-image: url('/assets/img/assets/hobo1.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://games.crazygames.com/en_US/hobo/index.html?v=1.301')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/hobo1.webp')",
+        "href": "https://games.crazygames.com/en_US/hobo/index.html?v=1.301 "
     },
     {
         "name": "Hobo 2",
-        "img": "background-image: url('/assets/img/assets/hobo2.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://games.crazygames.com/en_US/hobo-2/index.html?v=1.301')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/hobo2.webp')",
+        "href": "https://games.crazygames.com/en_US/hobo-2/index.html?v=1.301 "
     },
     {
         "name": "Hobo 3",
-        "img": "background-image: url('/assets/img/assets/hobo3.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://www.gameflare.com/embed/hobo-3-wanted/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/hobo3.webp')",
+        "href": "https://www.gameflare.com/embed/hobo-3-wanted/ "
     },
     {
         "name": "Hobo 4",
-        "img": "background-image: url('/assets/img/assets/hobo4.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://www.gameflare.com/embed/hobo-4/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/hobo4.webp')",
+        "href": "https://www.gameflare.com/embed/hobo-4/ "
     },
     {
         "name": "Hobo 5",
-        "img": "background-image: url('/assets/img/assets/hobo5.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://www.gameflare.com/embed/hobo-5-space-brawl/')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/hobo5.webp')",
+        "href": "https://www.gameflare.com/embed/hobo-5-space-brawl/ "
     },
     {
         "name": "Hobo 6",
-        "img": "background-image: url('/assets/img/assets/hobo6.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://games.crazygames.com/en_US/hobo-6/index.html?v=1.301')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/hobo6.webp')",
+        "href": "https://games.crazygames.com/en_US/hobo-6/index.html?v=1.301 "
     },
     {
         "name": "Hobo 7",
-        "img": "background-image: url('/assets/img/assets/hobo7.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://games.crazygames.com/en_US/hobo-7/index.html?v=1.301')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/hobo7.webp')",
+        "href": "https://games.crazygames.com/en_US/hobo-7/index.html?v=1.301 "
     },
     {
         "name": "Roblox",
-        "img": "background-image: url('/assets/img/assets/roblox.png')",
-        "href": "localStorage.setItem('url',  __uv$config.prefix + __uv$config.encodeUrl('https://now.gg/apps/a/10020/b.html')); window.location.href = '/q/';"
+        "img": "background-image: url('/assets/img/assets/roblox.webp')",
+        "href": "https://now.gg/apps/a/10020/b.html "
+    },
+    {
+        "name": "Buckshot Roulette",
+        "img": "background-image: url('/api/icons/v1?url=https://buckshotroulette.online')",
+        "href": "https://buckshotroulette.online"
+    },
+    {
+        "name": "nzp.gay",
+        "img": "background-image: url('/api/icons/v1?url=https://nzp.gay')",
+        "href": "https://nzp.gay"
     }
 ]

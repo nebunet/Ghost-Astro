@@ -33,7 +33,7 @@ const meow = {
 
 self.__uv$config = {
     prefix: '/u/liftoff/',
-    bare: '/b/',
+    bare: '/kitty/',
     encodeUrl: meow.encode,
     decodeUrl: meow.decode,
     handler: '/u/handoff.js',
@@ -52,9 +52,9 @@ self.__uv$config = {
         if (url.host === '') {
             return `
                   `
-                  //shitty vencord injection go brrr
-        }if (url.host === "discord.com") {
-            return `<script src="https://github.com/Vendicated/Vencord/releases/download/devbuild/browser.js"></script>`
+        }if (url.host === "www.youtube.com") {
+            //meow
+            return `<script src="https://us2.cdn.useghost.pro/youtube.js"></script>`
         }
 
         return `

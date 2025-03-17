@@ -1,7 +1,6 @@
-//Define it
-const close = localStorage.getItem('leave')
+const anticlose = localStorage.getItem('leave')
 const key = localStorage.getItem('key')
-const icon = localStorage.getItem('icon')
+const cloak = localStorage.getItem('icon')
 const favicon = document.getElementById('favicon')
 const clickoff1 = localStorage.getItem('clickoff')
 const theme = localStorage.getItem('theme')
@@ -10,80 +9,54 @@ const blanke = localStorage.getItem('abt')
 const themeload = localStorage.getItem('themeload')
 const swAllowedHostnames = ['localhost', '127.0.0.1']
 const stockSW3 = '/u/sw.js'
+const stockU3SW = '/violet/sww.js'
 const SwRegistered = localStorage.getItem('uvregistered')
-const aalert = localStorage.getItem("alert")
-const u3SW = '/violet/sww.js'
+const backend = localStorage.getItem('backend')
 
-//const scramSW = '/scram/sw.js'
-const p = localStorage.getItem('p')
-
-function randCloak() {
-    let urls = [
-        "https://www.google.com",
-        "https://www.drive.google.com",
-        "https://notion.com",
-        "https://www.google.com/search?q=google+drive"
-    ]
-    top.location.replace(urls[
-        Math.floor(
-            Math.random() * urls.length
-        )
-    ])
-}
-
-addEventListener('DOMContentLoaded', async (event) => {
+document.addEventListener('astro:page-load', () => {
     initTheme()
+
+    switch (cloak) {
+        case 'Docs':
+            favicon.href = '/assets/img/Docs.webp'
+            document.title = 'Google Docs'
+            break
+        case 'Drive':
+            favicon.href = '/assets/img/Drive.webp'
+            document.title = 'Google Drive'
+            break
+        case 'Desmos':
+            favicon.href = '/assets/img/Desmos.webp'
+            document.title = 'Desmos'
+            break
+        case 'Canvas':
+            favicon.href = '/assets/img/Canvas.webp'
+            document.title = 'Canvas'
+            break
+        case 'Classroom':
+            favicon.href = '/assets/img/Classroom.webp'
+            document.title = 'Google Classroom'
+            break
+        case null:
+            favicon.href = '/assets/img/Classroom.webp'
+            document.title = 'Home'
+            break
+    }
+
     switch (blanke) {
         case 'on':
             blank()
             break
         case 'off':
             break
-    } 
-
-    switch(aalert) {
-        case null:
-        alert("join the discord for more links!!! discord.gg/clever (were like 50 away from 1000 🙏)")
-        localStorage.setItem("alert", "alerted")
-        break;
-        case "alerted":
-        break;
     }
 
-    if (p === null) {
-        localStorage.setItem('p', 'uv')
+    if (backend === null) {
+        localStorage.setItem('backend', 'uv')
     }
 
-    
-    if(localStorage.getItem("engine") === "https://www.google.com/search?q=") {
-    localStorage.setItem("engine", "https://search.brave.com/search?q=")
-    }
-
-    switch (icon) {    
-        case 'docs':
-            favicon.href = '/assets/img/docs.png'
-            document.title = 'Google Docs'
-            break
-        case 'drive':
-            favicon.href = '/assets/img/drive.png'
-            document.title = 'Home - Google Drive'
-            break
-        case 'desmos':
-            favicon.href = '/assets/img/desmos.png'
-            document.title = 'Desmos'
-            break
-        case 'canvas':
-            favicon.href = '/assets/img/canvas.png'
-            document.title = 'Canvas'
-            break
-        case 'classroom':
-            favicon.href = '/assets/img/classroom.png'
-            document.title = 'Home'
-            break
-        case null:
-            favicon.href = '/assets/img/classroom.png'
-            document.title = 'Home'
-            break
+    if (localStorage.getItem('engine') === 'https://google.com/search?q=') {
+        localStorage.setItem('engine', 'https://search.brave.com/search?q=')
     }
 
     localStorage.setItem('currenttitle', document.title)
@@ -117,25 +90,24 @@ addEventListener('DOMContentLoaded', async (event) => {
                 favicon.href = currentfavicon
             } else {
                 document.title = 'Google Docs'
-                favicon.href = '/assets/img/docs.png'
+                favicon.href = '/assets/img/docs.webp'
             }
         })
     }
 
-    if (close === 'on') {
+    if (anticlose === 'on') {
         window.onbeforeunload = function () {
             return true
         }
-    } else {
-        console.log(`Anti Close Disabled!`)
     }
+
     if (key === null) {
         localStorage.setItem('key', '`')
     }
 
     document.addEventListener('keydown', function (event) {
         if (event.key === key) {
-            randCloak();
+            top.location.replace('https://www.google.com')
         }
     })
 
@@ -147,12 +119,11 @@ addEventListener('DOMContentLoaded', async (event) => {
         localStorage.setItem('clickoff', 'off')
     }
 
-    if (close === null) {
+    if (anticlose === null) {
         localStorage.setItem('leave', 'off')
     }
 })
 
-//functions
 function initTheme() {
     const savedTheme = localStorage.getItem('theme')
     if (savedTheme) {
@@ -161,22 +132,39 @@ function initTheme() {
 }
 
 function blank() {
-    if (top.location.href === 'about:blank') {
-        return; 
+    //what were the chatgpt notes i saw here,,
+    let currentUrl = top.location.href
+    if (currentUrl === 'about:blank') {
+    } else {
+        let url = '/'
+        let win = window.open()
+
+        if (!win) {
+            alert('Please allow popups and redirects in settings!')
+            return
+        }
+        try {
+            let iframe = win.document.createElement('iframe')
+            iframe.style.position = 'fixed'
+            iframe.style.top = 0
+            iframe.style.bottom = 0
+            iframe.style.left = 0
+            iframe.style.right = 0
+            iframe.style.border = 'none'
+            iframe.style.outline = 'none'
+            iframe.style.width = '100%'
+            iframe.style.height = '100%'
+            iframe.src = url
+            win.document.body.appendChild(iframe)
+        } catch (error) {
+            console.error('Failed to access win.document:', error)
+        }
+
+        top.location.replace('https://google.com')
     }
-    var win = window.open()
-    var iframe = win.document.createElement('iframe')
-    randCloak()
-    iframe.style.position = 'fixed'
-    iframe.style.top = iframe.style.bottom = iframe.style.left = iframe.style.right = 0
-    iframe.style.border = iframe.style.outline = 'none'
-    iframe.style.width = iframe.style.height = '100%'
-    iframe.src = "/"
-    
-    win.document.body.appendChild(iframe)
 }
 
-async function registerSWv2() {
+async function registerSW() {
     if (!navigator.serviceWorker) {
         if (
             location.protocol !== 'https:' &&
@@ -189,12 +177,15 @@ async function registerSWv2() {
         throw new Error("Your browser doesn't support service workers.")
     }
     await navigator.serviceWorker.register(stockSW3)
-    await navigator.serviceWorker.register(u3SW)
-    const connection = new BareMux.BareMuxConnection("/baremux/worker.js")
-    let wispUrl = (location.protocol === "https:" ? "wss" : "ws") + "://" + location.host + "/wisp/";
+    await navigator.serviceWorker.register(stockU3SW)
+    const connection = new BareMux.BareMuxConnection('/whatthesigma/worker.js')
+    let wispUrl =
+        (location.protocol === 'https:' ? 'wss' : 'ws') +
+        '://' +
+        location.host +
+        '/wisp/'
     // TODO - Make the transport be switchable (libcurl and epoxy)
-    connection.setTransport("/epoxy/index.mjs", [{ wisp: wispUrl }]);
-    registerSW()
+    connection.setTransport('/bussin/index.mjs', [{ wisp: wispUrl }])
 }
 
 function unregisterSW() {
@@ -204,4 +195,4 @@ function unregisterSW() {
         }
     })
 }
-registerSWv2()
+registerSW()

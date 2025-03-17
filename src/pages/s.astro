@@ -7,9 +7,9 @@ import Nav from '../components/nav.astro'
     <Nav/>
     <section class="settings">
         <h2 class="setting__title">Settings</h2>
-        <div class="setting__description">
+        <center><div class="setting__description">
          Welcome to endless customization!
-        </div>
+        </div></center>
         <div class="setting__info-container container">
           <div class="setting__info-wrapper">
             <div class="setting__info-card">
@@ -18,30 +18,46 @@ import Nav from '../components/nav.astro'
               </div>
               <div class="text-content">
                 <h3 class="setting__info-title">Themes</h3>
-                <button class="button1" onclick="theme1()"
+                <button class="button1" onclick="theme('catppuccin')"
                         >Catppuccin</button
                     >
-                    <button onclick="theme2()" class="button1">Ghost</button>
-                    <button onclick="theme4()" class="button1"
+                    <button onclick="theme()" class="button1">Ghost</button>
+                    <button onclick="theme('starlight')" class="button1">Starlight</button>
+                    <button onclick="theme('pink')" class="button1"
                         >Pink (Light)</button
                     >
-                    <button onclick="theme5()" class="button1"
+                    <button onclick="theme('blue')" class="button1"
                         >Blue (Light)</button
                     >
-                    <button onclick="theme6()" class="button1"
+                    <button onclick="theme('green')" class="button1"
                         >Green (Light)</button
                     >
-                    <button onclick="theme7()" class="button1"
+                    <button onclick="theme('greendark')" class="button1"
                         >Green (Dark)</button
                     >
-                    <button onclick="theme8()" class="button1"
+                    <button onclick="theme('pinkdark')" class="button1"
                         >Pink (Dark)</button
                     >
-                    <button onclick="theme9()" class="button1"
+                    <button onclick="theme('bluedark')" class="button1"
                         >Blue(Dark)</button
                     >
-                    <button onclick="theme10()" class="button1">Purple</button>
+                    <button onclick="theme('pruple')" class="button1">Purple</button>
               </div>
+            </div>
+          </div>
+          <div class="setting__info-wrapper">
+            <div class="setting__info-card">
+              <div class="setting__info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m840-234-80-80v-446H314l-80-80h526q33 0 56.5 23.5T840-760v526ZM792-56l-64-64H200q-33 0-56.5-23.5T120-200v-528l-64-64 56-56 736 736-56 56ZM240-280l120-160 90 120 33-44-283-283v447h447l-80-80H240Zm297-257ZM424-424Z"/></svg>
+              </div>
+              <div class="text-content">
+                <h3 class="setting__info-title">
+                  Backend
+                </h3>
+              <center>
+                <p>Coming Soon!</p>
+            </center>
+            </div>
             </div>
           </div>
           <div class="setting__info-wrapper">
@@ -51,19 +67,19 @@ import Nav from '../components/nav.astro'
               </div>
               <div class="text-content">
                 <h3 class="setting__info-title">Cloak</h3>
-                <button class="button1" onclick="icondocs()"
+                <button class="button1" onclick="icon('Docs')"
                         >Google Docs</button
                     >
-                    <button class="button1" onclick="icondrive()"
+                    <button class="button1" onclick="icon('Drive')"
                         >Google Drive</button
                     >
-                    <button class="button1" onclick="icondesmos()"
+                    <button class="button1" onclick="icon('Desmos')"
                         >Desmos</button
                     >
-                    <button class="button1" onclick="iconcanvas()">
+                    <button class="button1" onclick="icon('Canvas')">
                         Canvas</button
                     >
-                    <button class="button1" onclick="iconclass()">
+                    <button class="button1" onclick="icon('Classroom')">
                         Google Classroom</button
                     >
               </div>
@@ -76,7 +92,7 @@ import Nav from '../components/nav.astro'
               </div>
               <div class="text-content">
                 <h3 class="setting__info-title">
-                  Ant<x>i Tab C</x>lose
+                  Anti Tab Close
                 </h3>
                 <label class="switch">
                   <input type="checkbox" id="close" />
@@ -99,14 +115,14 @@ import Nav from '../components/nav.astro'
                   Search Engine
                 </h3>
                 <select class="engines" id="engineSWITCHER">
-                  <option value="https://google.com/search?q="
+                  <option value="https://www.google.com/search?="
                       >Google</option
                   >
                   <option value="https://www.bing.com/search?form=&q="
                       >Bing</option
                   >
                   <option value="https://duckduckgo.com/?t=h_&q="
-                      >DuckD<x>uck</x>Go</option
+                      >DuckDuckGo</option
                   >
                   <option value="https://search.brave.com/search?q="
                       >Brave</option
@@ -121,8 +137,6 @@ import Nav from '../components/nav.astro'
                   <option value="https://www.cnn.com/search?q="
                       >CNN</option
                   >
-                    <option value="https://theonion.com/?s="
-                        >The Onion</option>
               </select>
               </div>
             </div>
@@ -134,13 +148,13 @@ import Nav from '../components/nav.astro'
               </div>
               <div class="text-content">
                 <h3 class="setting__info-title">
-                  Αuto Α<x>bout:</x>Blank
+                  Auto About:Blank
                 </h3>
                 <label class="switch">
                   <input type="checkbox" id="abt" />
                   <span class="slider round" onclick="abt()"></span>
               </label>
-              <h2>Click Off Tab Cl<x>оak</x>ing</h2>
+              <h2>Click Off Tab Cloaking</h2>
               <label class="switch">
                   <input type="checkbox" id="clickoff" />
                   <span
@@ -152,5 +166,6 @@ import Nav from '../components/nav.astro'
             </div>
           </div>
       </section>
+      <audio src="" id="audio" controls autoplay hidden transition:persist transition:name="media-player"></audio>
     <script src="/js/cosmos.js?version=2&block=true" is:inline></script>
 </Layout>

@@ -1,0 +1,275 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Ghost">
+  <!-- made with :3 by the ghost network team -->
+    <div class="gmail__container">
+        <div class="gmail__container-search">
+          <div class="logo-container">
+            <img src="/assets/img/ghost.webp" alt="Logo" class="logo" />
+            <span class="logo-name">Ghost</span>
+          </div>
+          <div class="separator"></div>
+          <div class="search-icons">
+            <button class="svg-bttn" onclick="back();">
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#000000"
+            >
+              <path d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z" />
+            </svg>
+          </button>
+          <button class="svg-bttn" onclick="refresh();">
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#000000"
+            >
+              <path
+                d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"
+              />
+            </svg>
+          </button>
+          <button class="svg-bttn">
+            <a href="/">
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#000000"
+            >
+              <path
+                d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"
+              />
+            </svg>
+          </a>
+          </div>
+  
+          <div class="search-bar">
+                  <object type="image/svg+xml" id="searchIcon" data="/assets/google.svg" class="search-icon"></object>
+            <div class="separator"></div>
+            <svg
+              class="search-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M10 2a8 8 0 016.32 12.906l4.387 4.387a1 1 0 01-1.414 1.414l-4.387-4.387A8 8 0 1110 2zm0 2a6 6 0 100 12 6 6 0 000-12z"
+              />
+            </svg>
+            <input type="text" class="search-input" id="search-input" placeholder="Search..." />
+          </div>
+  
+          <div class="search-icons">
+            <button class="svg-bttn" onclick="redir();">
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#000000"
+            >
+              <path
+                d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
+              />
+            </svg>
+            </button>
+            <button class="svg-bttn" onclick="copy();" id="copybtn">
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#000000"
+            >
+              <path
+                d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z"
+              />
+            </svg>
+            </button>
+            <button class="svg-bttn" onclick="inspect();">
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#000000"
+            >
+              <path
+                d="M450-420q38 0 64-26t26-64q0-38-26-64t-64-26q-38 0-64 26t-26 64q0 38 26 64t64 26Zm193 160L538-365q-20 13-42.5 19t-45.5 6q-71 0-120.5-49.5T280-510q0-71 49.5-120.5T450-680q71 0 120.5 49.5T620-510q0 23-6.5 45.5T594-422l106 106-57 56ZM200-120q-33 0-56.5-23.5T120-200v-160h80v160h160v80H200Zm400 0v-80h160v-160h80v160q0 33-23.5 56.5T760-120H600ZM120-600v-160q0-33 23.5-56.5T200-840h160v80H200v160h-80Zm640 0v-160H600v-80h160q33 0 56.5 23.5T840-760v160h-80Z"
+              />
+            </svg>
+          </button>
+          <button class="svg-bttn" onclick="music();">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M500-360q42 0 71-29t29-71v-220h120v-80H560v220q-13-10-28-15t-32-5q-42 0-71 29t-29 71q0 42 29 71t71 29ZM320-240q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg>
+            </svg>
+          </button>
+          <button class="svg-bttn" onclick="more();" id="more">
+            <svg xmlns="http://www.w3.org/2000/svg" id="moresvg" height="24px" class="icon" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"/></svg>
+          </button>
+          </div>
+        </div>
+        <!--dropdown-->
+        <div class="dropDown">
+          <div class="options1">
+            <div class="option" onclick="newTab()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg> New Tab</div>
+            <div class="option" onclick="gg()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M182-200q-51 0-79-35.5T82-322l42-300q9-60 53.5-99T282-760h396q60 0 104.5 39t53.5 99l42 300q7 51-21 86.5T778-200q-21 0-39-7.5T706-230l-90-90H344l-90 90q-15 15-33 22.5t-39 7.5Zm16-86 114-114h336l114 114q2 2 16 6 11 0 17.5-6.5T800-304l-44-308q-4-29-26-48.5T678-680H282q-30 0-52 19.5T204-612l-44 308q-2 11 4.5 17.5T182-280q2 0 16-6Zm482-154q17 0 28.5-11.5T720-480q0-17-11.5-28.5T680-520q-17 0-28.5 11.5T640-480q0 17 11.5 28.5T680-440Zm-80-120q17 0 28.5-11.5T640-600q0-17-11.5-28.5T600-640q-17 0-28.5 11.5T560-600q0 17 11.5 28.5T600-560ZM310-440h60v-70h70v-60h-70v-70h-60v70h-70v60h70v70Zm170-40Z"/></svg> Games</div>
+            <div class="option" onclick="apps()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M240-160q-33 0-56.5-23.5T160-240q0-33 23.5-56.5T240-320q33 0 56.5 23.5T320-240q0 33-23.5 56.5T240-160Zm240 0q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm240 0q-33 0-56.5-23.5T640-240q0-33 23.5-56.5T720-320q33 0 56.5 23.5T800-240q0 33-23.5 56.5T720-160ZM240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400ZM240-640q-33 0-56.5-23.5T160-720q0-33 23.5-56.5T240-800q33 0 56.5 23.5T320-720q0 33-23.5 56.5T240-640Zm240 0q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Zm240 0q-33 0-56.5-23.5T640-720q0-33 23.5-56.5T720-800q33 0 56.5 23.5T800-720q0 33-23.5 56.5T720-640Z"/></svg> Apps</div>
+            <div class="option" onclick="music()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></svg> Music Player</div>
+            <div class="option" onclick="home()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg> Home</div>
+            <div class="option" onclick="refresh()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/></svg> Refresh</div>
+            <div class="option" onclick="inspect()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"/></svg> Inspect</div>
+          </div>
+        </div>
+        <!-- iframe wrapper -->
+        <div id="iframeWrapper" style="grid-area: iframe; background-color: var(--foreground-light); overflow: visible; border-top: 1px solid var(--border-color); border-left: 1px solid var(--border-color); border-right: 1px solid var(--border-color); border-radius: 30px 30px 30px 30px; position: relative; width:  100%; height: 100%; box-sizing: border-box;">
+        </div>
+        <!-- bookmarks bar -->
+        <div class="r-side">
+          <div class="scrollable-container">
+            <div class="box-container">
+              <!--default pins -->
+              <div id="bookmarks">
+              <div class="box">
+                <button class="svg-bttn" onclick="launch('https://google.com')">
+                <img src="/api/icons/v1?url=https://google.com" alt="Google" />
+              </button>
+              </div>
+              <div class="box">
+                <button class="svg-bttn" onclick="launch('https://twitter.com')">
+                <img src="/api/icons/v1?url=https://x.com" alt="Twitter" />
+              </button>
+              </div>
+              <div class="box">
+                <button class="svg-bttn" onclick="launch('https://snapchat.com')">
+                <img src="/api/icons/v1?url=https://snapchat.com" alt="Snapchat" />
+              </button>
+              </div>
+              <div class="box">
+                <button class="svg-bttn" onclick="launch('https://github.com')">
+                <img src="/api/icons/v1?url=https://github.com" alt="GitHub" />
+              </button>
+              </div>
+              <div class="box">
+                <button class="svg-bttn" onclick="launch('https://youtube.com')">
+                <img src="/api/icons/v1?url=https://youtube.com" alt="YouTube" />
+              </button>
+              </div>
+              <div class="box">
+                <button class="svg-bttn" onclick="launch('https://instagram.com')">
+                <img src="/api/icons/v1?url=https://instagram.com" alt="Instagram" />
+              </button>
+              </div>
+              <div class="box">
+                <button class="svg-bttn" onclick="launch('https://pinterest.com')">
+                <img src="/api/icons/v1?url=https://pinterest.com" alt="Pinterest" />
+              </button>
+                
+              </div>
+              </div>
+  
+              <div class="separator-top"></div>
+  
+              <div class="svg-box"> <!-- I'm So Gay -nobodycares -->
+                <button class="svg-bttn" id="bookmarkButton">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="40px"
+                  viewBox="0 -960 960 960"
+                  width="40px"
+                  fill="#000000"
+                >
+                  <path
+                    d="M446.67-446.67H200v-66.66h246.67V-760h66.66v246.67H760v66.66H513.33V-200h-66.66v-246.67Z"
+                  />
+                </svg>
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--tab container/misc -->
+        <div class="l-side">
+          <div class="scrollable-container">
+            <div class="new-tab" onclick="newTab();">
+              <div class="new-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="40px"
+                  viewBox="0 -960 960 960"
+                  width="40px"
+                >
+                  <path
+                    d="M446.67-446.67H200v-66.66h246.67V-760h66.66v246.67H760v66.66H513.33V-200h-66.66v-246.67Z"
+                  />
+                </svg>
+              </div>
+              <div class="new-name" id="newTabBttn" >New Tab</div>
+            </div>
+  
+            <div class="navbar">
+              <div class="nav-item">
+                <div class="nav-icon">
+                  <a href="https://discord.gg/clever" target="_blank" rel="noopener noreferrer">
+                  <svg
+                    role="img"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="nav-svg"
+                  >
+                    <title>Discord</title>
+                    <path
+                      d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="nav-name">Discord</div>
+              </a>
+              </div>
+              <div class="nav-item">
+                <div class="nav-icon">
+                  <a href="https://github.com/The-Ghost-Network/Ghost-Astro" target="_blank" rel="noopener noreferrer">
+                  <svg
+                    role="img"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="nav-svg"
+                  >
+                    <title>GitHub</title>
+                    <path
+                      d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="nav-name">Github</div>
+              </a>
+              </div>
+            </div>
+            <div class="separator-top"></div>
+            <div class="tab-section" id="tab-section">
+            </div>
+          </div>
+        </div>
+      </div>
+      <audio src="" id="audio" controls autoplay hidden transition:persist transition:name="media-player"></audio>
+    </body>
+    <script src="/js/tabs.js" is:inline></script>
+    <script src="/js/tabManager.js" is:inline></script>
+    <script src="/js/fixes.js" is:inline defer></script>
+</Layout>

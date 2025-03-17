@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Game from '../../components/game.astro';
+import data from "../../json/apps.json";
+---
+
+<main>
+    <Layout title="Ghost">
+        <center>
+            <br />
+            <p class="ex2" style="animation: fadeIn 1s;"><x>A</x>p<x>p</x>s</p>
+            <p>
+                You can request <x>A</x>p<x>p</x>s on the <a
+                    href="https://discord.gg/dbyDXfs5dN"
+                    >D<x>i</x>s<x>co</x>rd<x> ser</x>v<x>er</x></a
+                >
+            </p>
+            <center>
+                <div class="gcontainer">
+                    {data.map((data: { name: string; href: string; img: string; }) => <Game name={data.name} href={`e('${data.href}')`} img={data.img} />)}
+            </div>
+        </center>
+        </center>
+        <script is:inline>
+         function e(url) {
+            window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url) 
+            }
+                </script>
+    </Layout>
+    <audio src="" id="audio" controls autoplay hidden transition:persist transition:name="media-player"></audio>
+</main>

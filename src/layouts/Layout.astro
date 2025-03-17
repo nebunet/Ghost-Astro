@@ -4,23 +4,31 @@ interface Props {
 }
 
 const { title } = Astro.props
+import { ClientRouter } from 'astro:transitions';
+import { ViewTransitions } from 'astro:transitions';
+import { fade } from 'astro:transitions';
 ---
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="description" content="A Pretty Cool Site :D" />
         <meta name="viewport" content="width=device-width" />
-	<meta name="google-adsense-account" content="ca-pub-8983108696361501">
+        <meta name="google-adsense-account" content="ca-pub-8983108696361501">
         <link
             rel="icon"
             id="favicon"
             type="image/svg+xml"
-            href="/img/ghost.png"
+            href="/img/ghost.webp"
         />
-        <title>Ghost</title>
-        <!-- Google tag (gtag.js) -->
+        <meta property="og:title" content="Ghost" />
+        <meta property="og:url" content="https://immortal2willlose.xyz" />
+        <meta property="og:image" content="https://immortal2willlose.xyz/assets/img/ghost.webp" />
+        <meta property="og:description" content="One of the best and most coolest sites ever!">
+        <title>{title}</title>
+        <ClientRouter/>
+        <ViewTransitions />
+        <!--Google tag (gtag.js)-->
         <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-WFWKKRRXLT"
@@ -35,56 +43,556 @@ const { title } = Astro.props
 
             gtag('config', 'G-WFWKKRRXLT')
         </script>
-        <script is:inline src="/baremux/index.js" defer></script>
-        <script is:inline src="/epoxy/index.js" defer></script>
-        <script is:inline src="/u/space.js" defer></script>
-        <script is:inline src="/u/liftoff.js" defer></script>
-        <script is:inline src="/violet/bundle.js" defer></script>
-        <script is:inline src="/violet/config.js" defer></script>
-        <script src="/js/galaxy.js?rocket=true" is:inline></script>
-		<script is:inline>
-           /* const scramjet = new ScramjetController({
-	            files: {
-		            wasm: "/learn/wikipedia.wasm.js",
-		            worker: "/learn/work.js",
-		            client: "/learn/clients.js",
-		            shared: "/learn/desmos.shared.js",
-		            sync: "/learn/sync.js",
-	            },
-	            flags: {
-		                serviceworkers: true,
-		                syncxhr: true,
-		                scramitize: true,
-	            },
-});
+        <!--b and e-->
+        <script is:inline src="/whatthesigma/index.js" defer></script>
+        <script is:inline src="/bussin/index.js" defer></script>        
 
-scramjet.init(); */
-        </script>
+        <!--3-->
+        <script is:inline defer src="/violet/bundle.js"></script>
+        <script is:inline defer src="/violet/config.js"></script>
+
+        <!-- 2 default -->
+        <script is:inline src="/u/space.js" defer></script>
+        <script is:inline src="/u/liftoff.js" type="module" defer></script>
+        <script src="/js/galaxy.js?rocket=true" is:inline type="module"></script>
+
+        <!--r-->
+        <script src="https://unpkg.com/@rubynetwork/rammerhead-browser" defer />
+
+
         <link rel="manifest" href="/manifest.json">
     </head>
-    <body>
+    <body transition:animate={fade({ duration: '.4s' })}>
         <slot />
     </body>
 </html>
+
+<!--css-->
+<style is:global>
+    /* test styles */
+
+    :root {
+  --star: #ffd900;
+  --text-color: #e0e0e0;
+}
+
+.iframe-Container {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+}
+
+iframe {
+    position: relative;
+    z-index: -1;
+    display: none;
+}
+
+.frame_top {
+    position: relative;
+    width: 100%; 
+    height: 100%;
+    border: none;
+    display: block;
+    z-index: 9999;
+    border-radius: 15px;
+}
+
+body {
+  margin: 0;
+  font-family: sfprosemibold;
+  background-color: var(--Background-Color);
+  color: var(--text-color);
+}
+
+.gmail__container {
+  display: grid;
+  grid-template-areas:
+    "search search search"
+    "l-side iframe r-side";
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 200px 1fr 60px;
+  height: 100vh;
+  gap: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.option {
+    width: 150px;
+    height: 30%;
+    padding: 5px;
+    color: white;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: .4s ease;
+    display: flex;
+    align-items: center;
+}
+
+.option svg {
+    /*dawg what the sigma*/
+}
+
+.option:hover {
+    background-color: var(--Settings-Card-1);
+    transition: .4s ease;
+    cursor: pointer;
+}
+
+.option #text {
+    padding-bottom: 5px;
+}
+
+.dropDown {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    z-index: 9999999;
+    transition: .4s ease;
+    display: none;
+    width:fit-content;
+    height: fit-content;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid var(--Settings-Card-1);
+    background-color: var(--Background-Color);
+}
+
+.gmail__container-search {
+  grid-area: search;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--Background-Color);
+  height: 60px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+}
+
+.logo-name {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: var(--Secondary-Color);
+  padding-left: 13px;
+  border-radius: 7px;
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.search-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  text-align: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  padding: 7px;
+  border-radius: 5px;
+  background-color: var(--Secondary-Color);
+  cursor: pointer;
+  fill: var(--text-color);
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  background-color: var(--Background-Color);
+  padding: 7px;
+  border-radius: 5px;
+  fill: var(--text-color);
+}
+
+.search-input {
+  font-family: sfprosemibold;
+  flex-grow: 1;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  height: 40px;
+  border-radius: 4px;
+  color: var(--text-color);
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.separator-top {
+  width: 80%;
+  height: 1px;
+  margin: 10px auto;
+  background-color: var(--Game-Color);
+}
+
+.separator {
+  width: 1px;
+  height: 30px;
+  margin: 0px 15px;
+  background-color: var(--Game-Color);
+}
+
+.iframe {
+  grid-area: iframe;
+  background-color: var(--Secondary-Color);
+  border-top: 1px solid var(--Game-Color);
+  border-left: 1px solid var(--Game-Color);
+  border-right: 1px solid var(--Game-Color);
+  border-radius: 15px 15px 15px 15px;
+  position: relative;
+  z-index: 1;
+  width: 80%;
+  height: 90%;
+  box-sizing: border-box;
+}
+
+.r-side {
+  grid-area: r-side;
+  background-color: var(--Background-Color);
+  width: 60px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.box-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+#bookmarks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.box {
+  width: 40px;
+  height: 40px;
+  background-color: var(--Secondary-Color);
+  border: 1px solid var(--Game-Color);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.svg-box {
+  width: 40px;
+  height: 40px;
+  background-color: var(--Secondary-Color);
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--Game-Color);
+  border-radius: 8px;
+}
+
+.svg-box svg {
+  fill: var(--text-color);
+  width: 20px;
+  height: 20px;
+}
+
+.l-side {
+  grid-area: l-side;
+  background-color: var(--Background-Color);
+  width: 200px;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.new-tab {
+  display: flex;
+  align-items: center;
+  background-color: var(--Secondary-Color);
+  padding: 10px 15px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.new-tab:hover {
+  background-color: var(--Game-Color);
+}
+
+.new-tab .active {
+    background-color: var(--Game-Color);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.new-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  fill: var(--text-color);
+  margin-right: 10px;
+}
+
+.svg-bttn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.new-name {
+  color: var(--text-color);
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 7px 10px;
+  border-radius: 7px;
+  background-color: transparent;
+  transition: 0.3s ease;
+}
+
+.nav-item:hover {
+  cursor: pointer;
+  background-color: var(--Secondary-Color);
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--text-color);
+}
+
+.nav-name {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.new-tab {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.new-icon svg {
+  height: 32px;
+  width: 32px;
+  fill: var(--text-color);
+}
+
+.new-name {
+  color: var(--text-color);
+  font-size: 16px;
+}
+
+.tab-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  background-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.actv {
+    background-color: var(--Game-Color);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tab:hover {
+  background-color: var(--Game-Color);
+}
+
+.tabbtn {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    margin-right: 0px;
+}
+
+.tab-icon {
+  width: 32px;
+  max-height: 32px;
+  max-width: 64px;
+  display:flex; 
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+
+.tab-icon img {
+  min-width: 100%;
+  border-radius: 10px;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.tab-title {
+  font-family: sfprosemibold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-grow: .5;
+  color: var(--text-color);
+  font-size: 14px;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  overflow: hidden;
+  max-width: 80px;
+}
+
+.tab-svg {
+  width: 24px;
+  height: 24px;
+}
+
+.tab-svg svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--star);
+}
+
+.scrollable-container {
+  max-height: 100vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollable-container::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  max-height: 38px;
+  max-width: 38px;
+  padding: 7px;
+  border-radius: 5px;
+  background-color: var(--Background-Color);
+  display: flex;
+  align-items: center;
+}
+.selected-icon{
+  max-height: 24px;
+}
+.selected-icon svg {
+  width: 24px;
+  height: 24px;
+}
+.dropdown-menu {
+  position: absolute;
+  display: none;
+  flex-direction: row;
+  background-color: var(--Background-Color);
+  border-radius: 5px;
+  left: -41px;
+  padding: 7px;
+  gap: 10px;
+  z-index: 10;
+}
+.dropdown.open .dropdown-menu {
+  display: flex;
+}
+.dropdown-item {
+  cursor: pointer;
+}
+.dropdown-item svg {
+  width: 24px;
+  height: 24px;
+  padding: 3px;
+}
+</style>
 <style is:global>
 
-@font-face {
+    @font-face {
         font-family: sfprosemibold;
         src: url(/sfprosemibold.woff2);
     }
 
     /*as an ai i cannot work on shit code please try agian.*/
-
-    #tsparticles{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url("");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-    }
-
 
     .nav {
         background-color: var(--Secondary-Color);
@@ -179,12 +687,13 @@ scramjet.init(); */
     /* use root and classes for theming */
     /* I'd just like to interject for a moment. What you're referring to as Linux, is in fact, GNU/Linux, or as I've recently taken to calling it, GNU plus Linux. Linux is not an operating system unto itself, but rather another free component of a fully functioning GNU system made useful by the GNU corelibs, shell utilities and vital system components comprising a full OS as defined by POSIX. Many computer users run a modified version of the GNU system every day, without realizing it. Through a peculiar turn of events, the version of GNU which is widely used today is often called “Linux,” and many of its users are not aware that it is basically the GNU system, developed by the GNU Project. There really is a Linux, and these people are using it, but it is just a part of the system they use. */
     :root {
-        --Background-Color: #12151c;
+        --Background-Color: #0e1719;
         --text-color: white;
         --Primary-Color: #f84545;
-        --Secondary-Color: #1b222c;
+        --Secondary-Color: #1a1d21;
         --Third-Color: #f84545;
-        --Game-Color: #202025;
+        --Game-Color: #1a1d21;
+        --Shape-Color: #161e20;
         --Settings-Card-1: #202935de;
         --Settings-Card-2: #0a0a0ad4;
     }
@@ -195,12 +704,12 @@ scramjet.init(); */
         --Primary-Color: #8336c8;
         --Secondary-Color: #3019a5;
         --Third-Color: #8336c8;
-        --Game-Color: #3019a5;
+        --Game-Color: #654aee;
         --Settings-Card-1: #4112ae;
         --Settings-Card-2: #3807b8;
     }
 
-    .catp {
+    .catppuccin {
         --Background-Color: #494d64;
         --text-color: #cad3f5;
         --Primary-Color: #9194ab;
@@ -345,6 +854,76 @@ scramjet.init(); */
         100% {
             opacity: 1;
         }
+    }
+
+    .player {
+        position: absolute;
+        z-index: 1000;
+        display: flex;
+        width: 200px;
+        height: 200px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background-color: var(--Background-Color);
+        color: var(--color-white);
+        border-radius: 12px;
+    }
+
+
+    .footer__right {
+        display: flex;
+        position: absolute;
+        align-items: right;
+        gap: 1rem;
+        right: 0px;
+        bottom: 0px;
+    }
+    
+    .privacyPolicy {
+        padding: 20px 15px;
+        display: flex;
+        position: absolute;
+        align-items: right;
+        gap: 1rem;
+        left: 0px;
+        bottom: 0px;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: var(--color-white);
+        padding: none;
+        margin: 0px;
+        height: 25px;
+        text-align: center;
+        display: flex;
+    }
+
+    .player__controls {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .version {
+        color: #0f4d50;
+    }
+
+    .player__controls button {
+        background-color: transparent;
+        border: none;
+        color: var(--color-white);
+        font-size: 1.5rem;
+    }
+
+    .special {
+        background-color: #ffffff;
+        color: var(--color-primary);
+        border-radius: 50%;
+        padding: 0.5rem;
     }
 
     .button {
@@ -526,18 +1105,12 @@ scramjet.init(); */
         padding: 20px 15px;
     }
 
-    .gcontainer {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 5px;
-        overflow: show;
-    }
-
     .acontainer {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 5px;
-        overflow: show;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 30px;
+        gap: 10px;
     }
 
     .input {
@@ -721,7 +1294,6 @@ scramjet.init(); */
 }
 
 .hero__icon {
-    animation: fadeIn .4s;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -733,6 +1305,7 @@ scramjet.init(); */
 }
 
 .hero__title {
+    animation: fadeIn .5s;
     font-size: 5rem;
     color: #ffffff;
     margin: 0;
@@ -759,18 +1332,17 @@ scramjet.init(); */
 }
 
 .hero__btn {
+    font-family: sfprosemibold;
     background-color: var(--Primary-Color);
     color: #ffffff;
     border: none;
     padding: 12px 18px;
-    font-size: 1rem;
     cursor: pointer;
     border-radius: 8px;
     display: flex;
     align-items: center;
     gap: 10px;
-    text-transform: uppercase;
-    font-weight: bold;
+    font-size: 25px;
     transition: all 0.3s ease;
 }
 
@@ -798,18 +1370,18 @@ scramjet.init(); */
 }
 
 .g-a__btn {
+    font-family: sfprosemibold;
     background-color: var(--Primary-Color);
     color: #ffffff;
     border: none;
     padding: 6px 9px;
-    font-size: 1rem;
+    font-size: 20px;
     cursor: pointer;
     border-radius: 8px;
     display: flex;
     margin-top: 12px;
     align-items: center;
     gap: 10px;
-    font-weight: bold;
     transition: all 0.3s ease;
 }
 

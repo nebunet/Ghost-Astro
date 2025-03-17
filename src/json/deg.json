@@ -1,317 +1,322 @@
 [
   {
     "name": "Bitlife",
-    "img": "background-image: url('/assets/img/assets/bitlife.png')",
+    "img": "background-image: url('/assets/img/assets/bitlife.webp')",
     "href": "/gg/bitlife/"
   },
   {
+    "name": "Bloxors",
+    "img": "background-image: url('/assets/img/assets/blox.webp')",
+    "href": "/gg/bloxors/"
+  },
+  {
     "name": "Monkey mart",
-    "img": "background-image: url('/assets/img/assets/monkeymart.png')",
+    "img": "background-image: url('/assets/img/assets/monkeymart.webp')",
     "href": "/gg/MonkeyMart/"
   },
   {
     "name": "Motox3m",
-    "img": "background-image: url('/assets/img/assets/motox3m.png')",
+    "img": "background-image: url('/assets/img/assets/motox3m.webp')",
     "href": "/gg/motox3m/"
   },
   {
     "name": "Motox3m2",
-    "img": "background-image: url('/assets/img/assets/motox3m2.png')",
+    "img": "background-image: url('/assets/img/assets/motox3m2.webp')",
     "href": "/gg/motox3m2"
   },
   {
     "name": "Stickman-hook",
-    "img": "background-image: url('/assets/img/assets/stickmanhook.png')",
+    "img": "background-image: url('/assets/img/assets/stickmanhook.webp')",
     "href": "/gg/stickman-hook/"
   },
   {
     "name": "Achivement Unlocked",
-    "img": "background-image: url('/assets/img/assets/achievementunlocked.png')",
+    "img": "background-image: url('/assets/img/assets/achievementunlocked.webp')",
     "href": "/gg/achivementunlocked/"
   },
   {
     "name": "Among us",
-    "img": "background-image: url('/assets/img/assets/amongus.png')",
+    "img": "background-image: url('/assets/img/assets/amongus.webp')",
     "href": "/gg/among-us"
   },
   {
     "name": "Cut the Rope",
-    "img": "background-image: url('/assets/img/assets/cutrope.png')",
+    "img": "background-image: url('/assets/img/assets/cutrope.webp')",
     "href": "/gg/ctr/"
   },
   {
     "name": "Doodle Jump",
-    "img": "background-image: url('/assets/img/assets/doodle.png')",
+    "img": "background-image: url('/assets/img/assets/doodle.webp')",
     "href": "/gg/doodle-jump/"
   },
   {
     "name": "Ducklife",
-    "img": "background-image: url('/assets/img/assets/ducklife.png')",
+    "img": "background-image: url('/assets/img/assets/ducklife.webp')",
     "href": "/gg/ducklife1/"
   },
   {
     "name": "Friday Night Funkin",
-    "img": "background-image: url('/assets/img/assets/fnf.png')",
+    "img": "background-image: url('/assets/img/assets/fnf.webp')",
     "href": "/gg/fridaynightfunkin/"
   },
   {
     "name": "Happy Wheels",
-    "img": "background-image: url('/assets/img/assets/happywheels.png')",
+    "img": "background-image: url('/assets/img/assets/happywheels.webp')",
     "href": "/gg/happywheels/"
   },
   {
     "name": "Vex7",
-    "img": "background-image: url('/assets/img/assets/vex7.png')",
+    "img": "background-image: url('/assets/img/assets/vex7.webp')",
     "href": "/gg/vex7/"
   },
   {
     "name": "Webretro",
-    "img": "background-image: url('/assets/img/assets/retroarch.png')",
+    "img": "background-image: url('/assets/img/assets/retroarch.webp')",
     "href": "/gg/webretro/"
   },
   {
     "name": "Hackertype",
-    "img": "background-image: url('/assets/img/assets/hackertyper.png')",
+    "img": "background-image: url('/assets/img/assets/hackertyper.webp')",
     "href": "/gg/hackertype/"
   },
   {
     "name": "Jetpack Joyride",
-    "img": "background-image: url('/assets/img/assets/jetpack.png')",
+    "img": "background-image: url('/assets/img/assets/jetpack.webp')",
     "href": "/gg/jetpack-joyride/"
   },
   {
     "name": "Lofi radio",
-    "img": "background-image: url('/assets/img/assets/lofi.png')",
+    "img": "background-image: url('/assets/img/assets/lofi.webp')",
     "href": "/gg/chill-radio/"
   },
   {
     "name": "Dino",
-    "img": "background-image: url('/assets/img/assets/dino.png')",
+    "img": "background-image: url('/assets/img/assets/dino.webp')",
     "href": "/gg/chrome-dino/"
   },
   {
     "name": "Dogeminer",
-    "img": "background-image: url('/assets/img/assets/dogeminer.png')",
+    "img": "background-image: url('/assets/img/assets/dogeminer.webp')",
     "href": "/gg/Dogeminer/"
   },
   {
     "name": "Dogeminer 2",
-    "img": "background-image: url('/assets/img/assets/dogeminer2.png')",
+    "img": "background-image: url('/assets/img/assets/dogeminer2.webp')",
     "href": "/gg/Dogeminer2/"
   },
   {
     "name": "Flappy Bird",
-    "img": "background-image: url('/assets/img/assets/flappybird.png')",
+    "img": "background-image: url('/assets/img/assets/flappybird.webp')",
     "href": "/gg/flappy-bird/"
   },
   {
     "name": "Drivemad",
-    "img": "background-image: url('/assets/img/assets/drivemad.png')",
+    "img": "background-image: url('/assets/img/assets/drivemad.webp')",
     "href": "/gg/drive-mad/index.html"
   },
   {
     "name": "Minecraft 1.5",
-    "img": "background-image: url('/assets/img/assets/minecraft.png')",
+    "img": "background-image: url('/assets/img/assets/minecraft.webp')",
     "href": "/gg/minecraft-15/"
   },
   {
     "name": "Minecraft 1.8",
-    "img": "background-image: url('/assets/img/assets/minecraft.png')",
+    "img": "background-image: url('/assets/img/assets/minecraft.webp')",
     "href": "/gg/minecraft-18/"
   },
   {
     "name": "Just One Boss",
-    "img": "background-image: url('/assets/img/assets/justoneboss.png')",
+    "img": "background-image: url('/assets/img/assets/justoneboss.webp')",
     "href": "/gg/justoneboss/web/"
   },
   {
     "name": "1",
-    "img": "background-image: url('/assets/img/assets/1.png')",
+    "img": "background-image: url('/assets/img/assets/1.webp')",
     "href": "/gg/1/"
   },
   {
     "name": "100ng",
-    "img": "background-image: url('/assets/img/assets/100ng.jpg')",
+    "img": "background-image: url('/assets/img/assets/100ng.webp')",
     "href": "/gg/100ng/"
   },
   {
     "name": "1v1.space",
-    "img": "background-image: url('/assets/img/assets/1v1space.png')",
+    "img": "background-image: url('/assets/img/assets/1v1space.webp')",
     "href": "/gg/1v1space/"
   },
   {
     "name": "2048 multitask",
-    "img": "background-image: url('/assets/img/assets/2048.png')",
+    "img": "background-image: url('/assets/img/assets/2048.webp')",
     "href": "/gg/2048-multitask/"
   },
   {
     "name": "2048",
-    "img": "background-image: url('/assets/img/assets/2048.png')",
+    "img": "background-image: url('/assets/img/assets/2048.webp')",
     "href": "/gg/2048/"
   },
   {
     "name": "9007199254740992",
-    "img": "background-image: url('/assets/img/assets/2048.png')",
+    "img": "background-image: url('/assets/img/assets/2048.webp')",
     "href": "/gg/9007199254740992/"
   },
   {
     "name": "HexGL",
-    "img": "background-image: url('/assets/img/assets/hexgl.png')",
+    "img": "background-image: url('/assets/img/assets/hexgl.webp')",
     "href": "/gg/HexGL/"
   },
   {
     "name": "Stickman Survival",
-    "img": "background-image: url('/assets/img/assets/stickmansurvival.png')",
+    "img": "background-image: url('/assets/img/assets/stickmansurvival.webp')",
     "href": "/gg/Stickman-Survival/"
   },
   {
     "name": "A Dark Room",
-    "img": "background-image: url('/assets/img/assets/adarkroom.png')",
+    "img": "background-image: url('/assets/img/assets/adarkroom.webp')",
     "href": "/gg/adarkroom/"
   },
   {
     "name": "Amidst The Clouds",
-    "img": "background-image: url('/assets/img/assets/amidsttheclouds.png')",
+    "img": "background-image: url('/assets/img/assets/amidsttheclouds.webp')",
     "href": "/gg/amidst-the-clouds/"
   },
   {
     "name": "Angry Sharks",
-    "img": "background-image: url('/assets/img/assets/angrysharks.png')",
+    "img": "background-image: url('/assets/img/assets/angrysharks.webp')",
     "href": "/gg/angry-sharks/"
   },
   {
     "name": "Aquapark Slides",
-    "img": "background-image: url('/assets/img/assets/aquaparkslides.png')",
+    "img": "background-image: url('/assets/img/assets/aquaparkslides.webp')",
     "href": "/gg/aquapark-slides/"
   },
   {
     "name": "Avalanche",
-    "img": "background-image: url('/assets/img/assets/avalanche.png')",
+    "img": "background-image: url('/assets/img/assets/avalanche.webp')",
     "href": "/gg/avalanche/"
   },
   {
     "name": "Awesometanks2",
-    "img": "background-image: url('/assets/img/assets/awesometanks2.jpg')",
+    "img": "background-image: url('/assets/img/assets/awesometanks2.webp')",
     "href": "/gg/awesometanks2/"
   },
   {
     "name": "Bad Ice Cream 2",
-    "img": "background-image: url('/assets/img/assets/bad-ice-cream-2.png')",
+    "img": "background-image: url('/assets/img/assets/bad-ice-cream-2.webp')",
     "href": "/gg/bad-ice-cream-2/"
   },
   {
     "name": "ballistic Chickens",
-    "img": "background-image: url('/assets/img/assets/ballisticchickens.png')",
+    "img": "background-image: url('/assets/img/assets/ballisticchickens.webp')",
     "href": "/gg/ballistic-chickens/"
   },
   {
     "name": "Battle For Gondor",
-    "img": "background-image: url('/assets/img/assets/battleforgondor.jpg')",
+    "img": "background-image: url('/assets/img/assets/battleforgondor.webp')",
     "href": "/gg/battleforgondor/"
   },
   {
     "name": "Big Red Button",
-    "img": "background-image: url('/assets/img/assets/bigredbutton.png')",
+    "img": "background-image: url('/assets/img/assets/bigredbutton.webp')",
     "href": "/gg/bigredbutton/"
   },
   {
     "name": "Black Hole Square",
-    "img": "background-image: url('/assets/img/assets/blackholesquare.png')",
+    "img": "background-image: url('/assets/img/assets/blackholesquare.webp')",
     "href": "/gg/blacholesquare/"
   },
   {
     "name": "Black Knight",
-    "img": "background-image: url('/assets/img/assets/blackknight.png')",
+    "img": "background-image: url('/assets/img/assets/blackknight.webp')",
     "href": "/gg/blackknight/"
   },
   {
     "name": "Baloons TD 2",
-    "img": "background-image: url('/assets/img/assets/bloonstd2.png')",
+    "img": "background-image: url('/assets/img/assets/bloonstd2.webp')",
     "href": "/gg/bloonstd2/"
   },
   {
     "name": "BNTTS",
-    "img": "background-image: url('/assets/img/assets/bntts.png')",
+    "img": "background-image: url('/assets/img/assets/bntts.webp')",
     "href": "/gg/bntts/"
   },
   {
     "name": "Box head 2 Play",
-    "img": "background-image: url('/assets/img/assets/boxhead2play.jpg')",
+    "img": "background-image: url('/assets/img/assets/boxhead2play.webp')",
     "href": "/gg/boxhead2play/"
   },
   {
     "name": "Breaking The Bank",
-    "img": "background-image: url('/assets/img/assets/breakingthebank.png')",
+    "img": "background-image: url('/assets/img/assets/breakingthebank.webp')",
     "href": "/gg/breakingthebank/"
   },
   {
     "name": "Burger And Frights",
-    "img": "background-image: url('/assets/img/assets/burgerandfrights.png')",
+    "img": "background-image: url('/assets/img/assets/burgerandfrights.webp')",
     "href": "/gg/burger-and-frights/"
   },
   {
     "name": "Cannon Basketball 4",
-    "img": "background-image: url('/assets/img/assets/cannonbasketball4.png')",
+    "img": "background-image: url('/assets/img/assets/cannonbasketball4.webp')",
     "href": "/gg/cannon-basketball-4/"
   },
   {
     "name": "Cars Simulator",
-    "img": "background-image: url('/assets/img/assets/carssimulator.png')",
+    "img": "background-image: url('/assets/img/assets/carssimulator.webp')",
     "href": "/gg/cars-simulator/"
   },
   {
     "name": "Champion Island",
-    "img": "background-image: url('/assets/img/assets/championisland.png')",
+    "img": "background-image: url('/assets/img/assets/championisland.webp')",
     "href": "/gg/champion-island/"
   },
   {
     "name": "Champian Archer",
-    "img": "background-image: url('/assets/img/assets/championarcher.png')",
+    "img": "background-image: url('/assets/img/assets/championarcher.webp')",
     "href": "/gg/championarcher/"
   },
   {
     "name": "circlo",
-    "img": "background-image: url('/assets/img/assets/circlo.png')",
+    "img": "background-image: url('/assets/img/assets/circlo.webp')",
     "href": "/gg/circlo/"
   },
   {
     "name": "Cluster Rush",
-    "img": "background-image: url('/assets/img/assets/clusterrush.png')",
+    "img": "background-image: url('/assets/img/assets/clusterrush.webp')",
     "href": "/gg/cluster-rush/"
   },
   {
     "name": "Connect 3",
-    "img": "background-image: url('/assets/img/assets/connect3.png')",
+    "img": "background-image: url('/assets/img/assets/connect3.webp')",
     "href": "/gg/connect3/"
   },
   {
     "name": "Core Ball",
-    "img": "background-image: url('/assets/img/assets/pr_source.png')",
+    "img": "background-image: url('/assets/img/assets/pr_source.webp')",
     "href": "/gg/core-ball/"
   },
   {
     "name": "Fake Minecraft",
-    "img": "background-image: url('/assets/img/assets/craftmine.png')",
+    "img": "background-image: url('/assets/img/assets/craftmine.webp')",
     "href": "/gg/craftmine/"
   },
   {
     "name": "Cube Field",
-    "img": "background-image: url('/assets/img/assets/cubefield.png')",
+    "img": "background-image: url('/assets/img/assets/cubefield.webp')",
     "href": "/gg/cubefield/"
   },
   {
     "name": "Doge 2048",
-    "img": "background-image: url('/assets/img/assets/doge2048.jpeg')",
+    "img": "background-image: url('/assets/img/assets/doge2048.webp')",
     "href": "/gg/doge2048/"
   },
   {
     "name": "Edge Surf",
-    "img": "background-image: url('/assets/img/assets/edging.png')",
+    "img": "background-image: url('/assets/img/assets/edging.webp')",
     "href": "/gg/edge-surf/"
   },
   {
     "name": "Exo",
-    "img": "background-image: url('/assets/img/assets/exo.jpg')",
+    "img": "background-image: url('/assets/img/assets/exo.webp')",
     "href": "/gg/exo/"
   }
 ]

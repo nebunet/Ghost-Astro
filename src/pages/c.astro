@@ -3,27 +3,34 @@ import Layout from '../layouts/Layout.astro';
 import Game from '../components/game.astro';
 import Nav from '../components/nav.astro';
 import data from "../json/games.json";
-import ddata from "..//json/deg.json"; 
+import ddata from "../json/deg.json"; 
 ---
 
-<main style="z-index: 100;">
+<main>
     <Layout title="Ghost">
         <Nav />
         <center>
             <br />
-            <p class="ex2" style="animation: fadeIn 1s;">Gα<x>me</x>s</p>
+            <p class="ex2" style="animation: fadeIn 1s;"><x>G</x>a<x>m</x>e<x>s</x></p>
             <p>
-                You can request ga<x>me</x>s on the <a
+                You can request on the <x>G</x>a<x>m</x>e<x>s</x> <a
                     href="https://discord.gg/dbyDXfs5dN"
-                    >Dіs<x>co</x>rd serv<x>er</x></a
+                    >D<x>i</x>s<x>co</x>rd<x> ser</x>v<x>er</x></a
                 >
             </p>
             <center>
                 <div class="gcontainer">
-                    {data.map((data: { name: string; href: string; img: string; }) => <Game name={data.name} href={data.href} img={data.img} />)}
-                {ddata.map((ddata: { name: string; href: string; img: string; }) => <Game name={ddata.name} href={"window.location.href = '" + ddata.href + "'"} img={ddata.img} />)}
+                    {data.map((data: { name: string; href: string; img: string; }) => <Game name={data.name} href={`e('${data.href}')`} img={data.img} />)}
+                {ddata.map((ddata: { name: string; href: string; img: string; }) => <Game name={ddata.name} href={`window.location.href = '${ddata.href}'`} img={ddata.img} />)}
             </div>
         </center>
         </center>
+        <script is:inline>
+            //load inline as is so it doesnt break anything
+         function e(url) {
+                localStorage.setItem("url", __uv$config.prefix + __uv$config.encodeUrl(url)); window.location.href = "/edu/";
+            }
+        </script>
     </Layout>
+    <audio src="" id="audio" controls autoplay hidden transition:persist transition:name="media-player"></audio>
 </main>

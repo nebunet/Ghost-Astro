@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Nav from '../components/nav.astro'
+---
+
+<Layout title="Ghost">
+    <Nav />
+    <center>
+        <p class="ex2">password generator</p>
+        <p>generates a password for you</p>
+        <div class="output">
+            <p id="output"></p>
+        </div>
+    </center>
+    <script is:inline>
+        const output = document.getElementById('output')
+
+        function genPassword() {
+            let password = ''
+            const chars =
+                'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+{}|:<>?~'
+            for (let i = 0; i < 12; i++) {
+                password += chars.charAt(
+                    Math.floor(Math.random() * chars.length)
+                )
+            }
+            if (password.length < 12) {
+                password += Math.random().toString(36).slice(2)
+            }
+            return password
+        }
+
+        output.innerText = genPassword();
+    </script>
+    <audio
+        src=""
+        id="audio"
+        controls
+        autoplay
+        hidden
+        transition:persist
+        transition:name="media-player"></audio>
+</Layout>

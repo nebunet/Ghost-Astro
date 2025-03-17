@@ -8,7 +8,7 @@ import Nav from '../components/nav.astro'
     <center>
     <p class="ex2">song downloader</p>
     <p>enter a link to download music</p>
-    <p style="color: var(--Primary-Color)">supports sоun<x>dcl</x>оud, yоu<x>tu</x>be and more. <span style="color: white;"> powered by <a href="https://cobalt.tools" style="color: var(--Primary-Color)">cоbalt</a></span></p>
+    <p style="color: var(--Primary-Color)">supports soundcloud, youtube And more. <span style="color: white;"> powered by <a href="https://cobalt.tools" style="color: var(--Primary-Color)">cobalt</a></span></p>
     <input class="input" placeholder="Enter A URL" id="input">
     <div class="output">
         <p id="output"></p>
@@ -33,6 +33,7 @@ import Nav from '../components/nav.astro'
         const url = input.value;
         const output = document.getElementById("output")
         output.innerText = "Requesting Tunnel..."
+        //is being reversed proxyed through caddy
         fetch('/api/dl/v1/', {
         method: "POST",
         headers: {
@@ -63,4 +64,5 @@ import Nav from '../components/nav.astro'
       })
 }
     </script>
+    <audio src="" id="audio" controls autoplay hidden transition:persist transition:name="media-player"></audio>
     </Layout>

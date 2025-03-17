@@ -368,7 +368,7 @@
           }
 
           #errorTitle {
-          color: #D98C6B;
+          color: #ffffff;
           }
           #fetchedURL {
           color: #f84545;
@@ -412,9 +412,10 @@
             <textarea id="errorTrace" cols="40" rows="10" readonly></textarea>
             <p>Try:</p><ul><li>Checking your internet connection</li>
             <li>Verifying you entered the correct address</li>
+            <li>Insuring Lightgo.app/bare/ Hasnt Run out of bandwith</li>
             <li>Clearing the site data (hit ctrl + shift + r) </li><li>Contacting nobodycares_lo on discord (discord.gg/dbyDXfs5dN)</li>
             <li>Verify that <a href="https://lightgo.app/bare/" title='Bare server'>Bare Server</a> isn't censored</li>
-           </li></ul><button id="reload">Reload</button><p><i>Ultraviolet v2.0.0 || Ghost 2.4</i></p><script src="${
+           </li></ul><button id="reload">Reload</button><p><i>Ultraviolet v2.0.0 || Ghost v1.6.50</i></p><script src="${
                'data:application/javascript,' + encodeURIComponent(d)
            }"><\/script>
            </center>

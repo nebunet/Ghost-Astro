@@ -1,0 +1,44 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Game from '../../components/game.astro';
+import data from "../../json/games.json";
+import ddata from "../../json/deg.json"; 
+---
+
+<main>
+    <Layout title="Ghost">
+        <center>
+            <br />
+            <p class="ex2" style="animation: fadeIn 1s;">Ga<x>me</x>s</p>
+            <p>
+                You can request games on the <a
+                    href="https://discord.gg/dbyDXfs5dN"
+                    >Dis<x>co</x>rd serv<x>er</x></a
+                >
+            </p>
+            <center>
+                <div class="gcontainer">
+                    {data.map((data: { name: string; href: string; img: string; }) => <Game name={data.name} href={"e('" + data.href + "')"} img={data.img} />)}
+                {ddata.map((ddata: { name: string; href: string; img: string; }) => <Game name={ddata.name} href={"window.location.href = '" + ddata.href + "'"} img={ddata.img} />)}
+            </div>
+        </center>
+        </center>
+        <script is:inline>
+            const pr = localStorage.getItem("pr")
+         function e(url) {
+            switch(pr) {
+                case "uv":
+                window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url) 
+                break;
+                case "rh":
+                localStorage.setItem("urlREDIR", url);
+                localStorage.setItem("url", "");
+                window.location.href = '/q/';
+                break;
+                case null:
+                window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url) 
+            }
+        }
+                </script>
+    </Layout>
+</main>

@@ -1,0 +1,10 @@
+[
+    {
+        "url": "https://geforcenow.com",
+        "p": "scram"
+    },
+    {
+        "url": "https://accounts.google.com",
+        "alert": "Signing into google accounts is broken currently!"
+    }
+]
