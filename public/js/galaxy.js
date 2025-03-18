@@ -51,6 +51,11 @@ document.addEventListener('astro:page-load', () => {
             break
     }
 
+    if(localStorage.getItem("disalert") === null) {
+        alert("youtube works now :) join the discord (discord.gg/clever) i need the members 🙏")
+        localStorage.setItem("disalert", "1")
+    }
+
     if (backend === null) {
         localStorage.setItem('backend', 'uv')
     }
