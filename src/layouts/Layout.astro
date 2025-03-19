@@ -4,9 +4,6 @@ interface Props {
 }
 
 const { title } = Astro.props
-import { ClientRouter } from 'astro:transitions';
-import { ViewTransitions } from 'astro:transitions';
-import { fade } from 'astro:transitions';
 ---
 
 <!DOCTYPE html>
@@ -26,8 +23,6 @@ import { fade } from 'astro:transitions';
         <meta property="og:image" content="https://immortal2willlose.xyz/assets/img/ghost.webp" />
         <meta property="og:description" content="One of the best and most coolest sites ever!">
         <title>{title}</title>
-        <ClientRouter/>
-        <ViewTransitions />
         <!--Google tag (gtag.js)-->
         <script
             async
@@ -56,13 +51,10 @@ import { fade } from 'astro:transitions';
         <script is:inline src="/u/liftoff.js" type="module" defer></script>
         <script src="/js/galaxy.js?rocket=true" is:inline type="module"></script>
 
-        <!--r-->
-        <script src="https://unpkg.com/@rubynetwork/rammerhead-browser" defer />
-
 
         <link rel="manifest" href="/manifest.json">
     </head>
-    <body transition:animate={fade({ duration: '.4s' })}>
+    <body>
         <slot />
     </body>
 </html>

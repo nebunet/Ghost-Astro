@@ -336,7 +336,7 @@ switch (localStorage.getItem('engine')) {
         break
 }
 
-document.addEventListener('astro:page-load', async () => {
+document.addEventListener('DOMContentLoaded', async () => {
     if (localStorage.getItem('url')) {
         newTab()
         currentFrame.src = localStorage.getItem('url')

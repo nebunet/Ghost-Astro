@@ -13,7 +13,7 @@ const stockU3SW = '/violet/sww.js'
 const SwRegistered = localStorage.getItem('uvregistered')
 const backend = localStorage.getItem('backend')
 
-document.addEventListener('astro:page-load', () => {
+document.addEventListener('DOMContentLoaded', () => {
     initTheme()
 
     switch (cloak) {

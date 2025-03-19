@@ -39,7 +39,7 @@ import Nav from '../components/nav.astro'
     </style>
 
     <script is:inline>
-         document.addEventListener('astro:page-load', async () => {
+         document.addEventListener('DOMContentLoaded', async () => {
             const pname = localStorage.getItem('pr')
             switch (pname) {
                 case 'uv':
@@ -185,5 +185,4 @@ import Nav from '../components/nav.astro'
             return sub
         }
     </script>
-    <audio src="" id="audio" controls autoplay hidden transition:persist transition:name="media-player"></audio>
 </Layout>
