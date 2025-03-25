@@ -8,7 +8,6 @@ import fetch from "node-fetch";
 import { server as wisp } from "@mercuryworkshop/wisp-js";
 import { epoxyPath } from "@mercuryworkshop/epoxy-transport";
 import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
-import { createRammerhead, shouldRouteRh, routeRhUpgrade, routeRhRequest } from '@rubynetwork/rammerhead';
 import fs from "node:fs";
 
 const server = http.createServer();
@@ -18,13 +17,6 @@ const app = express();
 const __dirname = process.cwd();
 const base = '/';
 
-const rh = createRammerhead({
-  logLevel: 'debug', 
-  reverseProxy: false, 
-  disableLocalStorageSync: false, 
-  disableHttp2: false 
-})
-
 //https://en.wikipedia.org/wiki/Epoxy
 app.use("/bussin/", express.static(epoxyPath));
 app.use("/whatthesigma/", express.static(baremuxPath));
@@ -32,9 +24,7 @@ app.use(base, express.static('dist/client/'));
 app.use(ssrHandler);
 
 server.on('request', (req, res) => {
-  if (shouldRouteRh(req)) {
-    routeRhRequest(rh , req, res)
-}else if (bare.shouldRoute(req)) {
+  if (bare.shouldRoute(req)) {
         bare.routeRequest(req, res)
     } else {
         app(req, res)
@@ -42,9 +32,7 @@ server.on('request', (req, res) => {
 })
 
 server.on('upgrade', (req, socket, head) => {
-  if (shouldRouteRh(req)) {
-    routeRhUpgrade(rh , req, socket, head)
-}else if (bare.shouldRoute(req)) {
+  if (bare.shouldRoute(req)) {
         bare.routeUpgrade(req, socket, head)
     } else {
         wisp.routeRequest(socket, head);
