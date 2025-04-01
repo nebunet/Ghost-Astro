@@ -4,7 +4,7 @@ let raAPI = '/api/ra/v1/'
 const container = document.getElementById('g-a_holder-1')
 const appContainer = document.getElementById('g-a_holder-2')
 
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('astro:page-load', async () => {
     const gData = await fetch(rgAPI)
         .then((response) => response.text())
         .then((text) => {

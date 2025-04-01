@@ -4,6 +4,9 @@ interface Props {
 }
 
 const { title } = Astro.props
+import { ClientRouter } from 'astro:transitions';
+import { ViewTransitions } from 'astro:transitions';
+import { fade } from 'astro:transitions';
 ---
 
 <!DOCTYPE html>
@@ -11,7 +14,6 @@ const { title } = Astro.props
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <meta name="google-adsense-account" content="ca-pub-8983108696361501">
         <link
             rel="icon"
             id="favicon"
@@ -23,6 +25,8 @@ const { title } = Astro.props
         <meta property="og:image" content="https://immortal2willlose.xyz/assets/img/ghost.webp" />
         <meta property="og:description" content="One of the best and most coolest sites ever!">
         <title>{title}</title>
+        <ClientRouter/>
+        <ViewTransitions />
         <!--Google tag (gtag.js)-->
         <script
             async
@@ -51,10 +55,14 @@ const { title } = Astro.props
         <script is:inline src="/u/liftoff.js" type="module" defer></script>
         <script src="/js/galaxy.js?rocket=true" is:inline type="module"></script>
 
+        <!--r-->
+        <script src="https://unpkg.com/@rubynetwork/rammerhead-browser" defer />
+        <script src="/js/troll.js" is:inline></script>
+
 
         <link rel="manifest" href="/manifest.json">
     </head>
-    <body>
+    <body transition:animate={fade({ duration: '.4s' })}>
         <slot />
     </body>
 </html>
@@ -87,7 +95,7 @@ iframe {
     height: 100%;
     border: none;
     display: block;
-    z-index: 9999;
+    z-index: 9997;
     border-radius: 15px;
 }
 

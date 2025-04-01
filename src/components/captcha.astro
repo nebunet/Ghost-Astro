@@ -1,0 +1,221 @@
+<style is:global>
+    .captchaWrapper {
+        display: none;
+        z-index: 9999;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 300px;
+        max-width: 400px;
+        font-family: Roboto, Arial, sans-serif;
+        background-color: #ffffff;
+        border: 1px solid #ffffff; 
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        padding: 16px;
+    }
+
+    .captchaTitles {
+        margin-bottom: 16px;
+    }
+
+    .rc-imageselect-desc-wrapper {
+        background-color: #1a73e8;
+        padding: 12px;
+        border-radius: 4px;
+        font-size: 14px;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .rc-imageselect-desc-wrapper strong {
+        font-size: 16px;
+    }
+
+    .rc-imageselect-challenge {
+        text-align: center;
+        margin-top: 16px;
+    }
+
+    .rc-imageselect-table-44 {
+        margin: 0 auto;
+        border-spacing: 4px;
+    }
+
+    .rc-imageselect-tile {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .rc-image-tile-target img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .rc-image-tile-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(26, 115, 232, 0.5);
+        display: none;
+    }
+
+    .rc-imageselect-checkbox {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        width: 16px;
+        height: 16px;
+        border: 2px solid #fff;
+        background-color: #1a73e8;
+        border-radius: 50%;
+        display: none;
+    }
+
+    .rc-imageselect-tile.selected .rc-image-tile-overlay,
+    .rc-imageselect-tile.selected .rc-imageselect-checkbox {
+        display: block;
+    }
+
+    .controls {
+        margin-top: 16px;
+        text-align: center;
+    }
+
+    .captchaBttn,
+    .captchaSubmit {
+        background-color: #1a73e8;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 8px 16px;
+        font-size: 14px;
+        cursor: pointer;
+        margin: 0 8px;
+    }
+
+    #rc-image-tile-img {
+        min-width: 50px;
+    }
+
+    .captchaBttn:hover,
+    .captchaSubmit:hover {
+        background-color: #1558b0;
+    }
+
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 9998;
+    }
+
+</style>
+<div class="background" id="blockBackground"></div>
+<div class="captchaWrapper" id="captchaWrapper">
+    <div class="captchaTitles">
+        <div class="rc-imageselect-desc-wrapper">
+            Select all the squares with
+            <br />
+            <strong id="rc-imageselect-strong" style="font-size: 25px;"></strong>
+            <br />
+            <span class="rc-imageselect-carousel-instructions">If there are none, click skip</span>
+        </div>
+    </div>
+
+    <div class="rc-imageselect-challenge">
+        <div id="rc-imageselect-target" class="rc-imageselect-target" dir="ltr" role="presentation" aria-hidden="true">
+            <table class="rc-imageselect-table-44">
+                <tbody>
+                    <tr>
+                        <td role="button" tabindex="4" class="rc-imageselect-tile">
+                            <div class="rc-image-tile-target">
+                                <img src="/images/sample1.jpg" id="rc-image-tile-img" alt="Image challenge">
+                                <div class="rc-image-tile-overlay"></div>
+                                <div class="rc-imageselect-checkbox"></div>
+                            </div>
+                        </td>
+                        <td role="button" tabindex="4" class="rc-imageselect-tile">
+                            <div class="rc-image-tile-target">
+                                <img src="/images/sample1.jpg" id="rc-image-tile-img" alt="Image challenge">
+                                <div class="rc-image-tile-overlay"></div>
+                                <div class="rc-imageselect-checkbox"></div>
+                            </div>
+                        </td>
+                        <td role="button" tabindex="4" class="rc-imageselect-tile">
+                            <div class="rc-image-tile-target">
+                                <img src="/images/sample1.jpg" id="rc-image-tile-img" alt="Image challenge">
+                                <div class="rc-image-tile-overlay"></div>
+                                <div class="rc-imageselect-checkbox"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td role="button" tabindex="4" class="rc-imageselect-tile">
+                            <div class="rc-image-tile-target">
+                                <img src="/images/sample1.jpg" id="rc-image-tile-img" alt="Image challenge">
+                                <div class="rc-image-tile-overlay"></div>
+                                <div class="rc-imageselect-checkbox"></div>
+                            </div>
+                        </td>
+                        <td role="button" tabindex="4" class="rc-imageselect-tile">
+                            <div class="rc-image-tile-target">
+                                <img src="/images/sample1.jpg" id="rc-image-tile-img" alt="Image challenge">
+                                <div class="rc-image-tile-overlay"></div>
+                                <div class="rc-imageselect-checkbox"></div>
+                            </div>
+                        </td>
+                        <td role="button" tabindex="4" class="rc-imageselect-tile">
+                            <div class="rc-image-tile-target">
+                                <img src="/images/sample1.jpg" id="rc-image-tile-img" alt="Image challenge">
+                                <div class="rc-image-tile-overlay"></div>
+                                <div class="rc-imageselect-checkbox"></div>
+                            </div>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td role="button" tabindex="4" class="rc-imageselect-tile">
+                            <div class="rc-image-tile-target">
+                                <img src="/images/sample1.jpg" id="rc-image-tile-img" alt="Image challenge">
+                                <div class="rc-image-tile-overlay"></div>
+                                <div class="rc-imageselect-checkbox"></div>
+                            </div>
+                        </td>
+                        <td role="button" tabindex="4" class="rc-imageselect-tile">
+                            <div class="rc-image-tile-target">
+                                <img src="/images/sample1.jpg" id="rc-image-tile-img" alt="Image challenge">
+                                <div class="rc-image-tile-overlay"></div>
+                                <div class="rc-imageselect-checkbox"></div>
+                            </div>
+                        </td>
+                        <td role="button" tabindex="4" class="rc-imageselect-tile">
+                            <div class="rc-image-tile-target">
+                                <img src="/images/sample1.jpg" id="rc-image-tile-img" alt="Image challenge">
+                                <div class="rc-image-tile-overlay"></div>
+                                <div class="rc-imageselect-checkbox"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="controls" id="controlContainer">
+        <button class="captchaSubmit" id="submitCaptcha">Submit</button>
+    </div>
+    <script src="/js/captcha.js" is:inline></script>
+</div>

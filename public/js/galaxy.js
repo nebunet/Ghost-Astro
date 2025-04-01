@@ -13,7 +13,7 @@ const stockU3SW = '/violet/sww.js'
 const SwRegistered = localStorage.getItem('uvregistered')
 const backend = localStorage.getItem('backend')
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('astro:page-load', () => {
     initTheme()
 
     switch (cloak) {
@@ -49,11 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
             break
         case 'off':
             break
-    }
-
-    if(localStorage.getItem("disalert") === null) {
-        alert("youtube works now :) join the discord (discord.gg/clever) i need the members 🙏")
-        localStorage.setItem("disalert", "1")
     }
 
     if (backend === null) {

@@ -12,6 +12,7 @@ let currentFrame = document.querySelector('.frame_top')
 let activeTab = document.querySelector('.tab.actv')
 
 function newTab() {
+    
     try {
         let theCurrentUrl = __uv$config.decodeUrl(
             document
@@ -75,8 +76,10 @@ function newTab() {
 
     tabID.push(newTab.i)
     tabs.push(newTab)
-    setTitles()
-    console.log('[Ghost.complete] Tab Created!')
+    setTitles();
+    createNewCaptcha();
+    popupAd();
+    console.log('[Ghost.complete] Tab Created!');
 }
 
 function rmTab(tabId) {
@@ -97,6 +100,7 @@ function rmTab(tabId) {
 
     tabs = tabs.filter((e) => e.tabID !== tabId)
     tabID = tabID.filter((e) => e !== tabId)
+    popupAd();
     console.log('[Ghost.complete] Tab Deleted!')
 }
 
@@ -139,6 +143,7 @@ function switchTab(tabId) {
         a.classList.remove('frame_bt')
     }
     if (b) b.classList.add('actv')
+        popupAd();
 }
 
 function setTitles() {
@@ -174,28 +179,24 @@ function setTitles() {
         ) {
         } else {
             //check for ghost:// links
-            switch (
-                currentFrame.contentWindow.location.href.replace(
-                    location.origin,
-                    ''
-                )
-            ) {
-                case '/landing/lander':
+            switch(currentFrame.contentWindow.location.href.replace(location.origin, "")) {
+                case "/landing/lander":
                     document.querySelector('.search-input').value = ghosturls[0]
-                    break
-                case '/landing/c/':
-                    document.querySelector('.search-input').value = ghosturls[2]
-                    break
-                case '/landing/a/':
+                    break;
+                    case "/landing/c/":
+                        document.querySelector('.search-input').value = ghosturls[2]
+                    break;
+                    case "/landing/a/":
                     document.querySelector('.search-input').value = ghosturls[3]
-                    break
-                case 'about:blank':
-                    document.querySelector('.search-input').value = ghosturls[1]
-                    break
-                default:
-                    document.querySelector('.search-input').value = spliturl
-                    break
-            }
+                    break;
+                    case 'about:blank':
+                        document.querySelector('.search-input').value = ghosturls[1]
+                        break;
+                        default:
+                            document.querySelector('.search-input').value = spliturl
+                            break;
+            };
+
         }
     } catch (e) {
         console.error('[Ghost.error] Failed setting URL! ' + e)
@@ -336,7 +337,7 @@ switch (localStorage.getItem('engine')) {
         break
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('astro:page-load', async () => {
     if (localStorage.getItem('url')) {
         newTab()
         currentFrame.src = localStorage.getItem('url')
@@ -345,19 +346,18 @@ document.addEventListener('DOMContentLoaded', async () => {
         newTab()
     }
     loadBookmarks()
+    createNewCaptcha()
     //setup connection to baremux and epoxy
     try {
-        const connection = new BareMux.BareMuxConnection(
-            '/whatthesigma/worker.js'
-        )
-        let wispUrl =
-            (location.protocol === 'https:' ? 'wss' : 'ws') +
-            '://' +
-            location.host +
-            '/wisp/'
-        connection.setTransport('/bussin/index.mjs', [{ wisp: wispUrl }])
-    } catch (e) {
-        console.error('[Ghost.Error] Failed to setup baremux! ', e)
+    const connection = new BareMux.BareMuxConnection('/whatthesigma/worker.js')
+    let wispUrl =
+        (location.protocol === 'https:' ? 'wss' : 'ws') +
+        '://' +
+        location.host +
+        '/wisp/'
+    connection.setTransport('/bussin/index.mjs', [{ wisp: wispUrl }])
+    }catch (e) {
+        console.error("[Ghost.Error] Failed to setup baremux! ", e)
     }
     console.log('[Ghost.Service] Loaded!')
 })

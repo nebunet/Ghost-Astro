@@ -4,10 +4,6 @@ import Nav from '../components/nav.astro'
 ---
 
 <Layout title="Ghost">
-  <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8983108696361501"
- crossorigin="anonymous"></script>
-</head>
     <Nav/>
     <section class="settings">
         <h2 class="setting__title">Settings</h2>
@@ -170,5 +166,6 @@ import Nav from '../components/nav.astro'
             </div>
           </div>
       </section>
+      <audio src="" id="audio" controls autoplay hidden transition:persist transition:name="media-player"></audio>
     <script src="/js/cosmos.js?version=2&block=true" is:inline></script>
 </Layout>

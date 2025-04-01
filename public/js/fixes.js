@@ -10,3 +10,16 @@ let urlButLikeDecoded = __uv$config.decodeUrl(
             ''
         )
 )
+
+if (urlButLikeDecoded.includes('https://play.geforcenow.com')) {
+    //this only indicates if they are using ultraviolet **2** on geforce now (because uv2 loves to break sites)
+    //so in this case we will swap that over to scramjet etc etc
+
+    document.querySelector('.frame-top').src = '' //scramjet shit
+}
+
+if (urlButLikeDecoded.includes('https://open.spotify.com')) {
+    //because spotify doesnt like uv 2
+
+    document.querySelector('.frame-top').src = '' //uv3 shit
+}
