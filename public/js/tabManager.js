@@ -4,12 +4,10 @@
 const input = document.getElementById('search-input')
 
 document.addEventListener('DOMContentLoaded', () => {
-    popupAd();
     input.addEventListener('keydown', handleInput)
 
     async function handleInput(e) {
         if (e.key !== 'Enter') return
-        popupAd();
         const query = formatSearch(input.value)
         //ghost urls
         switch (input.value) {
@@ -33,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         setCTabTitle()
         setURL()
-        createNewCaptcha();
     }
 
     function formatSearch(query) {
@@ -276,7 +273,3 @@ setInterval(function () {
     setTitles()
     fixGoogle()
 }, 2000)
-
-setInterval(function () {
-    popupAd()
-}, 20000)

@@ -77,8 +77,6 @@ function newTab() {
     tabID.push(newTab.i)
     tabs.push(newTab)
     setTitles();
-    createNewCaptcha();
-    popupAd();
     console.log('[Ghost.complete] Tab Created!');
 }
 
@@ -100,7 +98,6 @@ function rmTab(tabId) {
 
     tabs = tabs.filter((e) => e.tabID !== tabId)
     tabID = tabID.filter((e) => e !== tabId)
-    popupAd();
     console.log('[Ghost.complete] Tab Deleted!')
 }
 
@@ -143,7 +140,6 @@ function switchTab(tabId) {
         a.classList.remove('frame_bt')
     }
     if (b) b.classList.add('actv')
-        popupAd();
 }
 
 function setTitles() {
@@ -346,7 +342,6 @@ document.addEventListener('astro:page-load', async () => {
         newTab()
     }
     loadBookmarks()
-    createNewCaptcha()
     //setup connection to baremux and epoxy
     try {
     const connection = new BareMux.BareMuxConnection('/whatthesigma/worker.js')
